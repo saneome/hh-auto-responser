@@ -1,0 +1,72 @@
+# Скопируйте этот файл в config.yaml.
+# Большинство полей можно оставить как есть.
+
+browser:
+  # Папка для хранения профиля браузера (куки, localStorage). Логин делается один раз.
+  user_data_dir: "user-data"
+  # Запускать ли браузер видимым. Для первой авторизации обязательно false → видимый.
+  # Дальше можете поставить true (headless) для фонового запуска.
+  headless: false
+  # Таймаут навигации/ожидания элементов, мс
+  default_timeout_ms: 20000
+  # Замедление действий браузера для "человечности" (мс между шагами Playwright)
+  slow_mo_ms: 50
+  # Локаль/часовой пояс — чтобы фингерпринт выглядел как у живого пользователя из РФ
+  locale: "ru-RU"
+  timezone: "Europe/Moscow"
+
+# Сколько максимум секунд ждать пока пользователь сам залогинится в открытом браузере
+login_timeout_seconds: 600
+
+# Параметры поиска вакансий — превращаются в URL https://hh.ru/search/vacancy?...
+search:
+  # Регион: 113 — Россия, 1 — Москва, 2 — СПб
+  area: 113
+  # Опыт: noExperience, between1And3, between3And6, moreThan6
+  experience:
+    - noExperience
+    - between1And3
+  # Тип занятости/график (на сайте hh: schedule=remote)
+  schedule: remote
+  # Дополнительно используем фильтр work_format=REMOTE (новый параметр hh)
+  remote_work_format: true
+  # Поисковые запросы (выполняются по очереди, дубликаты схлопываются)
+  queries:
+    - "Python backend"
+    - "Python разработчик"
+    - "Java backend"
+    - "Java разработчик"
+    - "Rust разработчик"
+    - "Rust backend"
+    - "React frontend"
+    - "Vue frontend"
+    - "Frontend разработчик"
+  # Сколько страниц максимум листать на каждый запрос (на странице ~50 вакансий)
+  max_pages: 5
+
+# Сопроводительное письмо
+cover_letter:
+  # Если true — в письмо подставится фраза про опыт 1–2 года (для прохождения ATS)
+  pretend_experience: false
+  telegram: "t.me/alexaneodev"
+  github: "github.com/saneome"
+
+# Рандомизация задержек между откликами (секунды). 30с..180с = 0.5..3 минуты.
+rate_limit:
+  min_seconds: 30
+  max_seconds: 180
+  long_break_chance: 0.07
+  long_break_min_seconds: 300   # 5 минут
+  long_break_max_seconds: 900  # 15 минут
+
+# Куда писать список уже отправленных откликов
+applied_log: "applied.json"
+
+# Сколько откликов максимум за один запуск (0 = без лимита)
+max_per_run: 30
+
+# Куда сохранять скриншоты при ошибках (чтобы было видно, что пошло не так)
+screenshots_dir: "screenshots"
+
+# Если true — поиск и навигация будут, но кнопка "Откликнуться" нажиматься не будет
+dry_run: false
