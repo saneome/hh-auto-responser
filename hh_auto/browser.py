@@ -295,23 +295,47 @@ def get_vacancy_page_text(page: Page, vacancy_url: str) -> str:
     except PWTimeout:
         pass
     parts: list[str] = []
-    selectors = [
-        "[data-qa=vacancy-title]",
-        "[data-qa=vacancy-description]",
-        "[data-qa=skills-element]",
-        "[data-qa=vacancy-experience]",
-        "[data-qa=vacancy-view-employment-mode]",
-        "[data-qa=common-employer-view-title]",
-    ]
-    for sel in selectors:
-        try:
-            for loc in page.locator(sel).all():
-                txt = (loc.inner_text(timeout=2000) or "").strip()
-                if txt:
-                    parts.append(txt)
-        except Exception:
-            continue
-    return "\n".join(parts)
+
+    def add_section(label: str, selectors: list[str]) -> None:
+        collected: list[str] = []
+        for sel in selectors:
+            try:
+                for loc in page.locator(sel).all():
+                    txt = (loc.inner_text(timeout=2000) or "").strip()
+                    if txt:
+                        collected.append(txt)
+            except Exception:
+                continue
+        if not collected:
+            return
+        unique: list[str] = []
+        seen: set[str] = set()
+        for txt in collected:
+            norm = " ".join(txt.split())
+            if not norm or norm in seen:
+                continue
+            seen.add(norm)
+            unique.append(txt)
+        if unique:
+            parts.append(f"{label}:\n" + "\n".join(unique))
+
+    add_section("Название вакансии", ["[data-qa=vacancy-title]"])
+    add_section("Компания", ["[data-qa=common-employer-view-title]", "[data-qa=vacancy-company-name]"])
+    add_section("Зарплата", ["[data-qa=vacancy-salary]"])
+    add_section("Опыт", ["[data-qa=vacancy-experience]"])
+    add_section("Формат работы", ["[data-qa=vacancy-view-employment-mode]"])
+    add_section("Ключевые навыки", ["[data-qa=skills-element]"])
+    add_section("Описание вакансии", ["[data-qa=vacancy-description]"])
+
+    try:
+        main_text = page.locator("main").inner_text(timeout=5000).strip()
+    except Exception:
+        main_text = ""
+    if main_text:
+        main_text = main_text[:12_000].strip()
+        parts.append("Полный текст страницы:\n" + main_text)
+
+    return "\n\n".join(parts)
 
 
 def already_applied(page: Page) -> bool:
@@ -396,6 +420,30 @@ def _human_type(loc: Locator, text: str) -> None:
         time.sleep(random.uniform(0.05, 0.2))
 
 
+def _natural_scroll(page: Page, *, steps: int = 4) -> None:
+    """Немного прокручиваем страницу, чтобы имитировать чтение вакансии."""
+    try:
+        page.locator("body").hover(timeout=1000)
+    except Exception:
+        pass
+
+    for _ in range(steps):
+        delta = random.randint(240, 840)
+        if random.random() < 0.25:
+            delta = -random.randint(100, 220)
+        try:
+            page.mouse.wheel(0, delta)
+        except Exception:
+            try:
+                page.evaluate(
+                    "(dy) => window.scrollBy({ top: dy, left: 0, behavior: 'auto' })",
+                    delta,
+                )
+            except Exception:
+                pass
+        time.sleep(random.uniform(0.25, 0.8))
+
+
 def _wait_for_modal(page: Page, timeout_ms: int = 10_000) -> bool:
     """Ждём появления модалки/диалога отклика."""
     modal_selectors = [
@@ -453,6 +501,7 @@ def apply_to_vacancy(
     if dry_run:
         return ApplyResult.SENT, "DRY RUN: до клика 'Откликнуться' не дошли"
 
+    _natural_scroll(page)
     log.info("Готовлю сопроводительное письмо...")
     time.sleep(random.uniform(2.0, 5.0))
 

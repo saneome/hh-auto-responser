@@ -218,6 +218,10 @@ def run(
             telegram=rc.telegram,
             github=rc.github,
             pretend_experience=rc.pretend_experience,
+            vacancy_title=name,
+            employer=employer,
+            vacancy_url=url,
+            vacancy_text=text,
         )
 
         if not first_apply:

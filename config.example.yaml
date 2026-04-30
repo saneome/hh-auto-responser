@@ -46,6 +46,7 @@ search:
 
 # Сопроводительное письмо
 cover_letter:
+  # Письмо собирается через NVIDIA NIM, если в .env задан NIM_API_KEY.
   # Если true — в письмо подставится фраза про опыт 1–2 года (для прохождения ATS)
   pretend_experience: false
   telegram: "t.me/alexaneodev"
