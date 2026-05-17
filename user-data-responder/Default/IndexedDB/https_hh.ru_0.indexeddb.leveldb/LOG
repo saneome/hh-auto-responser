@@ -1,0 +1,14 @@
+2026/05/18-01:23:55.306 10ec8 Reusing MANIFEST /home/xaneodev/hh-auto-response/user-data-responder/Default/IndexedDB/https_hh.ru_0.indexeddb.leveldb/MANIFEST-000001
+2026/05/18-01:23:55.307 10ec8 Recovering log #764
+2026/05/18-01:23:55.307 10ec8 Reusing old log /home/xaneodev/hh-auto-response/user-data-responder/Default/IndexedDB/https_hh.ru_0.indexeddb.leveldb/000764.log 
+2026/05/18-01:23:55.307 10ec8 Delete type=2 #762
+2026/05/18-01:23:55.493 10ec8 Level-0 table #769: started
+2026/05/18-01:23:55.495 10ec8 Level-0 table #769: 1382 bytes OK
+2026/05/18-01:23:55.498 10ec8 Delete type=0 #764
+2026/05/18-01:23:55.498 10ec8 Manual compaction at level-0 from '\x00\xc4\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\xc5\x00\x00\x00' @ 0 : 0; will stop at '\x00\xc4\x01\x03\x03\x00\x00\x00\x00\x00\x00\xf0?' @ 17502 : 1
+2026/05/18-01:23:55.498 10ec8 Compacting 1@0 + 1@1 files
+2026/05/18-01:23:55.502 10ec8 Generated table #770@0: 219 keys, 4733 bytes
+2026/05/18-01:23:55.502 10ec8 Compacted 1@0 + 1@1 files => 4733 bytes
+2026/05/18-01:23:55.504 10ec8 compacted to: files[ 0 1 1 0 0 0 0 ]
+2026/05/18-01:23:55.505 10ec8 Delete type=2 #769
+2026/05/18-01:23:55.505 10ec8 Manual compaction at level-0 from '\x00\xc4\x01\x03\x03\x00\x00\x00\x00\x00\x00\xf0?' @ 17502 : 1 .. '\x00\xc5\x00\x00\x00' @ 0 : 0; will stop at (end)

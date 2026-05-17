@@ -6,30 +6,29 @@ import re
 from textwrap import dedent
 
 from .filters import StackMatch
-from .nim_client import NimClientError, get_nim_client
+from .profile import CandidateProfile
+from .nim_client import LLMError, get_nim_client
 
 
 log = logging.getLogger("hh_auto.cover_letter")
 
 
-SYSTEM_PROMPT = dedent(
+STATIC_SYSTEM_PROMPT = dedent(
     """
-    Ты пишешь сопроводительные письма для отклика на hh.ru от лица Дидоренко Александра Святославовича.
+    Ты — кандидат на вакансию. Пишешь сопроводительное письмо для отклика на hh.ru.
 
-    Подтверждённый профиль по проекту:
-    - Python backend: Django, FastAPI, Flask
-    - Java backend: Spring, Kotlin
-    - Rust backend: Actix, Axum, Tokio
-    - Frontend: React, Vue, HTML, CSS, JavaScript, SCSS
-    - Real-time и media: WebSocket, WebRTC, RTMP, HLS, TURN/coTURN
-    - Проекты: мессенджер на Django + WebSocket + WebRTC; стриминговая платформа на FastAPI + WebSocket + RTMP + HLS; платформа для хакатонов на Rust + WebSocket + Vue
-    - Соревновательный опыт: 10 место из 138 команд на Wink AI Challenge; 26 место из 400 команд на IT Purple Hack
+    КРИТИЧЕСКИ ВАЖНО:
+    - Пиши ОТ ПЕРВОГО ЛИЦА кандидата: "я работаю с", "мой опыт включает", "я использую".
+    - НЕ ПИШИ от лица HR, рекрутера, работодателя или третьего лица.
+    - НЕ ПИШИ "Ваше резюме", "Мы рады", "Приглашаем" — это не кандидат.
+    - НЕ ПИШИ "я учу/изучаю Python" — это создаёт впечатление, что ты не умеешь. Вместо этого: "я работаю с Python", "мой стек включает Python", "у меня есть опыт с FastAPI и Django".
 
     Правила:
-    - Пиши по-русски, от первого лица, живо и конкретно.
-    - Используй только подтверждённые навыки и факты из этого профиля и текста вакансии.
+    - Пиши по-русски, живо и конкретно.
+    - Используй только подтверждённые навыки и факты из профиля кандидата и текста вакансии.
     - Не выдумывай компании, должности, коммерческий опыт или достижения.
     - Подстраивай письмо под требования страницы: знания, обязанности, soft skills, стек, формат работы.
+    - Город кандидата пиши в правильном падеже: "из Москвы", "из Питера", "из Казани", а не "из Москва".
     - Не делай списки, заголовки, псевдоструктуру или пояснения к ответу.
     - Верни только готовый текст письма, 3-5 коротких абзацев.
     """
@@ -104,12 +103,20 @@ def _opening(stack: StackMatch) -> str:
 def _build_local_cover_letter(
     stack: StackMatch,
     *,
+    profile: CandidateProfile | None = None,
     telegram: str,
     github: str,
     pretend_experience: bool = False,
 ) -> str:
+    profile_name = profile.full_name if profile else ""
+    if profile_name:
+        header = f"Здравствуйте! Меня зовут {profile_name}."
+    else:
+        header = _opening(stack)
     parts: list[str] = []
-    parts.append(_opening(stack))
+    parts.append(header)
+    if profile and profile.city:
+        parts.append(f"Я из {profile.city} и ищу подходящую роль по профилю вакансии.")
     parts.append("")
     parts.append("Что делал сам — pet-проекты:")
     parts.extend(_select_projects(stack))
@@ -121,8 +128,12 @@ def _build_local_cover_letter(
             "По опыту коммерческой разработки — порядка 1–2 лет в части backend-задач "
             "(подробности готов обсудить при звонке)."
         )
-    parts.append("")
-    parts.append(f"Связь: {telegram}, код — {github}.")
+    contact_lines = profile.contact_lines() if profile else []
+    if not contact_lines:
+        contact_lines = [line for line in [f"Telegram: {telegram}" if telegram else "", f"GitHub: {github}" if github else ""] if line]
+    if contact_lines:
+        parts.append("")
+        parts.append("Связь: " + "; ".join(contact_lines))
     parts.append("Готов созвониться и показать код подробнее. Спасибо за внимание!")
     return "\n".join(parts).strip()
 
@@ -137,6 +148,7 @@ def _truncate_text(text: str, limit: int = 12_000) -> str:
 def _build_user_prompt(
     stack: StackMatch,
     *,
+    profile: CandidateProfile,
     vacancy_title: str,
     employer: str,
     vacancy_url: str,
@@ -147,6 +159,12 @@ def _build_user_prompt(
 ) -> str:
     lines: list[str] = []
     lines.append("Это контекст страницы вакансии hh.ru.")
+    lines.append("Профиль кандидата:")
+    lines.append(profile.prompt_summary())
+    lines.append("")
+    if profile.contact_lines():
+        lines.append("Контакты для связи: " + "; ".join(profile.contact_lines()))
+        lines.append("")
     if vacancy_title:
         lines.append(f"Название: {vacancy_title}")
     if employer:
@@ -172,8 +190,34 @@ def _build_user_prompt(
         )
     else:
         lines.append("Коммерческий опыт не упоминай.")
-    lines.append(f"В конце обязательно добавь контакты: Telegram — {telegram}; GitHub — {github}.")
+    contact_lines = profile.contact_lines()
+    if contact_lines:
+        lines.append("В конце обязательно добавь контакты: " + "; ".join(contact_lines) + ".")
+    else:
+        lines.append(f"В конце обязательно добавь контакты: Telegram — {telegram}; GitHub — {github}.")
+    lines.append("")
+    lines.append(
+        "ВАЖНО: В конце письма коротко попроси дать оплачиваемое тестовое задание. "
+        "Например: 'Буду рад показать навыки на практике — готов к оплачиваемому тестовому заданию'. "
+        "Не навязывайся, но покажи готовность доказать себя делом."
+    )
     return "\n".join(lines).strip()
+
+
+def _build_system_prompt(profile: CandidateProfile) -> str:
+    return dedent(
+        f"""
+        {STATIC_SYSTEM_PROMPT}
+
+        Профиль кандидата:
+        {profile.prompt_summary()}
+
+        Дополнительные правила:
+        - Если вакансия просит конкретные знания, подчёркивай только те из них, что есть в профиле.
+        - Если вакансия подходит по формату работы или зарплате, это можно аккуратно отразить.
+        - В письме должно ощущаться, что кандидат читает именно эту вакансию, а не пишет шаблон.
+        """
+    ).strip()
 
 
 def _cleanup_generated_text(text: str) -> str:
@@ -189,6 +233,7 @@ def _cleanup_generated_text(text: str) -> str:
 def build_cover_letter(
     stack: StackMatch,
     *,
+    profile: CandidateProfile | None = None,
     telegram: str,
     github: str,
     pretend_experience: bool = False,
@@ -197,10 +242,12 @@ def build_cover_letter(
     vacancy_url: str = "",
     vacancy_text: str = "",
 ) -> str:
+    active_profile = profile or CandidateProfile(telegram=telegram, github=github)
     nim_client = get_nim_client()
     if nim_client is None:
         return _build_local_cover_letter(
             stack,
+            profile=active_profile,
             telegram=telegram,
             github=github,
             pretend_experience=pretend_experience,
@@ -208,6 +255,7 @@ def build_cover_letter(
 
     user_prompt = _build_user_prompt(
         stack,
+        profile=active_profile,
         vacancy_title=vacancy_title,
         employer=employer,
         vacancy_url=vacancy_url,
@@ -219,13 +267,14 @@ def build_cover_letter(
 
     try:
         generated = nim_client.chat_completion(
-            system_prompt=SYSTEM_PROMPT,
+            system_prompt=_build_system_prompt(active_profile),
             user_prompt=user_prompt,
         )
-    except NimClientError as exc:
+    except LLMError as exc:
         log.warning("NIM недоступен, использую локальный шаблон: %s", exc)
         return _build_local_cover_letter(
             stack,
+            profile=active_profile,
             telegram=telegram,
             github=github,
             pretend_experience=pretend_experience,
@@ -236,6 +285,7 @@ def build_cover_letter(
         log.warning("NIM вернул пустой текст, использую локальный шаблон.")
         return _build_local_cover_letter(
             stack,
+            profile=active_profile,
             telegram=telegram,
             github=github,
             pretend_experience=pretend_experience,

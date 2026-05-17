@@ -1,7 +1,12 @@
-"""NVIDIA NIM client for OpenAI-compatible chat completions."""
+"""LLM client for OpenAI-compatible chat completions with BYOK support.
+
+Default: qwen/qwen3.5-122b-a10b via NVIDIA NIM.
+Bring-your-own-key: GPT, Claude, Gemini, or any OpenAI-compatible API.
+"""
 from __future__ import annotations
 
 import json
+import logging
 import os
 from dataclasses import dataclass
 from functools import lru_cache
@@ -9,13 +14,101 @@ from pathlib import Path
 from typing import Any
 from urllib import error, request
 
+log = logging.getLogger("hh_auto.llm")
 
 DEFAULT_BASE_URL = "https://integrate.api.nvidia.com/v1"
-DEFAULT_MODEL = "qwen/qwen3.5-122b-a10b"
+DEFAULT_MODEL = "mistralai/mistral-medium-3.5-128b"
+
+# Best-effort header asking providers not to use data for training.
+# Supported by some providers (e.g. Anthropic, OpenAI org-level).
+# NVIDIA NIM may ignore it, but we send it as a signal.
+DO_NOT_TRAIN_HEADER = ("X-Do-Not-Train", "true")
 
 
-class NimClientError(RuntimeError):
+class LLMError(RuntimeError):
     pass
+
+
+@dataclass(frozen=True)
+class LLMClient:
+    api_key: str
+    base_url: str = DEFAULT_BASE_URL
+    model: str = DEFAULT_MODEL
+    timeout_seconds: int = 120
+    temperature: float = 0.5
+    max_tokens: int = 700
+    do_not_train: bool = True
+
+    def _headers(self) -> dict[str, str]:
+        h = {
+            "Authorization": f"Bearer {self.api_key}",
+            "Content-Type": "application/json",
+            "Accept": "application/json",
+        }
+        if self.do_not_train:
+            h["x-do-not-train"] = "true"
+            h["X-Do-Not-Train"] = "true"
+        return h
+
+    def chat_completion(self, *, system_prompt: str, user_prompt: str) -> str:
+        url = self.base_url.rstrip("/") + "/chat/completions"
+        payload: dict[str, Any] = {
+            "model": self.model,
+            "messages": [
+                {"role": "system", "content": system_prompt},
+                {"role": "user", "content": user_prompt},
+            ],
+            "temperature": self.temperature,
+            "max_tokens": self.max_tokens,
+            "stream": False,
+        }
+        req = request.Request(
+            url,
+            data=json.dumps(payload).encode("utf-8"),
+            headers=self._headers(),
+            method="POST",
+        )
+        last_exc: Exception | None = None
+        for attempt in range(3):
+            try:
+                with request.urlopen(req, timeout=self.timeout_seconds) as resp:
+                    raw = resp.read().decode("utf-8")
+                break
+            except error.HTTPError as exc:
+                body = exc.read().decode("utf-8", errors="replace")[:500]
+                raise LLMError(f"HTTP {exc.code} from LLM: {body}") from exc
+            except Exception as exc:
+                last_exc = exc
+                log.warning("LLM request attempt %d/%d failed: %s", attempt + 1, 3, exc)
+                if attempt < 2:
+                    import time
+                    time.sleep(3)
+        else:
+            raise LLMError(f"LLM request failed after 3 attempts: {last_exc}") from last_exc
+
+        try:
+            response = json.loads(raw)
+        except Exception as exc:
+            raise LLMError(f"LLM returned invalid JSON: {raw[:500]}") from exc
+
+        choices = response.get("choices")
+        if not choices or not isinstance(choices, list):
+            raise LLMError(f"LLM response has no choices: {response}")
+
+        message = choices[0].get("message", {})
+        if isinstance(message, dict):
+            content = message.get("content")
+            if content is not None:
+                return str(content)
+            reasoning = message.get("reasoning_content")
+            if reasoning is not None:
+                return str(reasoning)
+            raise LLMError(f"LLM response has unexpected message content: {message}")
+
+        if isinstance(message, str):
+            return message
+
+        raise LLMError(f"LLM response has unexpected message content: {message}")
 
 
 def _parse_env_file(path: Path) -> dict[str, str]:
@@ -66,96 +159,44 @@ def load_nim_settings() -> dict[str, str]:
     return settings
 
 
-@dataclass(frozen=True)
-class NimClient:
-    api_key: str
-    base_url: str = DEFAULT_BASE_URL
-    model: str = DEFAULT_MODEL
-    timeout_seconds: int = 60
-    temperature: float = 0.5
-    max_tokens: int = 700
-
-    def chat_completion(self, *, system_prompt: str, user_prompt: str) -> str:
-        url = self.base_url.rstrip("/") + "/chat/completions"
-        payload = {
-            "model": self.model,
-            "messages": [
-                {"role": "system", "content": system_prompt},
-                {"role": "user", "content": user_prompt},
-            ],
-            "temperature": self.temperature,
-            "max_tokens": self.max_tokens,
-            "stream": False,
-        }
-        data = json.dumps(payload, ensure_ascii=False).encode("utf-8")
-        req = request.Request(
-            url,
-            data=data,
-            method="POST",
-            headers={
-                "Authorization": f"Bearer {self.api_key}",
-                "Content-Type": "application/json",
-                "Accept": "application/json",
-            },
-        )
-        try:
-            with request.urlopen(req, timeout=self.timeout_seconds) as resp:
-                raw = resp.read().decode("utf-8", errors="replace")
-        except error.HTTPError as exc:
-            body = ""
-            try:
-                body = exc.read().decode("utf-8", errors="replace")
-            except Exception:
-                body = str(exc)
-            raise NimClientError(f"HTTP {exc.code} from NIM: {body}") from exc
-        except error.URLError as exc:
-            raise NimClientError(f"NIM request failed: {exc}") from exc
-
-        try:
-            response: dict[str, Any] = json.loads(raw)
-        except json.JSONDecodeError as exc:
-            raise NimClientError(f"NIM returned invalid JSON: {raw[:500]}") from exc
-
-        choices = response.get("choices") or []
-        if not choices:
-            raise NimClientError(f"NIM response has no choices: {response}")
-        message = choices[0].get("message") or {}
-        content = message.get("content")
-        if isinstance(content, str):
-            return content.strip()
-        if isinstance(content, list):
-            parts: list[str] = []
-            for item in content:
-                if isinstance(item, dict):
-                    text = item.get("text") or item.get("content") or ""
-                    if text:
-                        parts.append(str(text))
-                elif item:
-                    parts.append(str(item))
-            return "".join(parts).strip()
-        raise NimClientError(f"NIM response has unexpected message content: {message}")
-
-
-@lru_cache(maxsize=1)
-def get_nim_client() -> NimClient | None:
+def get_client_from_settings(
+    api_key: str | None = None,
+    base_url: str | None = None,
+    model: str | None = None,
+    do_not_train: bool = True,
+) -> LLMClient | None:
     settings = load_nim_settings()
-    api_key = (
-        settings.get("NIM_API_KEY")
-        or settings.get("NVIDIA_API_KEY")
-        or settings.get("NGC_API_KEY")
-    )
-    if not api_key:
+
+    key = api_key
+    if not key:
+        key = (
+            settings.get("LLM_API_KEY")
+            or settings.get("OPENAI_API_KEY")
+            or settings.get("NIM_API_KEY")
+            or settings.get("NVIDIA_API_KEY")
+            or settings.get("NGC_API_KEY")
+        )
+    if not key:
         return None
-    base_url = settings.get("NIM_BASE_URL", DEFAULT_BASE_URL)
-    model = settings.get("NIM_MODEL", DEFAULT_MODEL)
-    timeout_seconds = int(float(settings.get("NIM_TIMEOUT_SECONDS", "60")))
+
+    url = base_url or settings.get("LLM_BASE_URL") or settings.get("NIM_BASE_URL") or DEFAULT_BASE_URL
+    mdl = model or settings.get("LLM_MODEL") or settings.get("NIM_MODEL") or DEFAULT_MODEL
+
     temperature = float(settings.get("NIM_TEMPERATURE", "0.5"))
     max_tokens = int(float(settings.get("NIM_MAX_TOKENS", "700")))
-    return NimClient(
-        api_key=api_key,
-        base_url=base_url,
-        model=model,
+    timeout_seconds = int(float(settings.get("NIM_TIMEOUT_SECONDS", "60")))
+
+    return LLMClient(
+        api_key=key,
+        base_url=url,
+        model=mdl,
         timeout_seconds=timeout_seconds,
         temperature=temperature,
         max_tokens=max_tokens,
+        do_not_train=do_not_train,
     )
+
+
+# Backward-compatible alias
+def get_nim_client() -> LLMClient | None:
+    return get_client_from_settings()

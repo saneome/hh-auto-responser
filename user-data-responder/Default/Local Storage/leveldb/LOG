@@ -1,0 +1,5 @@
+2026/05/18-01:27:02.963 1127b Reusing MANIFEST /home/xaneodev/hh-auto-response/user-data-responder/Default/Local Storage/leveldb/MANIFEST-000001
+2026/05/18-01:27:02.968 1127b Recovering log #750
+2026/05/18-01:27:02.968 1127b Level-0 table #754: started
+2026/05/18-01:27:02.971 1127b Level-0 table #754: 11240 bytes OK
+2026/05/18-01:27:02.974 1127b Delete type=0 #750

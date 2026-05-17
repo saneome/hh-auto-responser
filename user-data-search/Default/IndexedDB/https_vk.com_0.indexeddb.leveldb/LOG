@@ -1,0 +1,7 @@
+2026/05/18-00:13:53.363 c65f Reusing MANIFEST /home/xaneodev/hh-auto-response/user-data-search/Default/IndexedDB/https_vk.com_0.indexeddb.leveldb/MANIFEST-000001
+2026/05/18-00:13:53.363 c65f Recovering log #3
+2026/05/18-00:13:53.364 c65f Reusing old log /home/xaneodev/hh-auto-response/user-data-search/Default/IndexedDB/https_vk.com_0.indexeddb.leveldb/000003.log 
+2026/05/18-00:14:04.618 c661 Level-0 table #5: started
+2026/05/18-00:14:04.620 c661 Level-0 table #5: 2315 bytes OK
+2026/05/18-00:14:04.623 c661 Delete type=0 #3
+2026/05/18-00:14:04.629 c661 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

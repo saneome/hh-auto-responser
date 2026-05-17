@@ -1,0 +1,6 @@
+2026/05/17-14:26:20.862 1273 Creating DB /home/xaneodev/hh-auto-response/user-data-search/Default/IndexedDB/https_vkvideo.ru_0.indexeddb.leveldb since it was missing.
+2026/05/17-14:26:20.871 1273 Reusing MANIFEST /home/xaneodev/hh-auto-response/user-data-search/Default/IndexedDB/https_vkvideo.ru_0.indexeddb.leveldb/MANIFEST-000001
+2026/05/17-14:27:10.925 1276 Level-0 table #5: started
+2026/05/17-14:27:10.927 1276 Level-0 table #5: 1828 bytes OK
+2026/05/17-14:27:10.930 1276 Delete type=0 #3
+2026/05/17-14:27:10.931 1276 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

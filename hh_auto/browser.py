@@ -17,6 +17,7 @@ from urllib.parse import urlencode
 
 from playwright.sync_api import (
     BrowserContext,
+    Error as PWError,
     Locator,
     Page,
     TimeoutError as PWTimeout,
@@ -28,6 +29,28 @@ log = logging.getLogger("hh_auto.browser")
 
 HH_BASE = "https://hh.ru"
 SEARCH_URL = f"{HH_BASE}/search/vacancy"
+
+
+class BrowserClosedError(RuntimeError):
+    """Raised when the user closes the browser window during automation."""
+
+
+def _is_browser_disconnected(exc: PWError) -> bool:
+    msg = str(exc).lower()
+    return any(
+        token in msg
+        for token in (
+            "browser has been closed",
+            "browser closed",
+            "disconnected",
+            "target closed",
+            "context destroyed",
+            "page closed",
+            "browser context has been",
+            "err_aborted",
+            "aborted",
+        )
+    )
 
 
 @dataclass
@@ -71,8 +94,18 @@ def open_browser(cfg: BrowserConfig) -> Iterator[BrowserContext]:
         ctx.add_init_script(
             "Object.defineProperty(navigator, 'webdriver', {get: () => undefined});"
         )
+        # Блокируем баннеры и метрики — они не нужны боту и иногда падают с BadRequest
+        def _block_route(route, _):
+            route.abort()
+        ctx.route("**/*banner*", _block_route)
+        ctx.route("**/*metric*", _block_route)
+        ctx.route("**/*ads*", _block_route)
         try:
             yield ctx
+        except PWError as e:
+            if _is_browser_disconnected(e):
+                raise BrowserClosedError(str(e)) from e
+            raise
         finally:
             try:
                 ctx.close()
@@ -128,12 +161,38 @@ def _check_login_indicators(page: Page) -> bool:
 
 
 def is_logged_in(page: Page) -> bool:
-    """Открывает hh.ru и проверяет, залогинены ли мы."""
+    """Открывает /applicant/negotiations и проверяет, залогинены ли мы."""
     try:
-        page.goto(HH_BASE, wait_until="domcontentloaded")
+        page.goto(f"{HH_BASE}/applicant/negotiations", wait_until="domcontentloaded")
+    except PWError as e:
+        if _is_browser_disconnected(e):
+            raise BrowserClosedError("Браузер закрыт при проверке авторизации") from e
+        return False
     except PWTimeout:
         return False
-    return _check_login_indicators(page)
+    # Если нас редиректнуло на страницу логина — точно не залогинены
+    url = page.url.lower()
+    if "/account/login" in url or "/login" in url:
+        return False
+
+    # Ищем явные признаки авторизации (кнопка "Выйти" или меню соискателя).
+    # Просто проверять URL недостаточно — hh.ru может показать страницу
+    # переписок и незалогиненному пользователю с предложением войти.
+    js = """
+    () => {
+        const logout = document.querySelector('[data-qa="mainmenu_logout"], a[href*="logout"], a[href*="exit"]');
+        if (logout) return true;
+        const menu = document.querySelector('[data-qa="mainmenu_applicantProfile"], [data-qa="mainmenu_myResumes"], [data-qa="mainmenu_applicantNegotiations"]');
+        if (menu) return true;
+        const bodyText = document.body ? document.body.innerText.toLowerCase() : '';
+        if (bodyText.includes('выйти') && !bodyText.includes('войти с паролем')) return true;
+        return false;
+    }
+    """
+    try:
+        return page.evaluate(js)
+    except Exception:
+        return False
 
 
 def ensure_logged_in(ctx: BrowserContext, cfg: BrowserConfig, login_timeout_seconds: int) -> None:
@@ -151,7 +210,12 @@ def ensure_logged_in(ctx: BrowserContext, cfg: BrowserConfig, login_timeout_seco
         "(включая капчу/SMS, если попросит). Жду до %d секунд.",
         login_timeout_seconds,
     )
-    page.goto(f"{HH_BASE}/account/login", wait_until="domcontentloaded")
+    try:
+        page.goto(f"{HH_BASE}/account/login", wait_until="domcontentloaded")
+    except PWError as e:
+        if _is_browser_disconnected(e):
+            raise BrowserClosedError("Браузер закрыт на странице логина") from e
+        raise
     deadline = time.time() + login_timeout_seconds
     checks = 0
     while time.time() < deadline:
@@ -162,11 +226,20 @@ def ensure_logged_in(ctx: BrowserContext, cfg: BrowserConfig, login_timeout_seco
             try:
                 current_url = page.url
                 log.info("Ожидание логина... Текущий URL: %s", current_url)
+            except PWError as e:
+                if _is_browser_disconnected(e):
+                    raise BrowserClosedError("Браузер закрыт во время ожидания логина") from e
+                pass
             except Exception:
                 pass
-        if _check_login_indicators(page):
-            log.info("Логин успешен. Сессия сохранена в %s.", cfg.user_data_dir)
-            return
+        try:
+            if _check_login_indicators(page):
+                log.info("Логин успешен. Сессия сохранена в %s.", cfg.user_data_dir)
+                return
+        except PWError as e:
+            if _is_browser_disconnected(e):
+                raise BrowserClosedError("Браузер закрыт во время ожидания логина") from e
+            pass
     # Таймаут — сделаем скриншот чтобы понять что видел скрипт
     screenshot(page, cfg, "login_timeout")
     raise RuntimeError(
@@ -225,6 +298,11 @@ def iter_search_results(
         log.info("Поиск: %s", url)
         try:
             page.goto(url, wait_until="domcontentloaded")
+        except PWError as e:
+            if _is_browser_disconnected(e):
+                raise BrowserClosedError("Браузер закрыт во время поиска") from e
+            log.warning("Ошибка открытия страницы поиска: %s", e)
+            break
         except PWTimeout:
             log.warning("Таймаут открытия страницы поиска")
             break
@@ -286,7 +364,12 @@ def _extract_search_items(page: Page) -> list[dict]:
 
 
 def get_vacancy_page_text(page: Page, vacancy_url: str) -> str:
-    page.goto(vacancy_url, wait_until="domcontentloaded")
+    try:
+        page.goto(vacancy_url, wait_until="domcontentloaded")
+    except PWError as e:
+        if _is_browser_disconnected(e):
+            raise BrowserClosedError("Браузер закрыт при переходе на вакансию") from e
+        raise
     try:
         page.wait_for_selector(
             "[data-qa=vacancy-description], [data-qa=vacancy-title]",
@@ -372,6 +455,7 @@ def _find_letter_textarea(page: Page):
         "[data-qa=vacancy-response-popup-form-letter-input]",
         "textarea[data-qa*=letter]",
         "textarea[name=letter]",
+        ".magritte-textarea-position-container___cEpbv_3-3-18 textarea",
         ".magritte-textarea-position-container___cEpbv_3-3-14 textarea",
         "[class*=magritte-textarea-position-container] textarea",
         "div[role=dialog] textarea",
@@ -390,12 +474,17 @@ def _find_letter_textarea(page: Page):
 def _try_show_letter_field(page: Page) -> None:
     toggles = [
         "[data-qa=vacancy-response-letter-toggle]",
-        ".magritte-button-view___53Slm_7-2-1:has-text('сопроводительное')",
-        "[class*=magritte-button-view]:has-text('сопроводительное')",
+        "[class*=horizontal-actions-container] button:has-text('сопроводительное')",
+        "[class*=horizontal-actions-container] button:has-text('Сопроводительное')",
+        "button:has-text('Добавить сопроводительное')",
+        "button:has-text('добавить сопроводительное')",
+        "[class*=button-view]:has-text('сопроводительное')",
+        "[class*=button-view]:has-text('Сопроводительное')",
         "button:has-text('Сопроводительное')",
+        "button:has-text('сопроводительное')",
         "a:has-text('Сопроводительное письмо')",
     ]
-    _click_first_visible(page, toggles, timeout_ms=1500)
+    _click_first_visible(page, toggles, timeout_ms=5000)
 
 
 def _human_type(loc: Locator, text: str) -> None:
@@ -487,16 +576,15 @@ def apply_to_vacancy(
     dry_run: bool = False,
 ) -> tuple[str, str]:
     """Возвращает (результат, описание). Результаты см. ApplyResult."""
-    page.goto(vacancy_url, wait_until="domcontentloaded")
+    try:
+        page.goto(vacancy_url, wait_until="domcontentloaded")
+    except PWError as e:
+        if _is_browser_disconnected(e):
+            raise BrowserClosedError("Браузер закрыт при открытии вакансии") from e
+        raise
 
     if already_applied(page):
         return ApplyResult.ALREADY, "уже откликались"
-
-    try:
-        if page.get_by_text("Тестовое задание", exact=False).count() > 0:
-            return ApplyResult.SKIPPED_TEST, "вакансия с тестовым заданием"
-    except Exception:
-        pass
 
     if dry_run:
         return ApplyResult.SENT, "DRY RUN: до клика 'Откликнуться' не дошли"
@@ -505,14 +593,18 @@ def apply_to_vacancy(
     log.info("Готовлю сопроводительное письмо...")
     time.sleep(random.uniform(2.0, 5.0))
 
+    # Проверка что мы на правильной странице вакансии
+    expected_vid = vacancy_url.rstrip("/").split("/")[-1].split("?")[0]
+    current_url = page.url
+    if expected_vid not in current_url:
+        return ApplyResult.SKIPPED_OTHER, "редирект на другую страницу"
+
     respond_clicked = _click_first_visible(
         page,
         [
             "[data-qa=vacancy-response-link-top]",
             "[data-qa=vacancy-response-link-view-top]",
             "a[data-qa^=vacancy-response-link]",
-            "button:has-text('Откликнуться')",
-            "a:has-text('Откликнуться')",
         ],
         timeout_ms=5000,
     )
@@ -526,25 +618,27 @@ def apply_to_vacancy(
         # Может быть редирект на отдельную страницу — проверим
         time.sleep(random.uniform(1.0, 2.0))
         screenshot(page, cfg, "after_respond_click")
+        # Если модалка не появилась и на странице нет диалога — скорее всего
+        # открылась полная форма отклика с множеством полей. Пропускаем.
+        try:
+            has_dialog = page.locator("div[role=dialog]").count() > 0
+        except Exception:
+            has_dialog = False
+        if not has_dialog:
+            return ApplyResult.SKIPPED_OTHER, "полная форма отклика (не модалка)"
     else:
         time.sleep(random.uniform(0.5, 1.0))
 
-    # Если перекинуло на отдельную страницу/попап с тестовым — пропускаем
-    try:
-        body_text = page.locator("body").inner_text(timeout=3000).lower()
-    except Exception:
-        body_text = ""
-    if "тестовое задание" in body_text and "обязательно" in body_text:
-        return ApplyResult.SKIPPED_TEST, "после клика попросили тестовое задание"
+    # NOTE: раньше здесь была проверка "тестовое задание" по тексту модалки,
+    # но она ложно срабатывала на описание вакансии внутри модалки.
+    # Если модалка содержит тестовое задание — textarea не появится
+    # и агент просто не отправит отклик (что видно в логе).
 
-    # Если есть выбор резюме — подтвердить первое доступное (или кнопка "Откликнуться" в модалке)
+    # Если есть выбор резюме — выбрать первое (НЕ отправляем пока)
     _click_first_visible(
         page,
         [
             "[data-qa=vacancy-response-resume-selector] >> nth=0",
-            "[data-qa=vacancy-response-submit-popup]",
-            "button:has-text('Откликнуться')",
-            "button:has-text('Продолжить')",
         ],
         timeout_ms=3000,
     )

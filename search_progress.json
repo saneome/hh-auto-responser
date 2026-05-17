@@ -1,0 +1,900 @@
+{
+  "seen": {
+    "133156410": {
+      "ts": 1779054347,
+      "name": "ML програмист разработчик",
+      "employer": "North Side",
+      "query": "Python разработчик",
+      "reason": "query_mismatch"
+    },
+    "133156411": {
+      "ts": 1779054347,
+      "name": "ML програмист разработчик",
+      "employer": "North Side",
+      "query": "Python разработчик",
+      "reason": "query_mismatch"
+    },
+    "133156412": {
+      "ts": 1779054347,
+      "name": "ML програмист разработчик",
+      "employer": "North Side",
+      "query": "Python разработчик",
+      "reason": "query_mismatch"
+    },
+    "133156413": {
+      "ts": 1779054347,
+      "name": "ML програмист разработчик",
+      "employer": "North Side",
+      "query": "Python разработчик",
+      "reason": "query_mismatch"
+    },
+    "133156414": {
+      "ts": 1779054347,
+      "name": "ML програмист разработчик",
+      "employer": "North Side",
+      "query": "Python разработчик",
+      "reason": "query_mismatch"
+    },
+    "133172338": {
+      "ts": 1779054347,
+      "name": "Backend-разработчик",
+      "employer": "Баландина Карина Сергеевна",
+      "query": "Python разработчик",
+      "reason": "query_mismatch"
+    },
+    "89514991": {
+      "ts": 1779054347,
+      "name": "Middle frontend-разработчик",
+      "employer": "ООО Бизнес Технологии",
+      "query": "Python разработчик",
+      "reason": "query_mismatch"
+    },
+    "131040143": {
+      "ts": 1779054347,
+      "name": "ML Engineer (Medical Imaging)",
+      "employer": "ООО ГравиЛинк",
+      "query": "Python разработчик",
+      "reason": "not_dev_title"
+    },
+    "133170175": {
+      "ts": 1779054347,
+      "name": "Backend-разработчик",
+      "employer": "Cookies.Games",
+      "query": "Python разработчик",
+      "reason": "query_mismatch"
+    },
+    "133169818": {
+      "ts": 1779054347,
+      "name": "QA Automation Engineer (Python)",
+      "employer": "ПАО Московская Биржа",
+      "query": "Python разработчик",
+      "reason": "not_dev_title"
+    },
+    "132306710": {
+      "ts": 1779054347,
+      "name": "DevOps-инженер",
+      "employer": "ИдаПроджект",
+      "query": "Python разработчик",
+      "reason": "not_dev_title"
+    },
+    "130498605": {
+      "ts": 1779054347,
+      "name": "Инженер по безопасной разработке (AppSec)",
+      "employer": "Честный знак.рф",
+      "query": "Python разработчик",
+      "reason": "not_dev_title"
+    },
+    "133169550": {
+      "ts": 1779054347,
+      "name": "Senior Backend / Fullstack Developer (CRM + API + вычислительная логика)",
+      "employer": "ЛС",
+      "query": "Python разработчик",
+      "reason": "query_mismatch"
+    },
+    "132807106": {
+      "ts": 1779054347,
+      "name": "Вайб-кодер на Claude Code (AI + Marketplace API)",
+      "employer": "ИП Мищенко Илья Сергеевич",
+      "query": "Python разработчик",
+      "reason": "not_dev_title"
+    },
+    "132442344": {
+      "ts": 1779054347,
+      "name": "Системный аналитик DWH (Middle)",
+      "employer": "evrone.ru",
+      "query": "Python разработчик",
+      "reason": "not_dev_title"
+    },
+    "133101668": {
+      "ts": 1779054347,
+      "name": "Специалист по тестированию ПО",
+      "employer": "КАЗНАЧЕЙСКИЕ СИСТЕМЫ",
+      "query": "Python разработчик",
+      "reason": "not_dev_title"
+    },
+    "132299587": {
+      "ts": 1779054347,
+      "name": "Senior System Analyst",
+      "employer": "evrone.ru",
+      "query": "Python разработчик",
+      "reason": "not_dev_title"
+    },
+    "132926787": {
+      "ts": 1779054358,
+      "name": "Backend Python-разработчик в команду AI-агентов",
+      "employer": "Prooftech IT",
+      "query": "Python разработчик",
+      "reason": "стоп-слова в описании"
+    },
+    "132293894": {
+      "ts": 1779054358,
+      "name": "Разработчик C++ (Senior)",
+      "employer": "Rubius",
+      "query": "Python разработчик",
+      "reason": "query_mismatch"
+    },
+    "132883557": {
+      "ts": 1779054358,
+      "name": "Junior SRE engineer",
+      "employer": "OptiSystems",
+      "query": "Python разработчик",
+      "reason": "not_dev_title"
+    },
+    "133045953": {
+      "ts": 1779054358,
+      "name": "Game Analyst (GameDev)",
+      "employer": "ТОО MadOut Games",
+      "query": "Python разработчик",
+      "reason": "not_dev_title"
+    },
+    "133043127": {
+      "ts": 1779054358,
+      "name": "Application Security Engineer (AppSec)",
+      "employer": "АО Флант",
+      "query": "Python разработчик",
+      "reason": "not_dev_title"
+    },
+    "131924711": {
+      "ts": 1779054358,
+      "name": "Application Security инженер (SAST/SCA)",
+      "employer": "Swordfish Security",
+      "query": "Python разработчик",
+      "reason": "not_dev_title"
+    },
+    "132493801": {
+      "ts": 1779054358,
+      "name": "Схемотехник/Embedded разработчик. Ingenic T33 / Ingenic T41 / RV1106B",
+      "employer": "НПП ТехноЛаб",
+      "query": "Python разработчик",
+      "reason": "query_mismatch"
+    },
+    "130817312": {
+      "ts": 1779054358,
+      "name": "DevOps Linux / Kubernetes инженер",
+      "employer": "ООО РА Дельта",
+      "query": "Python разработчик",
+      "reason": "not_dev_title"
+    },
+    "132367510": {
+      "ts": 1779054358,
+      "name": "Специалист по нагрузочному тестированию (Performance QA)",
+      "employer": "Q1X",
+      "query": "Python разработчик",
+      "reason": "not_dev_title"
+    },
+    "132358802": {
+      "ts": 1779054358,
+      "name": "AI Engineer (Agents & Orchestration)",
+      "employer": "ООО Артсофт-Технологии",
+      "query": "Python разработчик",
+      "reason": "not_dev_title"
+    },
+    "133152388": {
+      "ts": 1779054368,
+      "name": "Python-разработчик (Middle+/Senior)",
+      "employer": "ООО Инконсалт",
+      "query": "Python разработчик",
+      "reason": "стоп-слова в описании"
+    },
+    "132177798": {
+      "ts": 1779054368,
+      "name": "Старший инженер технической поддержки пакетного ядра (PS Core)",
+      "employer": "ООО Телкор",
+      "query": "Python разработчик",
+      "reason": "not_dev_title"
+    },
+    "132877033": {
+      "ts": 1779054368,
+      "name": "Data Engineer",
+      "employer": "edna",
+      "query": "Python разработчик",
+      "reason": "not_dev_title"
+    },
+    "132856902": {
+      "ts": 1779054368,
+      "name": "Риск-аналитик (Prop Trading)",
+      "employer": "ADF Capital",
+      "query": "Python разработчик",
+      "reason": "not_dev_title"
+    },
+    "133150656": {
+      "ts": 1779054368,
+      "name": "Математик-разработчик",
+      "employer": "Ozon Tech",
+      "query": "Python разработчик",
+      "reason": "query_mismatch"
+    },
+    "133150416": {
+      "ts": 1779054368,
+      "name": "Инженер 3й линии поддержки (ИБ сервисы)",
+      "employer": "Солар",
+      "query": "Python разработчик",
+      "reason": "not_dev_title"
+    },
+    "133149990": {
+      "ts": 1779054368,
+      "name": "Fullstack QA Engineer (Hotcore)",
+      "employer": "Островок.Ostrovok!Tech",
+      "query": "Python разработчик",
+      "reason": "not_dev_title"
+    },
+    "133149868": {
+      "ts": 1779054368,
+      "name": "System analyst (Browsing)",
+      "employer": "ООО Звук",
+      "query": "Python разработчик",
+      "reason": "not_dev_title"
+    },
+    "132676781": {
+      "ts": 1779054368,
+      "name": "Риск-аналитик МФО",
+      "employer": "Praktika.Dev",
+      "query": "Python разработчик",
+      "reason": "not_dev_title"
+    },
+    "132676782": {
+      "ts": 1779054368,
+      "name": "Риск-аналитик МФО",
+      "employer": "Praktika.Dev",
+      "query": "Python разработчик",
+      "reason": "not_dev_title"
+    },
+    "133146449": {
+      "ts": 1779054478,
+      "name": "Инженер по автоматизации на Питон",
+      "employer": "Перфоманс Лаб",
+      "query": "Python разработчик",
+      "reason": "not_dev_title"
+    },
+    "128235301": {
+      "ts": 1779054478,
+      "name": "Специалист по управлению угрозами",
+      "employer": "DNS Технологии",
+      "query": "Python разработчик",
+      "reason": "not_dev_title"
+    },
+    "133130095": {
+      "ts": 1779054492,
+      "name": "Senior Python Developer (Payments)",
+      "employer": "ООО НООСФЕРА",
+      "query": "Python разработчик",
+      "reason": "стоп-слова в описании"
+    },
+    "131309401": {
+      "ts": 1779054492,
+      "name": "Архитектор ИТ",
+      "employer": "Холдинг «Аэропорты Регионов»",
+      "query": "Python разработчик",
+      "reason": "not_dev_title"
+    },
+    "132833929": {
+      "ts": 1779054492,
+      "name": "Frontend разработчик (middle+ / React / Next.js)",
+      "employer": "Туроператор Русь",
+      "query": "Python разработчик",
+      "reason": "query_mismatch"
+    },
+    "133128688": {
+      "ts": 1779054492,
+      "name": "DevOps (Avanpost CloudMFA)",
+      "employer": "Avanpost",
+      "query": "Python разработчик",
+      "reason": "not_dev_title"
+    },
+    "133128156": {
+      "ts": 1779054492,
+      "name": "Эксперт дисциплины “Количественные исследования и аналитика”",
+      "employer": "Национальный исследовательский Томский государственный университет",
+      "query": "Python разработчик",
+      "reason": "not_dev_title"
+    },
+    "132985587": {
+      "ts": 1779054492,
+      "name": "Senior Rust Developer",
+      "employer": "evrone.ru",
+      "query": "Python разработчик",
+      "reason": "query_mismatch"
+    },
+    "131612827": {
+      "ts": 1779054492,
+      "name": "AI-инженер",
+      "employer": "ЕДИНЫЙ ЦУПИС",
+      "query": "Python разработчик",
+      "reason": "not_dev_title"
+    },
+    "131246521": {
+      "ts": 1779054492,
+      "name": "Старший разработчик BI",
+      "employer": "Navicon",
+      "query": "Python разработчик",
+      "reason": "query_mismatch"
+    },
+    "133127187": {
+      "ts": 1779054492,
+      "name": "Аналитик-разработчик в Платформу Аналитики на базе ИИ",
+      "employer": "ВкусВилл. Офис",
+      "query": "Python разработчик",
+      "reason": "not_dev_title"
+    },
+    "132465534": {
+      "ts": 1779054492,
+      "name": "Middle Business Analyst",
+      "employer": "evrone.ru",
+      "query": "Python разработчик",
+      "reason": "not_dev_title"
+    },
+    "132984021": {
+      "ts": 1779054647,
+      "name": "DevOps / SRE инженер",
+      "employer": "Авто-подбор.рф",
+      "query": "Python разработчик",
+      "reason": "not_dev_title"
+    },
+    "133124769": {
+      "ts": 1779054647,
+      "name": "Инженер технической поддержки RAN GSM/LTE (3 линия)",
+      "employer": "ООО Хайтес Коммьюникейшнс",
+      "query": "Python разработчик",
+      "reason": "not_dev_title"
+    },
+    "133124457": {
+      "ts": 1779054648,
+      "name": "Разработчик шины",
+      "employer": "Мрия, IT",
+      "query": "Python разработчик",
+      "reason": "query_mismatch"
+    },
+    "133124458": {
+      "ts": 1779054648,
+      "name": "Разработчик шины",
+      "employer": "Мрия, IT",
+      "query": "Python разработчик",
+      "reason": "query_mismatch"
+    },
+    "132153227": {
+      "ts": 1779054648,
+      "name": "Инженер технического сопровождения (виртуализация)",
+      "employer": "ООО БАЗИС",
+      "query": "Python разработчик",
+      "reason": "not_dev_title"
+    },
+    "132629993": {
+      "ts": 1779054648,
+      "name": "Руководитель группы DBA",
+      "employer": "ЕДИНЫЙ ЦУПИС",
+      "query": "Python разработчик",
+      "reason": "not_dev_title"
+    },
+    "132820453": {
+      "ts": 1779054648,
+      "name": "Head of ML-SEO (руководитель) / SEO Lead senior",
+      "employer": "ООО Умный Маркетинг",
+      "query": "Python разработчик",
+      "reason": "not_dev_title"
+    },
+    "133113845": {
+      "ts": 1779054690,
+      "name": "Backend Engineer (Python)",
+      "employer": "Ваш инвестор",
+      "query": "Python разработчик",
+      "reason": "стоп-слова в описании"
+    },
+    "133062606": {
+      "ts": 1779054704,
+      "name": "Middle Python Developer (Computer Vision)",
+      "employer": "X5 Tech",
+      "query": "Python разработчик",
+      "reason": "стоп-слова в описании"
+    },
+    "133061069": {
+      "ts": 1779054704,
+      "name": "Backend-разработчик PHP/Symfony, Go",
+      "employer": "Vestan",
+      "query": "Python разработчик",
+      "reason": "query_mismatch"
+    },
+    "133059519": {
+      "ts": 1779054704,
+      "name": "Инженер поддержки разработки",
+      "employer": "ГК «МТ-Интеграция»",
+      "query": "Python разработчик",
+      "reason": "not_dev_title"
+    },
+    "133056477": {
+      "ts": 1779054704,
+      "name": "Middle/Middle+ QA Engineer",
+      "employer": "Xello",
+      "query": "Python разработчик",
+      "reason": "not_dev_title"
+    },
+    "133055688": {
+      "ts": 1779054704,
+      "name": "ML-инженер",
+      "employer": "АО ГНИВЦ",
+      "query": "Python разработчик",
+      "reason": "not_dev_title"
+    },
+    "133055108": {
+      "ts": 1779054704,
+      "name": "QA-автоматизатор Python (Инвестиционное направление)",
+      "employer": "ООО РСХБ-Интех",
+      "query": "Python разработчик",
+      "reason": "not_dev_title"
+    },
+    "133054634": {
+      "ts": 1779054704,
+      "name": "Инженер MLOps",
+      "employer": "ПАО БАНК УРАЛСИБ",
+      "query": "Python разработчик",
+      "reason": "not_dev_title"
+    },
+    "129370191": {
+      "ts": 1779054704,
+      "name": "Data Scientist / ML-инженер (алгоритмы и оптимизация)",
+      "employer": "Rubbles",
+      "query": "Python разработчик",
+      "reason": "not_dev_title"
+    },
+    "133053430": {
+      "ts": 1779054704,
+      "name": "BI-аналитик",
+      "employer": "Finstar Financial Group",
+      "query": "Python разработчик",
+      "reason": "not_dev_title"
+    },
+    "131255925": {
+      "ts": 1779054704,
+      "name": "Старший продуктовый аналитик в Growth",
+      "employer": "Профи.ру",
+      "query": "Python разработчик",
+      "reason": "not_dev_title"
+    },
+    "133052330": {
+      "ts": 1779054716,
+      "name": "Junior+/Middle Backend Developer (Python, Django)",
+      "employer": "ООО ДжиАйТи",
+      "query": "Python разработчик",
+      "reason": "стоп-слова в описании"
+    },
+    "133051899": {
+      "ts": 1779054716,
+      "name": "Ведущий специалист по анализу защищенности (Pentester)",
+      "employer": "Hi, Rockits!",
+      "query": "Python разработчик",
+      "reason": "not_dev_title"
+    },
+    "132085175": {
+      "ts": 1779054716,
+      "name": "SDET (Python)",
+      "employer": "Positive Technologies",
+      "query": "Python разработчик",
+      "reason": "not_dev_title"
+    },
+    "133051638": {
+      "ts": 1779054716,
+      "name": "DevOps-разработчик 1С",
+      "employer": "ПАО Ростелеком",
+      "query": "Python разработчик",
+      "reason": "not_dev_title"
+    },
+    "132064349": {
+      "ts": 1779054727,
+      "name": "Python разработчик (FastAPI) Middle+, Senior",
+      "employer": "Компэл",
+      "query": "Python разработчик",
+      "reason": "стоп-слова в описании"
+    },
+    "132083413": {
+      "ts": 1779054727,
+      "name": "Senior разработчик С в отдел CPE",
+      "employer": "ООО НТЦ Ротек",
+      "query": "Python разработчик",
+      "reason": "query_mismatch"
+    },
+    "133047609": {
+      "ts": 1779054727,
+      "name": "Младший системный администратор, Группа поддержки эксплуатации",
+      "employer": "Ozon Tech",
+      "query": "Python разработчик",
+      "reason": "not_dev_title"
+    },
+    "133045636": {
+      "ts": 1779054727,
+      "name": "Специалист технической поддержки / Интегратор",
+      "employer": "Syndicate Group",
+      "query": "Python разработчик",
+      "reason": "not_dev_title"
+    },
+    "133039980": {
+      "ts": 1779054727,
+      "name": "Старший ML инженер",
+      "employer": "Альфа-Банк. Центральный офис",
+      "query": "Python разработчик",
+      "reason": "not_dev_title"
+    },
+    "133003032": {
+      "ts": 1779054727,
+      "name": "DevOps / Platform Engineer (Middle/Senior)",
+      "employer": "Drivee",
+      "query": "Python разработчик",
+      "reason": "not_dev_title"
+    },
+    "133002121": {
+      "ts": 1779054727,
+      "name": "Системный администратор Linux",
+      "employer": "ООО Управляющая Компания Сибантрацит",
+      "query": "Python разработчик",
+      "reason": "not_dev_title"
+    },
+    "133000518": {
+      "ts": 1779054727,
+      "name": "Ведущий аналитик",
+      "employer": "СК Ренессанс Жизнь",
+      "query": "Python разработчик",
+      "reason": "not_dev_title"
+    },
+    "131602625": {
+      "ts": 1779054727,
+      "name": "Системный администратор Linux/SRE (DevOps)",
+      "employer": "ЕДИНЫЙ ЦУПИС",
+      "query": "Python разработчик",
+      "reason": "not_dev_title"
+    },
+    "132998016": {
+      "ts": 1779054887,
+      "name": "Python-разработчик",
+      "employer": "ООО Синьор Софт",
+      "query": "Python разработчик",
+      "reason": "стоп-слова в описании"
+    },
+    "132997259": {
+      "ts": 1779054887,
+      "name": "Аналитик качества данных/Data Quality Analyst",
+      "employer": "IEK GROUP",
+      "query": "Python разработчик",
+      "reason": "not_dev_title"
+    },
+    "132994899": {
+      "ts": 1779054887,
+      "name": "Старший Разработчик Data Science",
+      "employer": "Детский мир. ДМ-тех",
+      "query": "Python разработчик",
+      "reason": "query_mismatch"
+    },
+    "130500892": {
+      "ts": 1779054887,
+      "name": "Cпециалист по автоматизации технических процессов",
+      "employer": "Яндекс Крауд: Бэк-офис",
+      "query": "Python разработчик",
+      "reason": "not_dev_title"
+    },
+    "132992591": {
+      "ts": 1779054887,
+      "name": "Инженер-тестировщик в ML (middle/middle+)",
+      "employer": "Koronatech",
+      "query": "Python разработчик",
+      "reason": "not_dev_title"
+    },
+    "132991247": {
+      "ts": 1779054887,
+      "name": "Data Engineer",
+      "employer": "Т-Банк. ИТ. DWH",
+      "query": "Python разработчик",
+      "reason": "not_dev_title"
+    },
+    "132991231": {
+      "ts": 1779054887,
+      "name": "Data Engineer",
+      "employer": "Т-Банк. ИТ. DWH",
+      "query": "Python разработчик",
+      "reason": "not_dev_title"
+    },
+    "132987582": {
+      "ts": 1779054887,
+      "name": "Senior Auto QA Engineer (Python)",
+      "employer": "АО ГК Орбита",
+      "query": "Python разработчик",
+      "reason": "not_dev_title"
+    },
+    "131979682": {
+      "ts": 1779054887,
+      "name": "DevSecOps/AppSec - инженер",
+      "employer": "ЕДИНЫЙ ЦУПИС",
+      "query": "Python разработчик",
+      "reason": "not_dev_title"
+    },
+    "131979683": {
+      "ts": 1779054887,
+      "name": "DevSecOps/AppSec - инженер",
+      "employer": "ЕДИНЫЙ ЦУПИС",
+      "query": "Python разработчик",
+      "reason": "not_dev_title"
+    },
+    "132553476": {
+      "ts": 1779054887,
+      "name": "Специалист нагр.тестирования",
+      "employer": "ООО Датаджайл",
+      "query": "Python разработчик",
+      "reason": "not_dev_title"
+    },
+    "70957502": {
+      "ts": 1779054887,
+      "name": "C++ разработчик",
+      "employer": "ООО Датаджайл",
+      "query": "Python разработчик",
+      "reason": "query_mismatch"
+    },
+    "132985607": {
+      "ts": 1779054887,
+      "name": "Руководитель ML-команды",
+      "employer": "ООО Прометей Технологии",
+      "query": "Python разработчик",
+      "reason": "not_dev_title"
+    },
+    "132984884": {
+      "ts": 1779054888,
+      "name": "QA Engineer Automation (Python)",
+      "employer": "EGAR",
+      "query": "Python разработчик",
+      "reason": "not_dev_title"
+    },
+    "132984041": {
+      "ts": 1779054888,
+      "name": "AI Integration Engineer (1С)",
+      "employer": "ПЭК / Офис",
+      "query": "Python разработчик",
+      "reason": "not_dev_title"
+    },
+    "132909938": {
+      "ts": 1779054888,
+      "name": "Главный программист",
+      "employer": "Страна Девелопмент",
+      "query": "Python разработчик",
+      "reason": "query_mismatch"
+    },
+    "132901797": {
+      "ts": 1779054888,
+      "name": "QA Engineer / QA Analyst",
+      "employer": "FARGO",
+      "query": "Python разработчик",
+      "reason": "not_dev_title"
+    },
+    "132898561": {
+      "ts": 1779054888,
+      "name": "Старший математик-разработчик, Базовые ML Модели",
+      "employer": "Ozon Tech",
+      "query": "Python разработчик",
+      "reason": "query_mismatch"
+    },
+    "132896696": {
+      "ts": 1779054899,
+      "name": "Senior Python / Django разработчик",
+      "employer": "Валта",
+      "query": "Python разработчик",
+      "reason": "стоп-слова в описании"
+    },
+    "132896614": {
+      "ts": 1779054899,
+      "name": "Senior Data Scientist",
+      "employer": "Электронная торговая площадка Газпромбанка",
+      "query": "Python разработчик",
+      "reason": "not_dev_title"
+    },
+    "131925781": {
+      "ts": 1779054899,
+      "name": "Старший аналитик-разработчик, Аналитика поиска",
+      "employer": "Ozon Tech",
+      "query": "Python разработчик",
+      "reason": "not_dev_title"
+    },
+    "132893671": {
+      "ts": 1779055026,
+      "name": "Python-разработчик",
+      "employer": "Генотек",
+      "query": "Python разработчик",
+      "reason": "skipped_other"
+    },
+    "132891702": {
+      "ts": 1779055026,
+      "name": "Продуктовый аналитик (Методология проведения А/Б экспериментов)",
+      "employer": "Ecom.tech",
+      "query": "Python разработчик",
+      "reason": "not_dev_title"
+    },
+    "130246553": {
+      "ts": 1779055026,
+      "name": "Старший инженер технической поддержки пакетного ядра (PS Core)",
+      "employer": "ООО Телкор",
+      "query": "Python разработчик",
+      "reason": "not_dev_title"
+    },
+    "130246550": {
+      "ts": 1779055026,
+      "name": "Старший инженер технической поддержки пакетного ядра (PS Core)",
+      "employer": "ООО Телкор",
+      "query": "Python разработчик",
+      "reason": "not_dev_title"
+    },
+    "132888609": {
+      "ts": 1779055201,
+      "name": "BI-разработчик",
+      "employer": "Синимекс",
+      "query": "Python разработчик",
+      "reason": "query_mismatch"
+    },
+    "132886615": {
+      "ts": 1779055333,
+      "name": "Python-разработчик в Спецпроекты",
+      "employer": "KTS",
+      "query": "Python разработчик",
+      "reason": "skipped_other"
+    },
+    "132885841": {
+      "ts": 1779055333,
+      "name": "LLM/Agent Engineer/Разработчик AI-агентов и RAG-пайплайнов",
+      "employer": "ООО Фордевинд",
+      "query": "Python разработчик",
+      "reason": "query_mismatch"
+    },
+    "132884921": {
+      "ts": 1779055333,
+      "name": "Руководитель отдела внедрения, программист разработчик",
+      "employer": "ООО ПК Парадигма",
+      "query": "Python разработчик",
+      "reason": "query_mismatch"
+    },
+    "132881373": {
+      "ts": 1779055333,
+      "name": "Ведущий ML разработчик",
+      "employer": "Nedra Digital",
+      "query": "Python разработчик",
+      "reason": "query_mismatch"
+    },
+    "131911295": {
+      "ts": 1779055480,
+      "name": "AI/AI-agent developer",
+      "employer": "ООО ИЦ АЙ-ТЕКО",
+      "query": "Python разработчик",
+      "reason": "query_mismatch"
+    },
+    "132879947": {
+      "ts": 1779055480,
+      "name": "Менеджер проектов",
+      "employer": "Генотек",
+      "query": "Python разработчик",
+      "reason": "not_dev_title"
+    },
+    "132250027": {
+      "ts": 1779055487,
+      "name": "Python-разработчик",
+      "employer": "Sette",
+      "query": "Python разработчик",
+      "reason": "стоп-слова в описании"
+    },
+    "132838283": {
+      "ts": 1779055487,
+      "name": "Разработчик моделей цифровых систем беспроводной связи",
+      "employer": "YADRO",
+      "query": "Python разработчик",
+      "reason": "query_mismatch"
+    },
+    "132836103": {
+      "ts": 1779055487,
+      "name": "Data Engineer",
+      "employer": "ООО HeadHunter::Infrastructure engineers",
+      "query": "Python разработчик",
+      "reason": "not_dev_title"
+    },
+    "132027348": {
+      "ts": 1779055487,
+      "name": "С++ Разработчик (Восприятие)",
+      "employer": "ООО Эвокарго",
+      "query": "Python разработчик",
+      "reason": "query_mismatch"
+    },
+    "132830710": {
+      "ts": 1779055487,
+      "name": "Разработчик платформы (n8n)",
+      "employer": "USETECH",
+      "query": "Python разработчик",
+      "reason": "query_mismatch"
+    },
+    "132830585": {
+      "ts": 1779055487,
+      "name": "DevSecOps Engineer",
+      "employer": "АО СимбирСофт",
+      "query": "Python разработчик",
+      "reason": "not_dev_title"
+    },
+    "132032519": {
+      "ts": 1779055502,
+      "name": "Старший программист-разработчик (Python/Django) / Senior back-end developer",
+      "employer": "CATAPULTO.RU",
+      "query": "Python разработчик",
+      "reason": "стоп-слова в описании"
+    },
+    "131011428": {
+      "ts": 1779055502,
+      "name": "Продуктовый аналитик (Аналитика контента)",
+      "employer": "Ozon Офис и Коммерция",
+      "query": "Python разработчик",
+      "reason": "not_dev_title"
+    },
+    "132821663": {
+      "ts": 1779055679,
+      "name": "Старший инженер по тестированию программного обеспечения",
+      "employer": "SOKOLOV",
+      "query": "Python разработчик",
+      "reason": "not_dev_title"
+    },
+    "132821336": {
+      "ts": 1779055692,
+      "name": "Software Engineer Middle (C# / Python)",
+      "employer": "Mindbox",
+      "query": "Python разработчик",
+      "reason": "стоп-слова в описании"
+    },
+    "132813263": {
+      "ts": 1779055849,
+      "name": "Разработчик Power BI (BI-аналитик)",
+      "employer": "Ригла",
+      "query": "Python разработчик",
+      "reason": "not_dev_title"
+    },
+    "132812967": {
+      "ts": 1779055849,
+      "name": "Руководитель направления Application Security",
+      "employer": "АО Банк ДОМ.РФ Другие подразделения",
+      "query": "Python разработчик",
+      "reason": "not_dev_title"
+    },
+    "131985584": {
+      "ts": 1779055849,
+      "name": "Прикладной администратор не инфраструктурщик (микросервисы, Kubernetes, 2-3 линия поддержки)",
+      "employer": "Т1 Иннотех",
+      "query": "Python разработчик",
+      "reason": "not_dev_title"
+    },
+    "132811482": {
+      "ts": 1779055861,
+      "name": "Python/AI разработчик",
+      "employer": "ООО Инсейлс Рус",
+      "query": "Python разработчик",
+      "reason": "стоп-слова в описании"
+    },
+    "132811295": {
+      "ts": 1779055861,
+      "name": "Ведущий сетевой инженер / Network engineer",
+      "employer": "ООО БУЛАТ",
+      "query": "Python разработчик",
+      "reason": "not_dev_title"
+    },
+    "132809845": {
+      "ts": 1779055861,
+      "name": "Tech Lead",
+      "employer": "ООО Интеллектуальные Системы Управления",
+      "query": "Python разработчик",
+      "reason": "not_dev_title"
+    }
+  }
+}

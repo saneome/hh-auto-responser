@@ -1,0 +1,80 @@
+diff --git a/hh_auto/profile.py b/hh_auto/profile.py
+index abc..def 100644
+--- a/hh_auto/profile.py
++++ b/hh_auto/profile.py
+@@ -265,8 +265,10 @@ class CandidateProfile:
+     desired_role: str = ""
+     telegram: str = ""
+     github: str = ""
+-    skip_office: bool = True
+-    skip_tkrf: bool = True
++    require_work_formats: list[str] = field(default_factory=lambda: ["remote"])
++    avoid_work_formats: list[str] = field(default_factory=list)
++    require_contract_types: list[str] = field(default_factory=list)
++    avoid_contract_types: list[str] = field(default_factory=lambda: ["ТК РФ"])
+
+     @classmethod
+     def from_config(cls, cfg: dict | None) -> "CandidateProfile":
+@@ -320,6 +322,10 @@ class CandidateProfile:
+             telegram=str(profile_cfg.get("telegram") or cover_letter_cfg.get("telegram", "")),
+             github=str(profile_cfg.get("github") or cover_letter_cfg.get("github", "")),
+             extra_contacts=parse_extra_contacts(profile_cfg.get("extra_contacts")),
++            require_work_formats=cfg.get("require_work_formats", ["remote"]),
++            avoid_work_formats=cfg.get("avoid_work_formats", []),
++            require_contract_types=cfg.get("require_contract_types", []),
++            avoid_contract_types=cfg.get("avoid_contract_types", ["ТК РФ"]),
+         )
+
+     def to_config(self) -> dict:
+@@ -336,6 +342,10 @@ class CandidateProfile:
+             "telegram": self.telegram,
+             "github": self.github,
+             "extra_contacts": [dict(item) for item in self.extra_contacts],
++            "require_work_formats": list(self.require_work_formats),
++            "avoid_work_formats": list(self.avoid_work_formats),
++            "require_contract_types": list(self.require_contract_types),
++            "avoid_contract_types": list(self.avoid_contract_types),
+         }
+
+     def area(self) -> int | str | None:
+@@ -430,14 +440,26 @@ def match_vacancy(profile: CandidateProfile, vacancy_text: str) -> VacancyMatch:
+     if profile.hard_skills and not hard_hits:
+         reasons.append("нет совпадений по хард-скиллам")
+
+-    format_section = _extract_section(vacancy_text, "Формат работы") or vacancy_text
+-    format_ok = True
+-    if profile.work_format == "remote":
+-        format_ok = _contains_any(format_section, _work_format_terms("remote"))
+-    elif profile.work_format == "hybrid":
+-        format_ok = _contains_any(format_section, _work_format_terms("hybrid"))
+-    elif profile.work_format == "office":
+-        format_ok = not _contains_any(format_section, _work_format_terms("remote") + _work_format_terms("hybrid"))
+-    if not format_ok:
+-        reasons.append("формат работы не совпадает")
++    format_section = _extract_section(vacancy_text, "Формат работы") or vacancy_text
++    contract_section = _extract_section(vacancy_text, "Тип занятости") or _extract_section(vacancy_text, "Оформление") or vacancy_text
++
++    format_ok = True
++    if profile.require_work_formats:
++        format_ok = any(_contains_any(format_section, _work_format_terms(fmt)) for fmt in profile.require_work_formats)
++    if profile.avoid_work_formats:
++        for fmt in profile.avoid_work_formats:
++            if _contains_any(format_section, _work_format_terms(fmt)):
++                format_ok = False
++                break
++    if not format_ok:
++        reasons.append("формат работы не подходит")
++
++    contract_ok = True
++    if profile.require_contract_types:
++        contract_ok = any(req.lower() in contract_section.lower() for req in profile.require_contract_types)
++    if profile.avoid_contract_types:
++        for avoid in profile.avoid_contract_types:
++            if avoid.lower() in contract_section.lower():
++                contract_ok = False
++                break
++    if not contract_ok:
++        reasons.append("тип договора не подходит")
+
+     salary_ok = True
+     if profile.desired_salary:

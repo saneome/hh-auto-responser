@@ -1,0 +1,1530 @@
+{
+  "132860183": {
+    "ts": 1778826513,
+    "name": "TypeScript-разработчик",
+    "employer": "ИП Калинин Егор Сергеевич",
+    "status": "already"
+  },
+  "132917788": {
+    "ts": 1778826702,
+    "name": "ML/MLOps разработчик-стажёр",
+    "employer": "АО Инновационные технологии",
+    "status": "applied"
+  },
+  "132570726": {
+    "ts": 1778826858,
+    "name": "Java разработчик/Java Developer (стажер)",
+    "employer": "Aston",
+    "status": "applied"
+  },
+  "131991789": {
+    "ts": 1778827456,
+    "name": "Junior Software Development Engineer in Test (Quality & AI focus)",
+    "employer": "Gear Games",
+    "status": "skipped_other"
+  },
+  "132506137": {
+    "ts": 1778827839,
+    "name": "Python-разработчик / AI-интегратор",
+    "employer": "SCorp",
+    "status": "skipped_test"
+  },
+  "132494402": {
+    "ts": 1778827981,
+    "name": "Java разработчик (ученик)",
+    "employer": "Aston",
+    "status": "applied"
+  },
+  "132477027": {
+    "ts": 1778828151,
+    "name": "Java разработчик/Java Developer (стажер)",
+    "employer": "Aston",
+    "status": "applied"
+  },
+  "132982765": {
+    "ts": 1778828200,
+    "name": "RPA-разработчик",
+    "employer": "ООО ТД ГраСС",
+    "status": "already"
+  },
+  "132982766": {
+    "ts": 1778828253,
+    "name": "RPA-разработчик",
+    "employer": "ООО ТД ГраСС",
+    "status": "already"
+  },
+  "132982767": {
+    "ts": 1778828308,
+    "name": "RPA-разработчик",
+    "employer": "ООО ТД ГраСС",
+    "status": "already"
+  },
+  "132982768": {
+    "ts": 1778828356,
+    "name": "RPA-разработчик",
+    "employer": "ООО ТД ГраСС",
+    "status": "already"
+  },
+  "132696843": {
+    "ts": 1778828505,
+    "name": "Java разработчик (ученик)",
+    "employer": "Aston",
+    "status": "skipped_other"
+  },
+  "132618685": {
+    "ts": 1778829116,
+    "name": "Java разработчик (ученик)",
+    "employer": "Aston",
+    "status": "skipped_other",
+    "url": "https://hh.ru/vacancy/132618685"
+  },
+  "https://hh.ru/vacancy/132618685": {
+    "ts": 1778829116,
+    "name": "Java разработчик (ученик)",
+    "employer": "Aston",
+    "status": "skipped_other",
+    "url": "https://hh.ru/vacancy/132618685"
+  },
+  "132587529": {
+    "ts": 1778829185,
+    "name": "Автор студенческих работ (программирование)",
+    "employer": "ООО Студсервис",
+    "status": "already",
+    "url": "https://hh.ru/vacancy/132587529"
+  },
+  "https://hh.ru/vacancy/132587529": {
+    "ts": 1778829185,
+    "name": "Автор студенческих работ (программирование)",
+    "employer": "ООО Студсервис",
+    "status": "already",
+    "url": "https://hh.ru/vacancy/132587529"
+  },
+  "132575927": {
+    "ts": 1778829502,
+    "name": "Стажер AI-разработчик",
+    "employer": "AGIMA",
+    "status": "already",
+    "url": "https://hh.ru/vacancy/132575927"
+  },
+  "https://hh.ru/vacancy/132575927": {
+    "ts": 1778829502,
+    "name": "Стажер AI-разработчик",
+    "employer": "AGIMA",
+    "status": "already",
+    "url": "https://hh.ru/vacancy/132575927"
+  },
+  "132462087": {
+    "ts": 1778829566,
+    "name": "Начинающий Python-разработчик",
+    "employer": "SL Soft",
+    "status": "already",
+    "url": "https://hh.ru/vacancy/132462087"
+  },
+  "https://hh.ru/vacancy/132462087": {
+    "ts": 1778829566,
+    "name": "Начинающий Python-разработчик",
+    "employer": "SL Soft",
+    "status": "already",
+    "url": "https://hh.ru/vacancy/132462087"
+  },
+  "131451573": {
+    "ts": 1778829611,
+    "name": "Python-разработчик (Junior)",
+    "employer": "ООО Поколение",
+    "status": "already",
+    "url": "https://hh.ru/vacancy/131451573"
+  },
+  "https://hh.ru/vacancy/131451573": {
+    "ts": 1778829611,
+    "name": "Python-разработчик (Junior)",
+    "employer": "ООО Поколение",
+    "status": "already",
+    "url": "https://hh.ru/vacancy/131451573"
+  },
+  "132249713": {
+    "ts": 1778829725,
+    "name": "Cтажёр-разработчик автоматизированных тестов",
+    "employer": "ООО Точка Качества",
+    "status": "skipped_other",
+    "url": "https://hh.ru/vacancy/132249713"
+  },
+  "https://hh.ru/vacancy/132249713": {
+    "ts": 1778829725,
+    "name": "Cтажёр-разработчик автоматизированных тестов",
+    "employer": "ООО Точка Качества",
+    "status": "skipped_other",
+    "url": "https://hh.ru/vacancy/132249713"
+  },
+  "132247444": {
+    "ts": 1778829862,
+    "name": "Cтажёр-разработчик автоматизированных тестов",
+    "employer": "ООО Точка Качества",
+    "status": "skipped_other",
+    "url": "https://hh.ru/vacancy/132247444"
+  },
+  "https://hh.ru/vacancy/132247444": {
+    "ts": 1778829862,
+    "name": "Cтажёр-разработчик автоматизированных тестов",
+    "employer": "ООО Точка Качества",
+    "status": "skipped_other",
+    "url": "https://hh.ru/vacancy/132247444"
+  },
+  "132956089": {
+    "ts": 1778829930,
+    "name": "Junior Python разработчик",
+    "employer": "hitalent",
+    "status": "skipped_test",
+    "url": "https://hh.ru/vacancy/132956089"
+  },
+  "https://hh.ru/vacancy/132956089": {
+    "ts": 1778829930,
+    "name": "Junior Python разработчик",
+    "employer": "hitalent",
+    "status": "skipped_test",
+    "url": "https://hh.ru/vacancy/132956089"
+  },
+  "132917830": {
+    "ts": 1778830093,
+    "name": "Computer vision (CV) разработчик-стажёр",
+    "employer": "АО Инновационные технологии",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132917830"
+  },
+  "https://hh.ru/vacancy/132917830": {
+    "ts": 1778830093,
+    "name": "Computer vision (CV) разработчик-стажёр",
+    "employer": "АО Инновационные технологии",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132917830"
+  },
+  "132914812": {
+    "ts": 1778833755,
+    "name": "Java разработчик (ученик)",
+    "employer": "Aston",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132914812"
+  },
+  "https://hh.ru/vacancy/132914812": {
+    "ts": 1778833755,
+    "name": "Java разработчик (ученик)",
+    "employer": "Aston",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132914812"
+  },
+  "132885471": {
+    "ts": 1778833973,
+    "name": "Java разработчик (ученик)",
+    "employer": "Aston",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132885471"
+  },
+  "https://hh.ru/vacancy/132885471": {
+    "ts": 1778833973,
+    "name": "Java разработчик (ученик)",
+    "employer": "Aston",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132885471"
+  },
+  "132849107": {
+    "ts": 1778834132,
+    "name": "Разработчик C++",
+    "employer": "Ланкин Дмитрий",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132849107"
+  },
+  "https://hh.ru/vacancy/132849107": {
+    "ts": 1778834132,
+    "name": "Разработчик C++",
+    "employer": "Ланкин Дмитрий",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132849107"
+  },
+  "133140374": {
+    "ts": 1778850727,
+    "name": "Стажер / Fullstack-разработчик (Python + React)",
+    "employer": "СМО Впомощь",
+    "status": "skipped_test",
+    "url": "https://hh.ru/vacancy/133140374"
+  },
+  "https://hh.ru/vacancy/133140374": {
+    "ts": 1778850727,
+    "name": "Стажер / Fullstack-разработчик (Python + React)",
+    "employer": "СМО Впомощь",
+    "status": "skipped_test",
+    "url": "https://hh.ru/vacancy/133140374"
+  },
+  "133139806": {
+    "ts": 1778850832,
+    "name": "Java разработчик (ученик)",
+    "employer": "Aston",
+    "status": "skipped_test",
+    "url": "https://hh.ru/vacancy/133139806"
+  },
+  "https://hh.ru/vacancy/133139806": {
+    "ts": 1778850832,
+    "name": "Java разработчик (ученик)",
+    "employer": "Aston",
+    "status": "skipped_test",
+    "url": "https://hh.ru/vacancy/133139806"
+  },
+  "132840325": {
+    "ts": 1778850943,
+    "name": "Java разработчик/Java Developer (стажер)",
+    "employer": "Aston",
+    "status": "skipped_test",
+    "url": "https://hh.ru/vacancy/132840325"
+  },
+  "https://hh.ru/vacancy/132840325": {
+    "ts": 1778850943,
+    "name": "Java разработчик/Java Developer (стажер)",
+    "employer": "Aston",
+    "status": "skipped_test",
+    "url": "https://hh.ru/vacancy/132840325"
+  },
+  "132789516": {
+    "ts": 1778851026,
+    "name": "Java разработчик (ученик)",
+    "employer": "Aston",
+    "status": "skipped_test",
+    "url": "https://hh.ru/vacancy/132789516"
+  },
+  "https://hh.ru/vacancy/132789516": {
+    "ts": 1778851026,
+    "name": "Java разработчик (ученик)",
+    "employer": "Aston",
+    "status": "skipped_test",
+    "url": "https://hh.ru/vacancy/132789516"
+  },
+  "132431689": {
+    "ts": 1778851102,
+    "name": "Java разработчик (ученик)",
+    "employer": "Aston",
+    "status": "skipped_test",
+    "url": "https://hh.ru/vacancy/132431689"
+  },
+  "https://hh.ru/vacancy/132431689": {
+    "ts": 1778851102,
+    "name": "Java разработчик (ученик)",
+    "employer": "Aston",
+    "status": "skipped_test",
+    "url": "https://hh.ru/vacancy/132431689"
+  },
+  "132376282": {
+    "ts": 1778851176,
+    "name": "Java разработчик/Java Developer (стажер)",
+    "employer": "Aston",
+    "status": "skipped_test",
+    "url": "https://hh.ru/vacancy/132376282"
+  },
+  "https://hh.ru/vacancy/132376282": {
+    "ts": 1778851176,
+    "name": "Java разработчик/Java Developer (стажер)",
+    "employer": "Aston",
+    "status": "skipped_test",
+    "url": "https://hh.ru/vacancy/132376282"
+  },
+  "132333517": {
+    "ts": 1778851470,
+    "name": "Java разработчик (ученик)",
+    "employer": "Aston",
+    "status": "skipped_test",
+    "url": "https://hh.ru/vacancy/132333517"
+  },
+  "https://hh.ru/vacancy/132333517": {
+    "ts": 1778851470,
+    "name": "Java разработчик (ученик)",
+    "employer": "Aston",
+    "status": "skipped_test",
+    "url": "https://hh.ru/vacancy/132333517"
+  },
+  "132199120": {
+    "ts": 1778851552,
+    "name": "Java разработчик (ученик)",
+    "employer": "Aston",
+    "status": "skipped_test",
+    "url": "https://hh.ru/vacancy/132199120"
+  },
+  "https://hh.ru/vacancy/132199120": {
+    "ts": 1778851552,
+    "name": "Java разработчик (ученик)",
+    "employer": "Aston",
+    "status": "skipped_test",
+    "url": "https://hh.ru/vacancy/132199120"
+  },
+  "132179268": {
+    "ts": 1778851669,
+    "name": "Стажёр-разработчик автоматизированных тестов",
+    "employer": "ООО Точка Качества",
+    "status": "skipped_other",
+    "url": "https://hh.ru/vacancy/132179268"
+  },
+  "https://hh.ru/vacancy/132179268": {
+    "ts": 1778851669,
+    "name": "Стажёр-разработчик автоматизированных тестов",
+    "employer": "ООО Точка Качества",
+    "status": "skipped_other",
+    "url": "https://hh.ru/vacancy/132179268"
+  },
+  "133089823": {
+    "ts": 1778852191,
+    "name": "Java разработчик (ученик)",
+    "employer": "Aston",
+    "status": "skipped_test",
+    "url": "https://hh.ru/vacancy/133089823"
+  },
+  "https://hh.ru/vacancy/133089823": {
+    "ts": 1778852191,
+    "name": "Java разработчик (ученик)",
+    "employer": "Aston",
+    "status": "skipped_test",
+    "url": "https://hh.ru/vacancy/133089823"
+  },
+  "133055977": {
+    "ts": 1778852256,
+    "name": "Стажёр разработчик-ETL, Команда разработки DWH",
+    "employer": "Ozon Tech",
+    "status": "already",
+    "url": "https://hh.ru/vacancy/133055977"
+  },
+  "https://hh.ru/vacancy/133055977": {
+    "ts": 1778852256,
+    "name": "Стажёр разработчик-ETL, Команда разработки DWH",
+    "employer": "Ozon Tech",
+    "status": "already",
+    "url": "https://hh.ru/vacancy/133055977"
+  },
+  "133032943": {
+    "ts": 1778852331,
+    "name": "Java разработчик (ученик)",
+    "employer": "Aston",
+    "status": "skipped_test",
+    "url": "https://hh.ru/vacancy/133032943"
+  },
+  "https://hh.ru/vacancy/133032943": {
+    "ts": 1778852331,
+    "name": "Java разработчик (ученик)",
+    "employer": "Aston",
+    "status": "skipped_test",
+    "url": "https://hh.ru/vacancy/133032943"
+  },
+  "132982764": {
+    "ts": 1778854497,
+    "name": "RPA-разработчик",
+    "employer": "ООО ТД ГраСС",
+    "status": "already",
+    "url": "https://hh.ru/vacancy/132982764"
+  },
+  "https://hh.ru/vacancy/132982764": {
+    "ts": 1778854497,
+    "name": "RPA-разработчик",
+    "employer": "ООО ТД ГраСС",
+    "status": "already",
+    "url": "https://hh.ru/vacancy/132982764"
+  },
+  "132593783": {
+    "ts": 1778855321,
+    "name": "Junior Flutter Developer",
+    "employer": "Самохин Арсений Дмитриевич",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132593783"
+  },
+  "https://hh.ru/vacancy/132593783": {
+    "ts": 1778855321,
+    "name": "Junior Flutter Developer",
+    "employer": "Самохин Арсений Дмитриевич",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132593783"
+  },
+  "132173363": {
+    "ts": 1778855808,
+    "name": "Разработчик Flutter (Middle)",
+    "employer": "ООО Кубань Кредит, КБ",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132173363"
+  },
+  "https://hh.ru/vacancy/132173363": {
+    "ts": 1778855808,
+    "name": "Разработчик Flutter (Middle)",
+    "employer": "ООО Кубань Кредит, КБ",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132173363"
+  },
+  "133034156": {
+    "ts": 1778855945,
+    "name": "Flutter-разработчик",
+    "employer": "Wolle Development Limited",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/133034156"
+  },
+  "https://hh.ru/vacancy/133034156": {
+    "ts": 1778855945,
+    "name": "Flutter-разработчик",
+    "employer": "Wolle Development Limited",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/133034156"
+  },
+  "132800345": {
+    "ts": 1778856120,
+    "name": "Junior Fullstack Developer (Web + Mobile + Backend + AI)",
+    "employer": "ИП Михайлова Татьяна Васильевна",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132800345"
+  },
+  "https://hh.ru/vacancy/132800345": {
+    "ts": 1778856120,
+    "name": "Junior Fullstack Developer (Web + Mobile + Backend + AI)",
+    "employer": "ИП Михайлова Татьяна Васильевна",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132800345"
+  },
+  "132721539": {
+    "ts": 1778856300,
+    "name": "Java / Flutter разработчик",
+    "employer": "ООО Геомакс Финанс",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132721539"
+  },
+  "https://hh.ru/vacancy/132721539": {
+    "ts": 1778856300,
+    "name": "Java / Flutter разработчик",
+    "employer": "ООО Геомакс Финанс",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132721539"
+  },
+  "132634455": {
+    "ts": 1778856437,
+    "name": "Flutter-разработчик (VPN сервис)",
+    "employer": "ИП Глушкова Ксения Евгеньевна",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132634455"
+  },
+  "https://hh.ru/vacancy/132634455": {
+    "ts": 1778856437,
+    "name": "Flutter-разработчик (VPN сервис)",
+    "employer": "ИП Глушкова Ксения Евгеньевна",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132634455"
+  },
+  "129982619": {
+    "ts": 1778856589,
+    "name": "Программист",
+    "employer": "АО СП МеКаМинефть",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/129982619"
+  },
+  "https://hh.ru/vacancy/129982619": {
+    "ts": 1778856589,
+    "name": "Программист",
+    "employer": "АО СП МеКаМинефть",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/129982619"
+  },
+  "131908729": {
+    "ts": 1778856771,
+    "name": "Разработчик Flutter (frontend)",
+    "employer": "ООО Рэд",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/131908729"
+  },
+  "https://hh.ru/vacancy/131908729": {
+    "ts": 1778856771,
+    "name": "Разработчик Flutter (frontend)",
+    "employer": "ООО Рэд",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/131908729"
+  },
+  "132310614": {
+    "ts": 1778856931,
+    "name": "Junior Flutter Developer",
+    "employer": "Фомичева Мария Андреевна",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132310614"
+  },
+  "https://hh.ru/vacancy/132310614": {
+    "ts": 1778856931,
+    "name": "Junior Flutter Developer",
+    "employer": "Фомичева Мария Андреевна",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132310614"
+  },
+  "132333910": {
+    "ts": 1778857056,
+    "name": "Frontend / React Разработчик",
+    "employer": "ООО Интербилдинг",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132333910"
+  },
+  "https://hh.ru/vacancy/132333910": {
+    "ts": 1778857056,
+    "name": "Frontend / React Разработчик",
+    "employer": "ООО Интербилдинг",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132333910"
+  },
+  "132332431": {
+    "ts": 1778857157,
+    "name": "Unity Developer на мобильную RTS",
+    "employer": "Gear Games",
+    "status": "skipped_other",
+    "url": "https://hh.ru/vacancy/132332431"
+  },
+  "https://hh.ru/vacancy/132332431": {
+    "ts": 1778857157,
+    "name": "Unity Developer на мобильную RTS",
+    "employer": "Gear Games",
+    "status": "skipped_other",
+    "url": "https://hh.ru/vacancy/132332431"
+  },
+  "133015745": {
+    "ts": 1778857314,
+    "name": "Junior Android Developer (Native Android / Hybrid Apps)",
+    "employer": "AH Group IT",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/133015745"
+  },
+  "https://hh.ru/vacancy/133015745": {
+    "ts": 1778857314,
+    "name": "Junior Android Developer (Native Android / Hybrid Apps)",
+    "employer": "AH Group IT",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/133015745"
+  },
+  "132950042": {
+    "ts": 1778857593,
+    "name": "Unity Developer",
+    "employer": "MidDevGames",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132950042"
+  },
+  "https://hh.ru/vacancy/132950042": {
+    "ts": 1778857593,
+    "name": "Unity Developer",
+    "employer": "MidDevGames",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132950042"
+  },
+  "132617565": {
+    "ts": 1779012748,
+    "name": "Junior Frontend Developer (React/Angular/Vue)",
+    "employer": "evrone.ru",
+    "status": "skipped_other",
+    "url": "https://hh.ru/vacancy/132617565"
+  },
+  "https://hh.ru/vacancy/132617565": {
+    "ts": 1779012748,
+    "name": "Junior Frontend Developer (React/Angular/Vue)",
+    "employer": "evrone.ru",
+    "status": "skipped_other",
+    "url": "https://hh.ru/vacancy/132617565"
+  },
+  "133076391": {
+    "ts": 1779014464,
+    "name": "Django разработчик (фуллстэк)",
+    "employer": "Pentestit",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/133076391"
+  },
+  "https://hh.ru/vacancy/133076391": {
+    "ts": 1779014464,
+    "name": "Django разработчик (фуллстэк)",
+    "employer": "Pentestit",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/133076391"
+  },
+  "133144077": {
+    "ts": 1779014624,
+    "name": "SAP HANA разработчик",
+    "employer": "ЛИАН",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/133144077"
+  },
+  "https://hh.ru/vacancy/133144077": {
+    "ts": 1779014624,
+    "name": "SAP HANA разработчик",
+    "employer": "ЛИАН",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/133144077"
+  },
+  "132848635": {
+    "ts": 1779014784,
+    "name": "Backend Developer (Python / Nest.js)",
+    "employer": "ДОН",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132848635"
+  },
+  "https://hh.ru/vacancy/132848635": {
+    "ts": 1779014784,
+    "name": "Backend Developer (Python / Nest.js)",
+    "employer": "ДОН",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132848635"
+  },
+  "133137665": {
+    "ts": 1779014922,
+    "name": "Fullstack Developer",
+    "employer": "ИП Береснев Кирилл Евгеньевич",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/133137665"
+  },
+  "https://hh.ru/vacancy/133137665": {
+    "ts": 1779014922,
+    "name": "Fullstack Developer",
+    "employer": "ИП Береснев Кирилл Евгеньевич",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/133137665"
+  },
+  "132703070": {
+    "ts": 1779015111,
+    "name": "Full-stack разработчик / AI-first engineer",
+    "employer": "ООО Кьюбити Трейд",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132703070"
+  },
+  "https://hh.ru/vacancy/132703070": {
+    "ts": 1779015111,
+    "name": "Full-stack разработчик / AI-first engineer",
+    "employer": "ООО Кьюбити Трейд",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132703070"
+  },
+  "132816811": {
+    "ts": 1779015220,
+    "name": "Программист на python с ИИ",
+    "employer": "СМ КОНТАКТ Восточная Европа",
+    "status": "skipped_other",
+    "url": "https://hh.ru/vacancy/132816811"
+  },
+  "https://hh.ru/vacancy/132816811": {
+    "ts": 1779015220,
+    "name": "Программист на python с ИИ",
+    "employer": "СМ КОНТАКТ Восточная Европа",
+    "status": "skipped_other",
+    "url": "https://hh.ru/vacancy/132816811"
+  },
+  "131360090": {
+    "ts": 1779015348,
+    "name": "Middle Backend Python Engineer",
+    "employer": "AbeloHost B.V.",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/131360090"
+  },
+  "https://hh.ru/vacancy/131360090": {
+    "ts": 1779015348,
+    "name": "Middle Backend Python Engineer",
+    "employer": "AbeloHost B.V.",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/131360090"
+  },
+  "132964848": {
+    "ts": 1779015512,
+    "name": "AI-assisted Fullstack Developer / Product Engineer",
+    "employer": "Lost Lore LLC",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132964848"
+  },
+  "https://hh.ru/vacancy/132964848": {
+    "ts": 1779015512,
+    "name": "AI-assisted Fullstack Developer / Product Engineer",
+    "employer": "Lost Lore LLC",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132964848"
+  },
+  "132448562": {
+    "ts": 1779015693,
+    "name": "Python Backend Developer (Telethon / MTProto / Интеграция LLM)",
+    "employer": "Мороз Даниил Дмитриевич",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132448562"
+  },
+  "https://hh.ru/vacancy/132448562": {
+    "ts": 1779015693,
+    "name": "Python Backend Developer (Telethon / MTProto / Интеграция LLM)",
+    "employer": "Мороз Даниил Дмитриевич",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132448562"
+  },
+  "132303581": {
+    "ts": 1779015836,
+    "name": "Python-разработчик",
+    "employer": "Арысюк Давид",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132303581"
+  },
+  "https://hh.ru/vacancy/132303581": {
+    "ts": 1779015836,
+    "name": "Python-разработчик",
+    "employer": "Арысюк Давид",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132303581"
+  },
+  "133101221": {
+    "ts": 1779015982,
+    "name": "Веб-разработчик (инфраструктурные сервисы)",
+    "employer": "Rambler&Co",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/133101221"
+  },
+  "https://hh.ru/vacancy/133101221": {
+    "ts": 1779015982,
+    "name": "Веб-разработчик (инфраструктурные сервисы)",
+    "employer": "Rambler&Co",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/133101221"
+  },
+  "133065304": {
+    "ts": 1779016129,
+    "name": "Ruby-разработчик",
+    "employer": "AYA Group",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/133065304"
+  },
+  "https://hh.ru/vacancy/133065304": {
+    "ts": 1779016129,
+    "name": "Ruby-разработчик",
+    "employer": "AYA Group",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/133065304"
+  },
+  "133064231": {
+    "ts": 1779016269,
+    "name": "Python Django разработчик",
+    "employer": "Adlibis",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/133064231"
+  },
+  "https://hh.ru/vacancy/133064231": {
+    "ts": 1779016269,
+    "name": "Python Django разработчик",
+    "employer": "Adlibis",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/133064231"
+  },
+  "133061979": {
+    "ts": 1779016425,
+    "name": "Python разработчик (AI агенты)",
+    "employer": "Альфа-Банк. ИТ-специалисты",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/133061979"
+  },
+  "https://hh.ru/vacancy/133061979": {
+    "ts": 1779016425,
+    "name": "Python разработчик (AI агенты)",
+    "employer": "Альфа-Банк. ИТ-специалисты",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/133061979"
+  },
+  "133060127": {
+    "ts": 1779016561,
+    "name": "Разработчик тестового фреймворка в 5G Core Telecom",
+    "employer": "YADRO",
+    "status": "skipped_other",
+    "url": "https://hh.ru/vacancy/133060127"
+  },
+  "https://hh.ru/vacancy/133060127": {
+    "ts": 1779016561,
+    "name": "Разработчик тестового фреймворка в 5G Core Telecom",
+    "employer": "YADRO",
+    "status": "skipped_other",
+    "url": "https://hh.ru/vacancy/133060127"
+  },
+  "133056495": {
+    "ts": 1779016696,
+    "name": "Middle Kotlin/Java Developer",
+    "employer": "Xello",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/133056495"
+  },
+  "https://hh.ru/vacancy/133056495": {
+    "ts": 1779016696,
+    "name": "Middle Kotlin/Java Developer",
+    "employer": "Xello",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/133056495"
+  },
+  "133010005": {
+    "ts": 1779016826,
+    "name": "Разработчик аналитических систем (SQL, SSRS)",
+    "employer": "РТС-тендер",
+    "status": "skipped_other",
+    "url": "https://hh.ru/vacancy/133010005"
+  },
+  "https://hh.ru/vacancy/133010005": {
+    "ts": 1779016826,
+    "name": "Разработчик аналитических систем (SQL, SSRS)",
+    "employer": "РТС-тендер",
+    "status": "skipped_other",
+    "url": "https://hh.ru/vacancy/133010005"
+  },
+  "133007525": {
+    "ts": 1779016993,
+    "name": "Flutter-разработчик",
+    "employer": "Pet Match AI",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/133007525"
+  },
+  "https://hh.ru/vacancy/133007525": {
+    "ts": 1779016993,
+    "name": "Flutter-разработчик",
+    "employer": "Pet Match AI",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/133007525"
+  },
+  "133005709": {
+    "ts": 1779017160,
+    "name": "Разработчик вайб-кодинга",
+    "employer": "ПЭК / Офис",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/133005709"
+  },
+  "https://hh.ru/vacancy/133005709": {
+    "ts": 1779017160,
+    "name": "Разработчик вайб-кодинга",
+    "employer": "ПЭК / Офис",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/133005709"
+  },
+  "133000723": {
+    "ts": 1779017310,
+    "name": "Разработчик BPMSoft",
+    "employer": "Axenix (ранее Accenture)",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/133000723"
+  },
+  "https://hh.ru/vacancy/133000723": {
+    "ts": 1779017310,
+    "name": "Разработчик BPMSoft",
+    "employer": "Axenix (ранее Accenture)",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/133000723"
+  },
+  "132935234": {
+    "ts": 1779017567,
+    "name": "Middle Python Developer (AI Agents / LLM Ops)",
+    "employer": "ООО Трейдмарк холдер",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132935234"
+  },
+  "https://hh.ru/vacancy/132935234": {
+    "ts": 1779017567,
+    "name": "Middle Python Developer (AI Agents / LLM Ops)",
+    "employer": "ООО Трейдмарк холдер",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132935234"
+  },
+  "132934314": {
+    "ts": 1779017722,
+    "name": "Разработчик Hadoop",
+    "employer": "Bell Integrator",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132934314"
+  },
+  "https://hh.ru/vacancy/132934314": {
+    "ts": 1779017722,
+    "name": "Разработчик Hadoop",
+    "employer": "Bell Integrator",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132934314"
+  },
+  "132934315": {
+    "ts": 1779017875,
+    "name": "Разработчик Hadoop",
+    "employer": "Bell Integrator",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132934315"
+  },
+  "https://hh.ru/vacancy/132934315": {
+    "ts": 1779017875,
+    "name": "Разработчик Hadoop",
+    "employer": "Bell Integrator",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132934315"
+  },
+  "132934316": {
+    "ts": 1779018008,
+    "name": "Разработчик Hadoop",
+    "employer": "Bell Integrator",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132934316"
+  },
+  "https://hh.ru/vacancy/132934316": {
+    "ts": 1779018008,
+    "name": "Разработчик Hadoop",
+    "employer": "Bell Integrator",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132934316"
+  },
+  "132934317": {
+    "ts": 1779018147,
+    "name": "Разработчик Hadoop",
+    "employer": "Bell Integrator",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132934317"
+  },
+  "https://hh.ru/vacancy/132934317": {
+    "ts": 1779018147,
+    "name": "Разработчик Hadoop",
+    "employer": "Bell Integrator",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132934317"
+  },
+  "132932691": {
+    "ts": 1779018278,
+    "name": "Разработчик (маркетплейс)",
+    "employer": "ООО ИЛС",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132932691"
+  },
+  "https://hh.ru/vacancy/132932691": {
+    "ts": 1779018278,
+    "name": "Разработчик (маркетплейс)",
+    "employer": "ООО ИЛС",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132932691"
+  },
+  "132932504": {
+    "ts": 1779018400,
+    "name": "Разработчик Hadoop\\Java",
+    "employer": "Bell Integrator",
+    "status": "skipped_other",
+    "url": "https://hh.ru/vacancy/132932504"
+  },
+  "https://hh.ru/vacancy/132932504": {
+    "ts": 1779018400,
+    "name": "Разработчик Hadoop\\Java",
+    "employer": "Bell Integrator",
+    "status": "skipped_other",
+    "url": "https://hh.ru/vacancy/132932504"
+  },
+  "132932488": {
+    "ts": 1779018506,
+    "name": "Программист встраиваемых систем/embedded linux developer (разработчик DIY, FPGA , микроконтроллеры)",
+    "employer": "ООО АРЕС",
+    "status": "skipped_other",
+    "url": "https://hh.ru/vacancy/132932488"
+  },
+  "https://hh.ru/vacancy/132932488": {
+    "ts": 1779018506,
+    "name": "Программист встраиваемых систем/embedded linux developer (разработчик DIY, FPGA , микроконтроллеры)",
+    "employer": "ООО АРЕС",
+    "status": "skipped_other",
+    "url": "https://hh.ru/vacancy/132932488"
+  },
+  "133169798": {
+    "ts": 1779045892,
+    "name": "Golang-разработчик - продуктовая команда (логистика / финтех)",
+    "employer": "Романович Артём Павлович",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/133169798"
+  },
+  "https://hh.ru/vacancy/133169798": {
+    "ts": 1779045892,
+    "name": "Golang-разработчик - продуктовая команда (логистика / финтех)",
+    "employer": "Романович Артём Павлович",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/133169798"
+  },
+  "132177788": {
+    "ts": 1779046023,
+    "name": "Go-разработчик, Группа разработки трейсинга и профилирования",
+    "employer": "Ozon Tech",
+    "status": "skipped_other",
+    "url": "https://hh.ru/vacancy/132177788"
+  },
+  "https://hh.ru/vacancy/132177788": {
+    "ts": 1779046023,
+    "name": "Go-разработчик, Группа разработки трейсинга и профилирования",
+    "employer": "Ozon Tech",
+    "status": "skipped_other",
+    "url": "https://hh.ru/vacancy/132177788"
+  },
+  "125428124": {
+    "ts": 1779046197,
+    "name": "Старший разработчик Go, Разработка систем оценки рисков",
+    "employer": "Ozon Банк",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/125428124"
+  },
+  "https://hh.ru/vacancy/125428124": {
+    "ts": 1779046197,
+    "name": "Старший разработчик Go, Разработка систем оценки рисков",
+    "employer": "Ozon Банк",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/125428124"
+  },
+  "133095559": {
+    "ts": 1779046357,
+    "name": "Junior Golang Developer",
+    "employer": "Удовиченко Анастасия Александровна",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/133095559"
+  },
+  "https://hh.ru/vacancy/133095559": {
+    "ts": 1779046357,
+    "name": "Junior Golang Developer",
+    "employer": "Удовиченко Анастасия Александровна",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/133095559"
+  },
+  "133093344": {
+    "ts": 1779046620,
+    "name": "Middle Golang Developer",
+    "employer": "Астрал-Софт",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/133093344"
+  },
+  "https://hh.ru/vacancy/133093344": {
+    "ts": 1779046620,
+    "name": "Middle Golang Developer",
+    "employer": "Астрал-Софт",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/133093344"
+  },
+  "132980194": {
+    "ts": 1779046912,
+    "name": "Go-разработчик, Big Promo",
+    "employer": "Ozon Tech",
+    "status": "skipped_other",
+    "url": "https://hh.ru/vacancy/132980194"
+  },
+  "https://hh.ru/vacancy/132980194": {
+    "ts": 1779046912,
+    "name": "Go-разработчик, Big Promo",
+    "employer": "Ozon Tech",
+    "status": "skipped_other",
+    "url": "https://hh.ru/vacancy/132980194"
+  },
+  "132978844": {
+    "ts": 1779047033,
+    "name": "Старший Go-разработчик, Платформа коммуникаций",
+    "employer": "Ozon Tech",
+    "status": "exception",
+    "url": "https://hh.ru/vacancy/132978844"
+  },
+  "https://hh.ru/vacancy/132978844": {
+    "ts": 1779047033,
+    "name": "Старший Go-разработчик, Платформа коммуникаций",
+    "employer": "Ozon Tech",
+    "status": "exception",
+    "url": "https://hh.ru/vacancy/132978844"
+  },
+  "132972751": {
+    "ts": 1779047191,
+    "name": "Go-разработчик (middle)",
+    "employer": "ООО Интегрированные системы управления",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132972751"
+  },
+  "https://hh.ru/vacancy/132972751": {
+    "ts": 1779047191,
+    "name": "Go-разработчик (middle)",
+    "employer": "ООО Интегрированные системы управления",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132972751"
+  },
+  "132934082": {
+    "ts": 1779047379,
+    "name": "Golang-разработчик",
+    "employer": "CRTEX",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132934082"
+  },
+  "https://hh.ru/vacancy/132934082": {
+    "ts": 1779047379,
+    "name": "Golang-разработчик",
+    "employer": "CRTEX",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132934082"
+  },
+  "132933373": {
+    "ts": 1779047543,
+    "name": "Старший разработчик Go, Сбор данных из открытых источников",
+    "employer": "Ozon Tech",
+    "status": "exception",
+    "url": "https://hh.ru/vacancy/132933373"
+  },
+  "https://hh.ru/vacancy/132933373": {
+    "ts": 1779047543,
+    "name": "Старший разработчик Go, Сбор данных из открытых источников",
+    "employer": "Ozon Tech",
+    "status": "exception",
+    "url": "https://hh.ru/vacancy/132933373"
+  },
+  "132913244": {
+    "ts": 1779047673,
+    "name": "Старший разработчик Go, Приложение продавца",
+    "employer": "Ozon Tech",
+    "status": "skipped_other",
+    "url": "https://hh.ru/vacancy/132913244"
+  },
+  "https://hh.ru/vacancy/132913244": {
+    "ts": 1779047673,
+    "name": "Старший разработчик Go, Приложение продавца",
+    "employer": "Ozon Tech",
+    "status": "skipped_other",
+    "url": "https://hh.ru/vacancy/132913244"
+  },
+  "132896913": {
+    "ts": 1779047803,
+    "name": "Golang-разработчик",
+    "employer": "ИП Сергеев Ростислав Александрович",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132896913"
+  },
+  "https://hh.ru/vacancy/132896913": {
+    "ts": 1779047803,
+    "name": "Golang-разработчик",
+    "employer": "ИП Сергеев Ростислав Александрович",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132896913"
+  },
+  "132896319": {
+    "ts": 1779047941,
+    "name": "Старший разработчик Go, B2B-отсрочка (Buy Now Pay Later), Ozon Банк",
+    "employer": "Ozon Банк",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132896319"
+  },
+  "https://hh.ru/vacancy/132896319": {
+    "ts": 1779047941,
+    "name": "Старший разработчик Go, B2B-отсрочка (Buy Now Pay Later), Ozon Банк",
+    "employer": "Ozon Банк",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132896319"
+  },
+  "132874425": {
+    "ts": 1779048115,
+    "name": "Golang-разработчик в команду платежного бэкенда",
+    "employer": "Финтех, Плюс Фантех",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132874425"
+  },
+  "https://hh.ru/vacancy/132874425": {
+    "ts": 1779048115,
+    "name": "Golang-разработчик в команду платежного бэкенда",
+    "employer": "Финтех, Плюс Фантех",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132874425"
+  },
+  "132709107": {
+    "ts": 1779048260,
+    "name": "Go-разработчик, Отзывы и социальность",
+    "employer": "Ozon Tech",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132709107"
+  },
+  "https://hh.ru/vacancy/132709107": {
+    "ts": 1779048260,
+    "name": "Go-разработчик, Отзывы и социальность",
+    "employer": "Ozon Tech",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132709107"
+  },
+  "132632423": {
+    "ts": 1779048475,
+    "name": "Разработчик Go (бэкенд)",
+    "employer": "СберМобайл",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132632423"
+  },
+  "https://hh.ru/vacancy/132632423": {
+    "ts": 1779048475,
+    "name": "Разработчик Go (бэкенд)",
+    "employer": "СберМобайл",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132632423"
+  },
+  "132628990": {
+    "ts": 1779048615,
+    "name": "Разработчик Go, Инструменты автоматического ценообразования",
+    "employer": "Ozon Tech",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132628990"
+  },
+  "https://hh.ru/vacancy/132628990": {
+    "ts": 1779048615,
+    "name": "Разработчик Go, Инструменты автоматического ценообразования",
+    "employer": "Ozon Tech",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132628990"
+  },
+  "132469617": {
+    "ts": 1779048746,
+    "name": "Go-разработчик, Аутентификация Ozon ID и сервис OTP",
+    "employer": "Ozon Tech",
+    "status": "skipped_other",
+    "url": "https://hh.ru/vacancy/132469617"
+  },
+  "https://hh.ru/vacancy/132469617": {
+    "ts": 1779048746,
+    "name": "Go-разработчик, Аутентификация Ozon ID и сервис OTP",
+    "employer": "Ozon Tech",
+    "status": "skipped_other",
+    "url": "https://hh.ru/vacancy/132469617"
+  },
+  "132435712": {
+    "ts": 1779048922,
+    "name": "Разработчик Go, Отдел разработки ядра, отчеты, Ozon Bank",
+    "employer": "Ozon Банк",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132435712"
+  },
+  "https://hh.ru/vacancy/132435712": {
+    "ts": 1779048922,
+    "name": "Разработчик Go, Отдел разработки ядра, отчеты, Ozon Bank",
+    "employer": "Ozon Банк",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132435712"
+  },
+  "132433109": {
+    "ts": 1779051562,
+    "name": "Golang-разработчик",
+    "employer": "X5 Digital",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132433109"
+  },
+  "https://hh.ru/vacancy/132433109": {
+    "ts": 1779051562,
+    "name": "Golang-разработчик",
+    "employer": "X5 Digital",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132433109"
+  },
+  "132411460": {
+    "ts": 1779051733,
+    "name": "Golang-разработчик",
+    "employer": "ООО Финфрейм",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132411460"
+  },
+  "https://hh.ru/vacancy/132411460": {
+    "ts": 1779051733,
+    "name": "Golang-разработчик",
+    "employer": "ООО Финфрейм",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132411460"
+  },
+  "132377259": {
+    "ts": 1779051914,
+    "name": "Старший Go-разработчик, Корзина",
+    "employer": "Ozon Tech",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132377259"
+  },
+  "https://hh.ru/vacancy/132377259": {
+    "ts": 1779051914,
+    "name": "Старший Go-разработчик, Корзина",
+    "employer": "Ozon Tech",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132377259"
+  },
+  "132286202": {
+    "ts": 1779052100,
+    "name": "Инженер-программист Fullstack Java/Spring + TS/React",
+    "employer": "ООО ИТЛаб",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132286202"
+  },
+  "https://hh.ru/vacancy/132286202": {
+    "ts": 1779052100,
+    "name": "Инженер-программист Fullstack Java/Spring + TS/React",
+    "employer": "ООО ИТЛаб",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132286202"
+  },
+  "132521873": {
+    "ts": 1779052275,
+    "name": "Java-разработчик с экспертизой в BSS",
+    "employer": "Amex Development",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132521873"
+  },
+  "https://hh.ru/vacancy/132521873": {
+    "ts": 1779052275,
+    "name": "Java-разработчик с экспертизой в BSS",
+    "employer": "Amex Development",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132521873"
+  },
+  "132463133": {
+    "ts": 1779052416,
+    "name": "Java-разработчик",
+    "employer": "РОКЕТ САЙНС",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132463133"
+  },
+  "https://hh.ru/vacancy/132463133": {
+    "ts": 1779052416,
+    "name": "Java-разработчик",
+    "employer": "РОКЕТ САЙНС",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132463133"
+  },
+  "131394556": {
+    "ts": 1779052621,
+    "name": "Java-разработчик",
+    "employer": "Sette",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/131394556"
+  },
+  "https://hh.ru/vacancy/131394556": {
+    "ts": 1779052621,
+    "name": "Java-разработчик",
+    "employer": "Sette",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/131394556"
+  },
+  "132978363": {
+    "ts": 1779052793,
+    "name": "Разработчик - Java",
+    "employer": "TIQUM",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132978363"
+  },
+  "https://hh.ru/vacancy/132978363": {
+    "ts": 1779052793,
+    "name": "Разработчик - Java",
+    "employer": "TIQUM",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132978363"
+  },
+  "132934382": {
+    "ts": 1779053107,
+    "name": "Разработчик Java Middle",
+    "employer": "Bell Integrator",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132934382"
+  },
+  "https://hh.ru/vacancy/132934382": {
+    "ts": 1779053107,
+    "name": "Разработчик Java Middle",
+    "employer": "Bell Integrator",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132934382"
+  },
+  "132345271": {
+    "ts": 1779054478,
+    "name": "Python developer (Backend + Vue.js)",
+    "employer": "ООО Инфотек",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132345271"
+  },
+  "https://hh.ru/vacancy/132345271": {
+    "ts": 1779054478,
+    "name": "Python developer (Backend + Vue.js)",
+    "employer": "ООО Инфотек",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132345271"
+  },
+  "132984161": {
+    "ts": 1779054647,
+    "name": "Backend-разработчик (Python / Django)",
+    "employer": "Авто-подбор.рф",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132984161"
+  },
+  "https://hh.ru/vacancy/132984161": {
+    "ts": 1779054647,
+    "name": "Backend-разработчик (Python / Django)",
+    "employer": "Авто-подбор.рф",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132984161"
+  },
+  "131018867": {
+    "ts": 1779054875,
+    "name": "Python разработчик",
+    "employer": "АО ГНИВЦ",
+    "status": "exception",
+    "url": "https://hh.ru/vacancy/131018867"
+  },
+  "https://hh.ru/vacancy/131018867": {
+    "ts": 1779054875,
+    "name": "Python разработчик",
+    "employer": "АО ГНИВЦ",
+    "status": "exception",
+    "url": "https://hh.ru/vacancy/131018867"
+  },
+  "132893671": {
+    "ts": 1779055026,
+    "name": "Python-разработчик",
+    "employer": "Генотек",
+    "status": "skipped_other",
+    "url": "https://hh.ru/vacancy/132893671"
+  },
+  "https://hh.ru/vacancy/132893671": {
+    "ts": 1779055026,
+    "name": "Python-разработчик",
+    "employer": "Генотек",
+    "status": "skipped_other",
+    "url": "https://hh.ru/vacancy/132893671"
+  },
+  "132888617": {
+    "ts": 1779055201,
+    "name": "Python-разработчик",
+    "employer": "Электронная торговая площадка Газпромбанка",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132888617"
+  },
+  "https://hh.ru/vacancy/132888617": {
+    "ts": 1779055201,
+    "name": "Python-разработчик",
+    "employer": "Электронная торговая площадка Газпромбанка",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132888617"
+  },
+  "132886615": {
+    "ts": 1779055333,
+    "name": "Python-разработчик в Спецпроекты",
+    "employer": "KTS",
+    "status": "skipped_other",
+    "url": "https://hh.ru/vacancy/132886615"
+  },
+  "https://hh.ru/vacancy/132886615": {
+    "ts": 1779055333,
+    "name": "Python-разработчик в Спецпроекты",
+    "employer": "KTS",
+    "status": "skipped_other",
+    "url": "https://hh.ru/vacancy/132886615"
+  },
+  "132880772": {
+    "ts": 1779055480,
+    "name": "Python-разработчик (Направление клиентского сервиса)",
+    "employer": "RWB (Wildberries & Russ)",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132880772"
+  },
+  "https://hh.ru/vacancy/132880772": {
+    "ts": 1779055480,
+    "name": "Python-разработчик (Направление клиентского сервиса)",
+    "employer": "RWB (Wildberries & Russ)",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132880772"
+  },
+  "132825467": {
+    "ts": 1779055679,
+    "name": "Разработчик Python (middle)",
+    "employer": "SPTLab",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132825467"
+  },
+  "https://hh.ru/vacancy/132825467": {
+    "ts": 1779055679,
+    "name": "Разработчик Python (middle)",
+    "employer": "SPTLab",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132825467"
+  },
+  "132813684": {
+    "ts": 1779055849,
+    "name": "Fullstack-разработчик (React, Python)",
+    "employer": "ФосАгро. IT",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132813684"
+  },
+  "https://hh.ru/vacancy/132813684": {
+    "ts": 1779055849,
+    "name": "Fullstack-разработчик (React, Python)",
+    "employer": "ФосАгро. IT",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132813684"
+  }
+}

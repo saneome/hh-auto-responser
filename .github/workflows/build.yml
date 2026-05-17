@@ -1,0 +1,108 @@
+name: Build Desktop App
+
+on:
+  push:
+    branches: [master]
+    tags: ['v*']
+  workflow_dispatch:
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        include:
+          - os: ubuntu-latest
+            platform: linux
+            artifact: hh-auto-response-linux
+          - os: windows-latest
+            platform: windows
+            artifact: hh-auto-response-windows
+          - os: macos-latest
+            platform: macos
+            artifact: hh-auto-response-macos
+
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python 3.13
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+          pip install pyinstaller
+
+      - name: Install Playwright Chromium
+        run: playwright install chromium
+
+      - name: Build with PyInstaller
+        run: pyinstaller --clean --noconfirm hh-auto-response.spec
+
+      - name: Upload artifact (folder)
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.artifact }}
+          path: dist/hh-auto-response/
+          retention-days: 30
+
+  installer:
+    needs: build
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download Windows artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: hh-auto-response-windows
+          path: dist/hh-auto-response/
+
+      - name: Install InnoSetup
+        run: |
+          choco install innosetup -y
+
+      - name: Build installer
+        run: |
+          & "C:\Program Files (x86)\Inno Setup 6\ISCC.exe" setup.iss
+
+      - name: Upload installer
+        uses: actions/upload-artifact@v4
+        with:
+          name: hh-auto-response-windows-installer
+          path: installer-output/*.exe
+          retention-days: 30
+
+  release:
+    needs: [build, installer]
+    runs-on: ubuntu-latest
+    if: startsWith(github.ref, 'refs/tags/v')
+    permissions:
+      contents: write
+    steps:
+      - name: Download all artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: artifacts
+
+      - name: Create archives
+        run: |
+          cd artifacts
+          for dir in hh-auto-response-linux hh-auto-response-macos hh-auto-response-windows; do
+            if [ -d "$dir" ]; then
+              tar czf "${dir}.tar.gz" -C "$dir" .
+            fi
+          done
+          if [ -d hh-auto-response-windows-installer ]; then
+            cp hh-auto-response-windows-installer/*.exe ./
+          fi
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            artifacts/*.tar.gz
+            artifacts/*.exe
+          generate_release_notes: true

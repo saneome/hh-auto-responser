@@ -18,29 +18,47 @@ browser:
 # Сколько максимум секунд ждать пока пользователь сам залогинится в открытом браузере
 login_timeout_seconds: 600
 
+# Профиль кандидата — GUI заполняет эти поля и на их основе строит поиск и сопроводительное.
+profile:
+  full_name: "Дидоренко Александр Святославович"
+  city: "Москва"
+  hard_skills:
+    - "Python"
+    - "Django"
+    - "FastAPI"
+    - "PostgreSQL"
+  soft_skills:
+    - "командная работа"
+    - "ответственность"
+    - "коммуникация"
+  work_format: "remote"  # remote | hybrid | office
+  experience: "between1And3"
+  desired_salary: 250000
+  desired_role: "Python backend разработчик"
+  telegram: "t.me/alexaneodev"
+  github: "github.com/saneome"
+  extra_contacts: []
+
+# Уведомления
+notifications:
+  telegram:
+    token: "YOUR_BOT_TOKEN"        # Токен Telegram-бота (BotFather)
+    chat_id: "YOUR_CHAT_ID"        # ID чата (или username), куда писать уведомления
+    # proxy: "http://user:pass@host:port"   # HTTP/HTTPS прокси для Telegram API
+    # proxy: "socks5://user:pass@host:port" # SOCKS5 прокси (требует pip install pysocks)
+
 # Параметры поиска вакансий — превращаются в URL https://hh.ru/search/vacancy?...
 search:
-  # Регион: 113 — Россия, 1 — Москва, 2 — СПб
-  area: 113
+  # Регион может подставиться автоматически из profile.city; null = брать из GUI-профиля.
+  area: null
   # Опыт: noExperience, between1And3, between3And6, moreThan6
   experience:
-    - noExperience
     - between1And3
-  # Тип занятости/график (на сайте hh: schedule=remote)
+  # Если формат удалённый, к поиску добавляется schedule=remote
   schedule: remote
-  # Дополнительно используем фильтр work_format=REMOTE (новый параметр hh)
   remote_work_format: true
-  # Поисковые запросы (выполняются по очереди, дубликаты схлопываются)
-  queries:
-    - "Python backend"
-    - "Python разработчик"
-    - "Java backend"
-    - "Java разработчик"
-    - "Rust разработчик"
-    - "Rust backend"
-    - "React frontend"
-    - "Vue frontend"
-    - "Frontend разработчик"
+  # Поисковые запросы можно оставить пустыми — GUI сгенерирует их из profile.*
+  queries: []
   # Сколько страниц максимум листать на каждый запрос (на странице ~50 вакансий)
   max_pages: 5
 
@@ -71,3 +89,12 @@ screenshots_dir: "screenshots"
 
 # Если true — поиск и навигация будут, но кнопка "Откликнуться" нажиматься не будет
 dry_run: false
+
+# Ответы работодателям (responder) — проверяет переписку и генерирует ответы через LLM
+responder:
+  # Вероятность проверки переписки после каждого отклика (0.0 — 1.0)
+  chance: 0.15
+  # Автоотправка ответов работодателям (иначе — только генерация для ручной проверки)
+  auto_reply: false
+  # Интервал между циклами проверки переписки в режиме --loop (секунды)
+  check_interval_seconds: 300

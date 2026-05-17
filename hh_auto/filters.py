@@ -14,6 +14,7 @@ STACK_PATTERNS: dict[str, list[str]] = {
     "react": [r"\breact\b", r"\bnext\.?js\b", r"\bredux\b"],
     "vue": [r"\bvue\b", r"\bnuxt\b"],
     "go": [r"\bgolang\b", r"\bgo\s*lang\b", r"\bgo\s*разработчик\b", r"\bgo\s*developer\b"],
+    "flutter": [r"\bflutter\b", r"\bdart\b", r"\bmobile\b"],
     "websocket": [r"\bweb\s*socket", r"\bws\b"],
     "webrtc": [r"\bwebrtc\b", r"\bcoturn\b", r"\bturn\b"],
     "streaming": [r"\brtmp\b", r"\bhls\b", r"\bстрим", r"\bstreaming\b"],
@@ -21,8 +22,8 @@ STACK_PATTERNS: dict[str, list[str]] = {
     "backend": [r"\bback[\s-]?end\b", r"\bбэк", r"\bбэкенд", r"\bбекенд"],
 }
 
-# Минимальный список — нам нужны только эти языки/фреймворки в стеке
-PRIMARY_TECH = {"python", "java", "rust", "react", "vue", "go"}
+# Минимальный список — хотя бы один из этих тегов должен быть в вакансии
+PRIMARY_TECH = {"python", "java", "rust", "react", "vue", "go", "flutter", "backend", "frontend", "fullstack", "websocket", "streaming"}
 
 # Стоп-слова — если присутствуют, скорее всего не наш профиль
 NEGATIVE_PATTERNS = [
@@ -32,6 +33,9 @@ NEGATIVE_PATTERNS = [
     r"\bруководитель\b|\bteam\s*lead\b|\btechlead\b|\bтех\s*лид",
     r"\bsenior\b|\bведущий\b",
     r"опыт\s+от\s+(4|5|6|7|8|9|10)",
+    # ML / Data Science — не наш профиль
+    r"\bdata\s+scientist\b|\bml\b|\bmachine\s+learning\b|\bdeep\s+learning\b|\bdata\s+engineer\b",
+    r"\bаналитик\b|\bmlops\b|\bml-инженер\b|\bdata\s+analyst\b|\bcv\b|\bкомпьютерное\s*зрение\b",
 ]
 
 
@@ -45,6 +49,9 @@ class StackMatch:
 
     def __bool__(self) -> bool:
         return self.has_primary
+
+    def __contains__(self, item: str) -> bool:
+        return item in self.detected
 
 
 def detect_stack(text: str) -> StackMatch:

@@ -1,0 +1,18 @@
+2026/05/18-01:21:14.819 10f16 Reusing MANIFEST /home/xaneodev/hh-auto-response/user-data-responder/Default/Local Storage/leveldb/MANIFEST-000001
+2026/05/18-01:21:14.824 10f16 Recovering log #745
+2026/05/18-01:21:14.825 10f16 Reusing old log /home/xaneodev/hh-auto-response/user-data-responder/Default/Local Storage/leveldb/000745.log 
+2026/05/18-01:22:14.827 10f16 Level-0 table #749: started
+2026/05/18-01:22:14.843 10f16 Level-0 table #749: 14027 bytes OK
+2026/05/18-01:22:14.848 10f16 Delete type=0 #745
+2026/05/18-01:23:15.712 10f18 Level-0 table #751: started
+2026/05/18-01:23:15.720 10f18 Level-0 table #751: 10675 bytes OK
+2026/05/18-01:23:15.725 10f18 Delete type=0 #748
+2026/05/18-01:23:15.725 10f18 Compacting 4@0 + 1@1 files
+2026/05/18-01:23:15.735 10f18 Generated table #752@0: 78 keys, 1025120 bytes
+2026/05/18-01:23:15.735 10f18 Compacted 4@0 + 1@1 files => 1025120 bytes
+2026/05/18-01:23:15.738 10f18 compacted to: files[ 0 1 0 0 0 0 0 ]
+2026/05/18-01:23:15.739 10f18 Delete type=2 #746
+2026/05/18-01:23:15.739 10f18 Delete type=2 #744
+2026/05/18-01:23:15.739 10f18 Delete type=2 #751
+2026/05/18-01:23:15.739 10f18 Delete type=2 #749
+2026/05/18-01:23:15.740 10f18 Delete type=2 #742

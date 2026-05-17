@@ -13,3 +13,9 @@ screenshots/
 .idea/
 .vscode/
 *.log
+.openclaude-profile.json
+example.py
+build/
+dist/
+installer-output/
+*.spec.bak
