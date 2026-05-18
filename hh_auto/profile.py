@@ -206,6 +206,15 @@ def _role_from_skills(skills: list[str]) -> str:
     return "разработчик"
 
 
+
+def _role_domain_for_experience(role: str, _skills: list[str]) -> str:
+    """Return a natural phrase for pretend_experience mention based on desired_role."""
+    role = (role or "").strip()
+    if not role:
+        return "на аналогичной позиции"
+    return f"как {role}"
+
+
 def build_search_queries(profile: "CandidateProfile", *, max_queries: int = 12) -> list[str]:
     role = profile.desired_role.strip() or _role_from_skills(profile.hard_skills)
     format_term = FORMAT_LABELS.get(profile.work_format, "")

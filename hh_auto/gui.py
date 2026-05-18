@@ -210,7 +210,7 @@ class SettingsWindow(QMainWindow):
 
         # Cover letter
         self._cover = self._add_section(form, "Сопроводительное письмо")
-        self.inp_pretend_exp = self._check(self._cover, "Притвориться опытным")
+        self.inp_pretend_exp = self._check(self._cover, "Упомянуть 1–2 года опыта в письме")
 
         # Responder
         self._responder = self._add_section(form, "Автоответчик")

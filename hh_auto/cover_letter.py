@@ -6,7 +6,7 @@ import re
 from textwrap import dedent
 
 from .filters import StackMatch
-from .profile import CandidateProfile
+from .profile import CandidateProfile, _role_domain_for_experience
 from .nim_client import LLMError, get_nim_client
 
 
@@ -122,10 +122,11 @@ def _build_local_cover_letter(
     parts.extend(_select_projects(stack))
     parts.append("")
     parts.append(HACKATHONS_BLOCK)
-    if pretend_experience:
+    if pretend_experience and profile:
+        domain = _role_domain_for_experience(profile.desired_role, profile.hard_skills)
         parts.append("")
         parts.append(
-            "По опыту коммерческой разработки — порядка 1–2 лет в части backend-задач "
+            f"По опыту коммерческой разработки — порядка 1–2 лет {domain} "
             "(подробности готов обсудить при звонке)."
         )
     contact_lines = profile.contact_lines() if profile else []
@@ -185,8 +186,9 @@ def _build_user_prompt(
     )
     lines.append("Не выдумывай факты, компании и коммерческий опыт.")
     if pretend_experience:
+        domain = _role_domain_for_experience(profile.desired_role, profile.hard_skills)
         lines.append(
-            "Можно один раз аккуратно упомянуть нейтральную фразу: 'порядка 1–2 лет в backend-задачах'."
+            f"Можно один раз аккуратно упомянуть нейтральную фразу: 'порядка 1–2 лет {domain}'."
         )
     else:
         lines.append("Коммерческий опыт не упоминай.")
