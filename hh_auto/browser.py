@@ -6,8 +6,10 @@
 """
 from __future__ import annotations
 
+import json
 import logging
 import random
+import re
 import time
 from contextlib import contextmanager
 from dataclasses import dataclass
@@ -23,6 +25,9 @@ from playwright.sync_api import (
     TimeoutError as PWTimeout,
     sync_playwright,
 )
+
+from .filters import StackMatch, detect_stack
+from .nim_client import LLMError, get_nim_client
 
 
 log = logging.getLogger("hh_auto.browser")
@@ -567,12 +572,194 @@ def _wait_for_element(page: Page, selectors: list[str], timeout_ms: int = 8_000)
     return None
 
 
+def _llm_pick_resume_index(resume_items: list[dict], vacancy_name: str) -> int | None:
+    """Спрашиваем LLM какое резюме подходит под вакансию."""
+    client = get_nim_client()
+    if client is None:
+        return None
+
+    prompt = (
+        "Вакансия: " + (vacancy_name or "неизвестная") + "\n"
+        "Доступные резюме (номер — название):\n"
+    )
+    for item in resume_items:
+        prompt += f"{item['idx']}: {item['text']}\n"
+    prompt += (
+        "\nКакое резюме лучше всего подходит к этой вакансии? "
+        "Ответь ТОЛЬКО номером одного резюме, без текста, без пояснений."
+    )
+    try:
+        reply = client.chat_completion(
+            system_prompt="Ты рекрутер. Выбираешь наиболее подходящее резюме для вакансии по названию.",
+            user_prompt=prompt,
+        )
+        for token in re.findall(r"\b(\d+)\b", reply):
+            idx = int(token)
+            if 0 <= idx < len(resume_items):
+                log.debug("LLM выбрал резюме #%d (ответ: %r)", idx, reply[:100])
+                return idx
+        log.debug("LLM ответил непонятно: %r", reply[:200])
+    except LLMError as exc:
+        log.debug("LLM не ответил на выбор резюме: %s", exc)
+    except Exception as exc:
+        log.debug("LLM unexpected error: %s", exc)
+    return None
+
+
+def _select_best_resume(
+    page: Page,
+    vacancy_stack: StackMatch | None,
+    vacancy_name: str = "",
+) -> str | None:
+    """Открывает выпадающий список резюме, парсит названия,
+    выбирает резюме с наибольшим пересечением стека с vacancy_stack
+    или через LLM если keyword-match не уверен.
+    Возвращает data-qa или None.
+    """
+    log.debug("Ищем селектор резюме...")
+    modal = page.locator('[data-qa=vacancy-response-popup]').first
+    if modal.count() == 0:
+        modal = page.locator('div[role=dialog]').first
+
+    opened = False
+    if modal.count() > 0:
+        sel = modal.locator(
+            '[data-qa=vacancy-response-resume-selector],'
+            ' [class*=magritte-card][class*=press-enabled]'
+        ).first
+        if sel.count() > 0 and sel.is_visible():
+            log.debug("Селектор резюме найден в модалке, кликаем.")
+            try:
+                sel.click()
+                opened = True
+            except Exception as exc:
+                log.debug("Клик по селектору в модалке не удался: %s", exc)
+
+    if not opened:
+        opened = _click_first_visible(
+            page,
+            [
+                "[data-qa=vacancy-response-resume-selector]",
+                "[class*=magritte-card][class*=press-enabled]",
+            ],
+            timeout_ms=3000,
+        )
+
+    if not opened:
+        log.debug("Селектор резюме не нашли — на странице, вероятно, нет выбора резюме.")
+        return None
+
+    time.sleep(random.uniform(1.5, 2.5))
+    log.debug("Парсим выпадающий список резюме...")
+
+    js_items = """
+    () => {
+        const out = [];
+        const items = document.querySelectorAll(
+            '[class*="magritte-select-drop-container"] [class*="magritte-content-border-container"]'
+        );
+        items.forEach((el, idx) => {
+            const text = (el.innerText || el.textContent || '').trim().substring(0,200);
+            if (text) out.push({idx: idx, text: text});
+        });
+        if (!out.length) {
+            const drop = document.querySelector('[class*="magritte-select-drop-container"]');
+            if (drop) {
+                const children = drop.querySelectorAll('li, [role="option"], [class*="content"]');
+                children.forEach((el, idx) => {
+                    const text = (el.innerText || el.textContent || '').trim().substring(0,200);
+                    if (text) out.push({idx: idx, text: text});
+                });
+            }
+        }
+        return out;
+    }
+    """
+    try:
+        items = page.evaluate(js_items)
+    except Exception as exc:
+        log.debug("Ошибка evaluate при парсинге резюме: %s", exc)
+        items = []
+
+    if not items:
+        log.debug("Список резюме не распарсился, оставляем дефолт.")
+        return None
+
+    log.debug("Доступные резюме: %s", json.dumps(items, ensure_ascii=False))
+
+    # ---- keyword-based scoring ----
+    best_idx = None
+    best_score = -1
+    for item in items:
+        stack = detect_stack(item["text"])
+        overlap = len(stack.detected & vacancy_stack.detected) if (vacancy_stack and vacancy_stack.detected) else 0
+        score = overlap * 2 + (1 if stack.has_primary else 0)
+        if score > best_score:
+            best_score = score
+            best_idx = item["idx"]
+        log.debug("Резюме '%s' → стек %s, overlap=%d, score=%d", item["text"], stack.detected, overlap, score)
+
+    if best_idx is None:
+        best_idx = 0
+
+    # ---- LLM fallback when keyword score is weak ----
+    # Одинаковый низкий score или max_overlap==0 -> спрашиваем LLM
+    if best_score <= 1:
+        log.info("Keyword match слабый (score=%d), спрашиваем LLM...", best_score)
+        llm_idx = _llm_pick_resume_index(items, vacancy_name)
+        if llm_idx is not None:
+            best_idx = llm_idx
+            best_score = -1  # флаг что выбор был LLM
+            log.info("LLM выбрал резюме #%d.", best_idx)
+        else:
+            log.info("LLM не ответил, оставляем keyword-выбор #%d.", best_idx)
+    else:
+        log.info("Keyword match уверенный (score=%d), выбираем #%d.", best_score, best_idx)
+
+    # Клик по выбранному элементу
+    click_js = """
+    (idx) => {
+        let items = document.querySelectorAll(
+            '[class*="magritte-select-drop-container"] [class*="magritte-content-border-container"]'
+        );
+        if (!items.length) {
+            const drop = document.querySelector('[class*="magritte-select-drop-container"]');
+            if (drop) items = drop.querySelectorAll('li, [role="option"], [class*="content"]');
+        }
+        if (items[idx]) {
+            items[idx].click();
+            return true;
+        }
+        return false;
+    }
+    """
+    try:
+        clicked = page.evaluate(click_js, best_idx)
+    except Exception as exc:
+        log.warning("Ошибка evaluate при клике по резюме #%d: %s", best_idx, exc)
+        clicked = False
+
+    if clicked:
+        log.info("Выбрано резюме #%d (score=%d).", best_idx, best_score)
+        time.sleep(0.3)
+        try:
+            page.keyboard.press("Escape")
+            log.debug("Нажали Escape для закрытия выпадашки резюме.")
+        except Exception:
+            pass
+    else:
+        log.warning("Не удалось кликнуть по резюме #%d.", best_idx)
+    return "ok" if clicked else None
+
+
 def apply_to_vacancy(
     page: Page,
     cfg: BrowserConfig,
     *,
     vacancy_url: str,
     message: str,
+    vacancy_stack: StackMatch | None = None,
+    vacancy_name: str = "",
     dry_run: bool = False,
 ) -> tuple[str, str]:
     """Возвращает (результат, описание). Результаты см. ApplyResult."""
@@ -634,14 +821,18 @@ def apply_to_vacancy(
     # Если модалка содержит тестовое задание — textarea не появится
     # и агент просто не отправит отклик (что видно в логе).
 
-    # Если есть выбор резюме — выбрать первое (НЕ отправляем пока)
-    _click_first_visible(
-        page,
-        [
-            "[data-qa=vacancy-response-resume-selector] >> nth=0",
-        ],
-        timeout_ms=3000,
-    )
+    # Выбираем резюме под вакансию (если есть несколько)
+    if vacancy_stack:
+        _select_best_resume(page, vacancy_stack, vacancy_name=vacancy_name)
+    else:
+        # Fallback: клик по первому резюме без анализа
+        _click_first_visible(
+            page,
+            [
+                "[data-qa=vacancy-response-resume-selector]",
+            ],
+            timeout_ms=3000,
+        )
     time.sleep(random.uniform(0.5, 1.5))
 
     # Сначала ищем textarea — оно может быть уже открыто

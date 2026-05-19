@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import argparse
+import datetime
 import logging
 import sys
 import time
@@ -112,6 +113,12 @@ def main() -> int:
             else (cfg.get("responder") or {}).get("check_interval_seconds", 300)
         )
         first = True
+        report_time_str = (cfg.get("telegram") or {}).get("daily_report_time", "09:00")
+        try:
+            report_h, report_m = map(int, report_time_str.split(":"))
+        except Exception:
+            report_h, report_m = 9, 0
+        _last_report_date = None
         while True:
             if not first:
                 try:
@@ -121,6 +128,18 @@ def main() -> int:
                     logging.info("Responder loop interrupted")
                     break
             first = False
+
+            # Daily report check
+            now = datetime.datetime.now()
+            if _last_report_date != now.date():
+                if now.hour > report_h or (now.hour == report_h and now.minute >= report_m):
+                    logging.info("Отправляю ежедневный отчёт...")
+                    if notifier:
+                        try:
+                            notifier.daily_report("")
+                        except Exception:
+                            pass
+                    _last_report_date = now.date()
 
             # Пересоздаём браузер каждый цикл — Chrome не выдерживает idle
             try:
@@ -132,19 +151,16 @@ def main() -> int:
                                                  dry_run=args.dry_run, auto_reply=True,
                                                  login_timeout=login_timeout)
                         logging.info("chat_manager завершён: %d задач", len(tasks))
-                        if notifier:
-                            for t in tasks:
-                                if t.sent:
-                                    notifier.send(f"✉️ Отправлен ответ *{t.employer}*:\n{t.generated_text[:300]}")
                     else:
                         logging.info("Запуск chat_manager (scrape only)...")
                         tasks = run_chat_manager(ctx, profile, bcfg,
                                                  dry_run=args.dry_run, auto_reply=False,
                                                  login_timeout=login_timeout)
                         logging.info("chat_manager завершён: %d задач", len(tasks))
-                        if notifier:
-                            for t in tasks:
-                                notifier.send(f"Новое сообщение от *{t.employer}* ({t.vacancy})")
+                    if notifier:
+                        for t in tasks:
+                            if t.test_task:
+                                notifier.test_task(t.employer, t.vacancy, t.last_message[:500])
             except BrowserClosedError:
                 logging.warning("Браузер закрыт (возможно, Chrome упал). Пересоздам на следующей итерации.")
             except Exception:
@@ -174,8 +190,8 @@ def main() -> int:
                     logging.info("Ответили на %d сообщений", len([t for t in tasks if t.sent]))
                     if notifier:
                         for t in tasks:
-                            if t.sent:
-                                notifier.send(f"✉️ Отправлен ответ *{t.employer}*:\n{t.generated_text[:300]}")
+                            if t.test_task:
+                                notifier.test_task(t.employer, t.vacancy, t.last_message[:500])
         except BrowserClosedError:
             logging.warning("Браузер закрыт при post-search responder. Пропускаю.")
         except Exception as exc:

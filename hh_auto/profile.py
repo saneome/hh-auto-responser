@@ -411,34 +411,24 @@ def default_candidate_profile() -> CandidateProfile:
         full_name="Дидоренко Александр Святославович",
         city="Москва",
         hard_skills=[
-            "Python",
-            "Django",
-            "FastAPI",
-            "Flask",
-            "Java",
-            "Spring",
-            "Kotlin",
-            "Rust",
-            "Actix",
-            "Axum",
-            "Tokio",
-            "React",
-            "Vue",
-            "HTML",
-            "CSS",
-            "JavaScript",
-            "SCSS",
-            "WebSocket",
-            "WebRTC",
-            "RTMP",
-            "HLS",
-            "TURN",
+            "Figma",
+            "Adobe Photoshop",
+            "Adobe Illustrator",
+            "UI/UX",
+            "Веб-дизайн",
+            "Графический дизайн",
+            "Дизайн интерфейсов",
+            "Prototyping",
+            "Wireframing",
+            "Дизайн мобильных приложений",
+            "Adobe After Effects",
+            "Sketch",
         ],
         soft_skills=["командная работа", "ответственность", "коммуникация"],
         work_format="remote",
         experience="between1And3",
-        desired_salary=250000,
-        desired_role="Python backend разработчик",
+        desired_salary=100000,
+        desired_role="Дизайнер",
         telegram="t.me/alexaneodev",
         github="github.com/saneome",
     )
@@ -452,8 +442,9 @@ def match_vacancy(profile: CandidateProfile, vacancy_text: str) -> VacancyMatch:
 
     if profile.hard_skills and not hard_hits:
         # Если detect_stack нашел один из наших стеков - принимаем
-        stack = detect_stack(vacancy_text)
-        if not any(x in stack for x in ["python", "java", "rust", "react", "vue", "go", "backend", "frontend", "fullstack"]):
+        from .filters import build_stack_patterns, detect_stack
+        stack = detect_stack(vacancy_text, build_stack_patterns(profile.hard_skills))
+        if not any(x.lower() in stack for x in profile.hard_skills):
             reasons.append("нет совпадений по хард-скиллам")
 
     salary_ok = True

@@ -1526,5 +1526,313 @@
     "employer": "ФосАгро. IT",
     "status": "applied",
     "url": "https://hh.ru/vacancy/132813684"
+  },
+  "133199966": {
+    "ts": 1779101382,
+    "name": "Старший разработчик Python (Информационная/Кибербезопасность)",
+    "employer": "BI.ZONE Направление Кибербезопасность",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/133199966"
+  },
+  "https://hh.ru/vacancy/133199966": {
+    "ts": 1779101382,
+    "name": "Старший разработчик Python (Информационная/Кибербезопасность)",
+    "employer": "BI.ZONE Направление Кибербезопасность",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/133199966"
+  },
+  "132991507": {
+    "ts": 1779101599,
+    "name": "Python-разработчик",
+    "employer": "ООО Дата Дженерейшн",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132991507"
+  },
+  "https://hh.ru/vacancy/132991507": {
+    "ts": 1779101599,
+    "name": "Python-разработчик",
+    "employer": "ООО Дата Дженерейшн",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132991507"
+  },
+  "132306526": {
+    "ts": 1779138734,
+    "name": "Middle Python Developer / Python-разработчик (+ PIX)",
+    "employer": "Арнест ЮниРусь",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132306526"
+  },
+  "https://hh.ru/vacancy/132306526": {
+    "ts": 1779138734,
+    "name": "Middle Python Developer / Python-разработчик (+ PIX)",
+    "employer": "Арнест ЮниРусь",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132306526"
+  },
+  "133220181": {
+    "ts": 1779138975,
+    "name": "Fullstack-разработчик (Python + React)",
+    "employer": "Fortech",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/133220181"
+  },
+  "https://hh.ru/vacancy/133220181": {
+    "ts": 1779138975,
+    "name": "Fullstack-разработчик (Python + React)",
+    "employer": "Fortech",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/133220181"
+  },
+  "133219821": {
+    "ts": 1779139737,
+    "name": "Fullstack-разработчик (Python/Node.js/Cloud Code)",
+    "employer": "Сенсор Лицензирование",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/133219821"
+  },
+  "https://hh.ru/vacancy/133219821": {
+    "ts": 1779139737,
+    "name": "Fullstack-разработчик (Python/Node.js/Cloud Code)",
+    "employer": "Сенсор Лицензирование",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/133219821"
+  },
+  "133065755": {
+    "ts": 1779139881,
+    "name": "Python developer (Django Admin)",
+    "employer": "ИП BMGM",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/133065755"
+  },
+  "https://hh.ru/vacancy/133065755": {
+    "ts": 1779139881,
+    "name": "Python developer (Django Admin)",
+    "employer": "ИП BMGM",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/133065755"
+  },
+  "133098044": {
+    "ts": 1779139990,
+    "name": "Python-разработчик (Basis Cloud Control)",
+    "employer": "ООО БАЗИС",
+    "status": "skipped_other",
+    "url": "https://hh.ru/vacancy/133098044"
+  },
+  "https://hh.ru/vacancy/133098044": {
+    "ts": 1779139990,
+    "name": "Python-разработчик (Basis Cloud Control)",
+    "employer": "ООО БАЗИС",
+    "status": "skipped_other",
+    "url": "https://hh.ru/vacancy/133098044"
+  },
+  "133019858": {
+    "ts": 1779141633,
+    "name": "Python разработчик / разработка ИИ помощника",
+    "employer": "Центр финансовых технологий",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/133019858"
+  },
+  "https://hh.ru/vacancy/133019858": {
+    "ts": 1779141633,
+    "name": "Python разработчик / разработка ИИ помощника",
+    "employer": "Центр финансовых технологий",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/133019858"
+  },
+  "132121521": {
+    "ts": 1779141819,
+    "name": "Старший разработчик сервисов данных (Python)",
+    "employer": "БЮРО 1440",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132121521"
+  },
+  "https://hh.ru/vacancy/132121521": {
+    "ts": 1779141819,
+    "name": "Старший разработчик сервисов данных (Python)",
+    "employer": "БЮРО 1440",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132121521"
+  },
+  "131899024": {
+    "ts": 1779142149,
+    "name": "Программист Python",
+    "employer": "ООО Электронная медицина",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/131899024"
+  },
+  "https://hh.ru/vacancy/131899024": {
+    "ts": 1779142149,
+    "name": "Программист Python",
+    "employer": "ООО Электронная медицина",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/131899024"
+  },
+  "133248519": {
+    "ts": 1779185230,
+    "name": "Дизайнер-проектировщик/ Дизайнер интерьеров (общепит)",
+    "employer": "ООО АМА ГРУПП",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/133248519"
+  },
+  "https://hh.ru/vacancy/133248519": {
+    "ts": 1779185230,
+    "name": "Дизайнер-проектировщик/ Дизайнер интерьеров (общепит)",
+    "employer": "ООО АМА ГРУПП",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/133248519"
+  },
+  "133244216": {
+    "ts": 1779185381,
+    "name": "Графический дизайнер для соцсетей",
+    "employer": "ООО Курник-Групп",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/133244216"
+  },
+  "https://hh.ru/vacancy/133244216": {
+    "ts": 1779185381,
+    "name": "Графический дизайнер для соцсетей",
+    "employer": "ООО Курник-Групп",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/133244216"
+  },
+  "133050658": {
+    "ts": 1779185593,
+    "name": "Middle UI/UX-дизайнер",
+    "employer": "ФОДЖИН",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/133050658"
+  },
+  "https://hh.ru/vacancy/133050658": {
+    "ts": 1779185593,
+    "name": "Middle UI/UX-дизайнер",
+    "employer": "ФОДЖИН",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/133050658"
+  },
+  "132375556": {
+    "ts": 1779185761,
+    "name": "Креативный event-дизайнер",
+    "employer": "ООО Андерсен Ивент",
+    "status": "exception",
+    "url": "https://hh.ru/vacancy/132375556"
+  },
+  "https://hh.ru/vacancy/132375556": {
+    "ts": 1779185761,
+    "name": "Креативный event-дизайнер",
+    "employer": "ООО Андерсен Ивент",
+    "status": "exception",
+    "url": "https://hh.ru/vacancy/132375556"
+  },
+  "133240207": {
+    "ts": 1779185989,
+    "name": "Младший продуктовый дизайнер",
+    "employer": "АО Интернет Проекты",
+    "status": "exception",
+    "url": "https://hh.ru/vacancy/133240207"
+  },
+  "https://hh.ru/vacancy/133240207": {
+    "ts": 1779185989,
+    "name": "Младший продуктовый дизайнер",
+    "employer": "АО Интернет Проекты",
+    "status": "exception",
+    "url": "https://hh.ru/vacancy/133240207"
+  },
+  "133239843": {
+    "ts": 1779186168,
+    "name": "Продуктовый дизайнер Middle UX\\UI",
+    "employer": "Сантехника-Онлайн",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/133239843"
+  },
+  "https://hh.ru/vacancy/133239843": {
+    "ts": 1779186168,
+    "name": "Продуктовый дизайнер Middle UX\\UI",
+    "employer": "Сантехника-Онлайн",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/133239843"
+  },
+  "133239593": {
+    "ts": 1779186311,
+    "name": "Product Designer / Продуктовый дизайнер",
+    "employer": "Пятёрочка. Диджитал",
+    "status": "skipped_other",
+    "url": "https://hh.ru/vacancy/133239593"
+  },
+  "https://hh.ru/vacancy/133239593": {
+    "ts": 1779186311,
+    "name": "Product Designer / Продуктовый дизайнер",
+    "employer": "Пятёрочка. Диджитал",
+    "status": "skipped_other",
+    "url": "https://hh.ru/vacancy/133239593"
+  },
+  "132724610": {
+    "ts": 1779186499,
+    "name": "Графический дизайнер",
+    "employer": "ПроЦех55",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132724610"
+  },
+  "https://hh.ru/vacancy/132724610": {
+    "ts": 1779186499,
+    "name": "Графический дизайнер",
+    "employer": "ПроЦех55",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132724610"
+  },
+  "133147873": {
+    "ts": 1779186629,
+    "name": "UX/UI-дизайнер",
+    "employer": "You+Baby Studio",
+    "status": "exception",
+    "url": "https://hh.ru/vacancy/133147873"
+  },
+  "https://hh.ru/vacancy/133147873": {
+    "ts": 1779186629,
+    "name": "UX/UI-дизайнер",
+    "employer": "You+Baby Studio",
+    "status": "exception",
+    "url": "https://hh.ru/vacancy/133147873"
+  },
+  "133216522": {
+    "ts": 1779186808,
+    "name": "Дизайнер отдела продаж",
+    "employer": "ООО Спринтер",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/133216522"
+  },
+  "https://hh.ru/vacancy/133216522": {
+    "ts": 1779186808,
+    "name": "Дизайнер отдела продаж",
+    "employer": "ООО Спринтер",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/133216522"
+  },
+  "132483462": {
+    "ts": 1779186955,
+    "name": "Дизайнер",
+    "employer": "ООО Business Speech",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132483462"
+  },
+  "https://hh.ru/vacancy/132483462": {
+    "ts": 1779186955,
+    "name": "Дизайнер",
+    "employer": "ООО Business Speech",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132483462"
+  },
+  "133214468": {
+    "ts": 1779187194,
+    "name": "AI дизайнер",
+    "employer": "ООО Рмт Комьюнити",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/133214468"
+  },
+  "https://hh.ru/vacancy/133214468": {
+    "ts": 1779187194,
+    "name": "AI дизайнер",
+    "employer": "ООО Рмт Комьюнити",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/133214468"
   }
 }

@@ -1,3 +1,6 @@
-2026/05/18-01:21:15.930 10f3e Reusing MANIFEST /home/xaneodev/hh-auto-response/user-data-search/Default/Session Storage/MANIFEST-000001
-2026/05/18-01:21:15.931 10f3e Recovering log #55
-2026/05/18-01:21:15.934 10f3e Reusing old log /home/xaneodev/hh-auto-response/user-data-search/Default/Session Storage/000055.log 
+2026/05/19-00:44:48.194 23b45 Reusing MANIFEST /home/xaneodev/hh-auto-response/user-data-search/Default/Session Storage/MANIFEST-000001
+2026/05/19-00:44:48.212 23b45 Recovering log #62
+2026/05/19-00:44:48.214 23b45 Reusing old log /home/xaneodev/hh-auto-response/user-data-search/Default/Session Storage/000062.log 
+2026/05/19-00:46:33.206 23bcf Level-0 table #66: started
+2026/05/19-00:46:33.210 23bcf Level-0 table #66: 10594 bytes OK
+2026/05/19-00:46:33.216 23bcf Delete type=0 #62

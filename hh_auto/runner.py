@@ -33,14 +33,6 @@ from .storage import AppliedLog, SearchProgress
 log = logging.getLogger("hh_auto.runner")
 
 
-def _notify_apply(notifier, name, employer, vid):
-    if notifier:
-        try:
-            notifier.send(f"✅ Отклик отправлен: *{employer}* — {name[:50]}")
-        except Exception:
-            pass
-
-
 def _is_disconnect(exc: Exception) -> bool:
     if isinstance(exc, BrowserClosedError):
         return True
@@ -182,16 +174,10 @@ def _gather_vacancies(page: Page, rc: RunnerConfig) -> list[dict]:
     return all_items
 
 
-def _is_dev_title(name: str) -> bool:
-    """Только вакансии на разработчика/программиста."""
+def _is_target_title(name: str, profile: CandidateProfile) -> bool:
+    """True if vacancy title matches the user's hard_skills or desired_role."""
     n = name.lower()
-    dev_keywords = [
-        "разработчик", "developer", "программист", "программирование",
-        "backend", "frontend", "фронтенд", "бэкенд", "бекенд",
-        "software", "инженер-программист", "веб-разработчик",
-        "веб-мастер", "web-разработчик", "fullstack", "фулстак",
-    ]
-    # Явно исключаем дата-инженерию, аналитику, qa, менеджмент
+    # Blacklist — non-dev roles we explicitly skip regardless of profession
     blacklist = [
         "data engineer", "data scientist", "data analyst", "аналитик",
         "qa", "тестировщик", "автоматизатор", "devops", "sre",
@@ -204,9 +190,13 @@ def _is_dev_title(name: str) -> bool:
     for b in blacklist:
         if b in n:
             return False
-    for kw in dev_keywords:
-        if kw in n:
+    # Check hard_skills
+    for skill in profile.hard_skills:
+        if skill.lower() in n:
             return True
+    # Check desired_role
+    if profile.desired_role and profile.desired_role.lower() in n:
+        return True
     return False
 
 
@@ -229,10 +219,11 @@ def _has_target_language(name: str, text: str, hard_skills: list[str]) -> bool:
     return False
 
 
-def _is_relevant(text: str) -> tuple[bool, StackMatch, str]:
+def _is_relevant(text: str, hard_skills: list[str]) -> tuple[bool, StackMatch, str]:
     if is_negative(text):
         return False, StackMatch(), "стоп-слова в описании"
-    stack = detect_stack(text)
+    from .filters import build_stack_patterns, detect_stack
+    stack = detect_stack(text, build_stack_patterns(hard_skills))
     if not stack.has_primary:
         return False, stack, "нет нужного стека"
     return True, stack, ""
@@ -302,10 +293,10 @@ def run(
                 continue
 
             # --- фильтр названия ---
-            if not _is_dev_title(name):
-                log.debug("skip %s — не вакансия разработчика — %s", vid or url, name)
+            if not _is_target_title(name, rc.profile):
+                log.debug("skip %s — не подходит под профиль — %s", vid or url, name)
                 if vid:
-                    progress.skip(vid, name=name, employer=employer, query=query, reason="not_dev_title")
+                    progress.skip(vid, name=name, employer=employer, query=query, reason="not_target_title")
                 skipped += 1
                 continue
 
@@ -341,7 +332,7 @@ def run(
                 continue
 
             # --- relevance check ---
-            ok, stack, reason = _is_relevant(text)
+            ok, stack, reason = _is_relevant(text, rc.profile.hard_skills)
             if not ok:
                 log.debug("skip %s — %s — %s", vid or url, reason, name)
                 if vid:
@@ -387,7 +378,7 @@ def run(
             # --- apply ---
             try:
                 result, info = apply_to_vacancy(
-                    page, bcfg, vacancy_url=url, message=message, dry_run=False
+                    page, bcfg, vacancy_url=url, message=message, vacancy_stack=stack, vacancy_name=name, dry_run=False
                 )
             except Exception as e:
                 if _is_disconnect(e):

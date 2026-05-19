@@ -71,6 +71,25 @@ class ReplyTask:
     last_message: str
     generated_text: str = ""
     sent: bool = False
+    test_task: bool = False
+
+
+# Keywords that indicate employer offered a test task
+_TEST_TASK_KEYWORDS = [
+    "тестовое задание", "тестовое", "test task",
+    "тз", "тестовик", "тест", "испытательное",
+    "практическое задание", "техническое задание",
+    "домашнее задание", "домашка", "кейс",
+    "практика", "задание на проверку",
+]
+
+
+def _is_test_task_offer(text: str) -> bool:
+    """True if employer message offers a test task."""
+    if not text:
+        return False
+    low = text.lower()
+    return any(kw in low for kw in _TEST_TASK_KEYWORDS)
 
 
 def _build_history(messages: list[dict[str, Any]]) -> str:
@@ -296,6 +315,7 @@ def prepare_replies(profile: CandidateProfile) -> list[ReplyTask]:
             vacancy=t.get("vacancy", "?"),
             history=messages,
             last_message=last_employer_msg,
+            test_task=_is_test_task_offer(last_employer_msg),
         )
         log.info("Generating reply for %s (%s)...", tid, task.employer)
         reply_text = _generate_reply(task, profile)

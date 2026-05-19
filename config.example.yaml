@@ -23,18 +23,26 @@ profile:
   full_name: "Дидоренко Александр Святославович"
   city: "Москва"
   hard_skills:
-    - "Python"
-    - "Django"
-    - "FastAPI"
-    - "PostgreSQL"
+    - "Figma"
+    - "Adobe Photoshop"
+    - "Adobe Illustrator"
+    - "UI/UX"
+    - "Веб-дизайн"
+    - "Графический дизайн"
+    - "Дизайн интерфейсов"
+    - "Prototyping"
+    - "Wireframing"
+    - "Дизайн мобильных приложений"
+    - "Adobe After Effects"
+    - "Sketch"
   soft_skills:
     - "командная работа"
     - "ответственность"
     - "коммуникация"
-  work_format: "remote"  # remote | hybrid | office
+  work_format: "remote"
   experience: "between1And3"
-  desired_salary: 250000
-  desired_role: "Python backend разработчик"
+  desired_salary: 100000
+  desired_role: "Дизайнер"
   telegram: "t.me/alexaneodev"
   github: "github.com/saneome"
   extra_contacts: []
@@ -46,6 +54,7 @@ notifications:
     chat_id: "YOUR_CHAT_ID"        # ID чата (или username), куда писать уведомления
     # proxy: "http://user:pass@host:port"   # HTTP/HTTPS прокси для Telegram API
     # proxy: "socks5://user:pass@host:port" # SOCKS5 прокси (требует pip install pysocks)
+  daily_report_time: "21:00"
 
 # Параметры поиска вакансий — превращаются в URL https://hh.ru/search/vacancy?...
 search:
@@ -58,7 +67,15 @@ search:
   schedule: remote
   remote_work_format: true
   # Поисковые запросы можно оставить пустыми — GUI сгенерирует их из profile.*
-  queries: []
+  queries:
+    - "Дизайнер"
+    - "UI/UX дизайнер"
+    - "Веб-дизайнер"
+    - "Графический дизайнер"
+    - "Дизайнер интерфейсов"
+    - "Product дизайнер"
+    - "Дизайнер мобильных приложений"
+    - "Figma дизайнер"
   # Сколько страниц максимум листать на каждый запрос (на странице ~50 вакансий)
   max_pages: 5
 

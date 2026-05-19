@@ -20,6 +20,7 @@ STACK_PATTERNS: dict[str, list[str]] = {
     "streaming": [r"\brtmp\b", r"\bhls\b", r"\bстрим", r"\bstreaming\b"],
     "frontend": [r"\bfront[\s-]?end\b", r"\bфронт"],
     "backend": [r"\bback[\s-]?end\b", r"\bбэк", r"\bбэкенд", r"\bбекенд"],
+    "fullstack": [r"\bfull[\s-]?stack\b", r"\bфулл[\s-]?стек\b", r"\bфуллстек\b"],
 }
 
 # Минимальный список — хотя бы один из этих тегов должен быть в вакансии
@@ -42,10 +43,12 @@ NEGATIVE_PATTERNS = [
 @dataclass
 class StackMatch:
     detected: set[str] = field(default_factory=set)
+    primary: set[str] = field(default_factory=set)
 
     @property
     def has_primary(self) -> bool:
-        return bool(self.detected & PRIMARY_TECH)
+        primary = self.primary or PRIMARY_TECH
+        return bool(self.detected & primary)
 
     def __bool__(self) -> bool:
         return self.has_primary
@@ -54,18 +57,34 @@ class StackMatch:
         return item in self.detected
 
 
-def detect_stack(text: str) -> StackMatch:
-    """Возвращает множество детектированных технологий в тексте."""
+def build_stack_patterns(hard_skills: list[str]) -> dict[str, list[str]]:
+    """Build regex patterns from user's hard_skills for universal detection."""
+    patterns: dict[str, list[str]] = {}
+    for raw in hard_skills:
+        skill = raw.strip()
+        if not skill:
+            continue
+        key = skill.lower()
+        escaped = re.escape(key)
+        # Whole-word / phrase boundary matching that works with any language/symbols
+        patterns[key] = [rf"(?:^|(?<=\W)){escaped}(?:(?=\W)|$)"]
+    return patterns
+
+
+def detect_stack(text: str, custom_patterns: dict[str, list[str]] | None = None) -> StackMatch:
+    """Returns detected technologies. Uses custom_patterns if provided, otherwise default STACK_PATTERNS."""
     if not text:
         return StackMatch()
     low = text.lower()
     found: set[str] = set()
-    for key, patterns in STACK_PATTERNS.items():
-        for p in patterns:
+    patterns = custom_patterns or STACK_PATTERNS
+    for key, pats in patterns.items():
+        for p in pats:
             if re.search(p, low, re.IGNORECASE):
                 found.add(key)
                 break
-    return StackMatch(detected=found)
+    primary = set(custom_patterns.keys()) if custom_patterns else PRIMARY_TECH
+    return StackMatch(detected=found, primary=primary)
 
 
 def is_negative(text: str) -> bool:
