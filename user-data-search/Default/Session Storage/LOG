@@ -1,15 +1,3 @@
-2026/05/19-12:53:37.477 46e9a Reusing MANIFEST /home/xaneodev/hh-auto-response/user-data-search/Default/Session Storage/MANIFEST-000001
-2026/05/19-12:53:37.478 46e9a Recovering log #65
-2026/05/19-12:53:37.482 46e9a Reusing old log /home/xaneodev/hh-auto-response/user-data-search/Default/Session Storage/000065.log 
-2026/05/19-12:57:37.487 46e9a Level-0 table #69: started
-2026/05/19-12:57:37.490 46e9a Level-0 table #69: 10025 bytes OK
-2026/05/19-12:57:37.494 46e9a Delete type=0 #65
-2026/05/19-12:57:37.494 46e9a Compacting 4@0 + 1@1 files
-2026/05/19-12:57:37.500 46e9a Generated table #70@0: 656 keys, 12517 bytes
-2026/05/19-12:57:37.500 46e9a Compacted 4@0 + 1@1 files => 12517 bytes
-2026/05/19-12:57:37.503 46e9a compacted to: files[ 0 1 1 0 0 0 0 ]
-2026/05/19-12:57:37.504 46e9a Delete type=2 #57
-2026/05/19-12:57:37.504 46e9a Delete type=2 #69
-2026/05/19-12:57:37.504 46e9a Delete type=2 #66
-2026/05/19-12:57:37.504 46e9a Delete type=2 #63
-2026/05/19-12:57:37.504 46e9a Delete type=2 #60
+2026/05/19-21:50:18.740 38e4 Reusing MANIFEST C:\Users\Lenovo\Desktop\hh-auto-responser\user-data-search\Default\Session Storage/MANIFEST-000001
+2026/05/19-21:50:18.742 38e4 Recovering log #3
+2026/05/19-21:50:18.747 38e4 Reusing old log C:\Users\Lenovo\Desktop\hh-auto-responser\user-data-search\Default\Session Storage/000003.log 

@@ -7,6 +7,7 @@ from __future__ import annotations
 
 import logging
 import os
+import platform
 import signal
 import subprocess
 import time
@@ -112,7 +113,7 @@ def _join_list(items: list[str]) -> str:
 
 
 class SettingsWindow(QMainWindow):
-    RUNBOTH_PATH = "./run-both.sh"
+    RUNBOTH_PATH = "run-both.bat" if platform.system() == "Windows" else "./run-both.sh"
 
     def __init__(self, config_path: str = "config.yaml"):
         super().__init__()
@@ -557,31 +558,52 @@ class SettingsWindow(QMainWindow):
         if self._proc is None:
             return
 
-        try:
-            os.killpg(os.getpgid(self._proc.pid), signal.SIGTERM)
-        except (ProcessLookupError, OSError):
-            pass
-        else:
+        if platform.system() == "Windows":
+            try:
+                self._proc.terminate()
+            except OSError:
+                pass
             try:
                 self._proc.wait(timeout=8)
             except TimeoutExpired:
                 try:
-                    os.killpg(os.getpgid(self._proc.pid), signal.SIGKILL)
-                except (ProcessLookupError, OSError):
+                    self._proc.kill()
+                except OSError:
                     pass
+                try:
+                    self._proc.wait(timeout=3)
+                except TimeoutExpired:
+                    pass
+        else:
+            try:
+                os.killpg(os.getpgid(self._proc.pid), signal.SIGTERM)
+            except (ProcessLookupError, OSError):
+                pass
+            else:
+                try:
+                    self._proc.wait(timeout=8)
+                except TimeoutExpired:
+                    try:
+                        os.killpg(os.getpgid(self._proc.pid), signal.SIGKILL)
+                    except (ProcessLookupError, OSError):
+                        pass
         self._proc = None
         self._stop_log_threads()
 
-        # Kill Python agents (also catches grandchildren that PG signal may miss)
-        subprocess.run(["pkill", "-TERM", "-f", "python main.py .*user-data-dir user-data-search"], capture_output=True)
-        subprocess.run(["pkill", "-TERM", "-f", "python main.py .*check-negotiations"], capture_output=True)
-        time.sleep(2)
-        subprocess.run(["pkill", "-KILL", "-f", "python main.py .*user-data-dir user-data-search"], capture_output=True)
-        subprocess.run(["pkill", "-KILL", "-f", "python main.py .*check-negotiations"], capture_output=True)
+        if platform.system() == "Windows":
+            subprocess.run(["taskkill", "/F", "/FI", "IMAGENAME eq python.exe"], capture_output=True)
+            subprocess.run(["taskkill", "/F", "/FI", "IMAGENAME eq chrome.exe", "/FI", "WINDOWTITLE eq *"], capture_output=True)
+        else:
+            # Kill Python agents (also catches grandchildren that PG signal may miss)
+            subprocess.run(["pkill", "-TERM", "-f", "python main.py .*user-data-dir user-data-search"], capture_output=True)
+            subprocess.run(["pkill", "-TERM", "-f", "python main.py .*check-negotiations"], capture_output=True)
+            time.sleep(2)
+            subprocess.run(["pkill", "-KILL", "-f", "python main.py .*user-data-dir user-data-search"], capture_output=True)
+            subprocess.run(["pkill", "-KILL", "-f", "python main.py .*check-negotiations"], capture_output=True)
 
-        # also kill lingering chrome processes
-        subprocess.run(["pkill", "-9", "-f", "user-data-responder"], capture_output=True)
-        subprocess.run(["pkill", "-9", "-f", "user-data-search"], capture_output=True)
+            # also kill lingering chrome processes
+            subprocess.run(["pkill", "-9", "-f", "user-data-responder"], capture_output=True)
+            subprocess.run(["pkill", "-9", "-f", "user-data-search"], capture_output=True)
 
         self.btn_start.setEnabled(True)
         self.btn_stop.setEnabled(False)

@@ -1868,6 +1868,1427 @@
       "employer": "Городские сервисы",
       "query": "Дизайнер",
       "reason": "match_vacancy:нет совпадений по хард-скиллам"
+    },
+    "133064419": {
+      "ts": 1779215221,
+      "name": "UI/UX Designer",
+      "employer": "MARTA",
+      "query": "Дизайнер",
+      "reason": "query_mismatch"
+    },
+    "132598679": {
+      "ts": 1779215222,
+      "name": "Digital - дизайнер",
+      "employer": "Brokerpro",
+      "query": "Дизайнер",
+      "reason": "not_target_title"
+    },
+    "132762335": {
+      "ts": 1779215222,
+      "name": "Game Designer",
+      "employer": "ООО Хайкор Геймз",
+      "query": "Дизайнер",
+      "reason": "not_target_title"
+    },
+    "133272231": {
+      "ts": 1779215233,
+      "name": "Графический дизайнер",
+      "employer": "Ассоциация Содействия Цифровому Развитию",
+      "query": "Дизайнер",
+      "reason": "match_vacancy:зарплата ниже ожиданий"
+    },
+    "133271998": {
+      "ts": 1779215233,
+      "name": "Дизайнер",
+      "employer": "Mérash team",
+      "query": "Дизайнер",
+      "reason": "not_target_title"
+    },
+    "133061961": {
+      "ts": 1779215243,
+      "name": "Графический дизайнер для маркетплейсов",
+      "employer": "ООО Прямой Контракт",
+      "query": "Дизайнер",
+      "reason": "match_vacancy:зарплата ниже ожиданий"
+    },
+    "132400572": {
+      "ts": 1779215359,
+      "name": "Архитектор-дизайнер интерьеров",
+      "employer": "ООО Инженерные системы",
+      "query": "Дизайнер",
+      "reason": "not_target_title"
+    },
+    "132758985": {
+      "ts": 1779215359,
+      "name": "Дизайнер",
+      "employer": "ИП Полякова Анна Андреевна",
+      "query": "Дизайнер",
+      "reason": "not_target_title"
+    },
+    "132689964": {
+      "ts": 1779215359,
+      "name": "Менеджер-дизайнер по продаже корпусной мебели на заказ",
+      "employer": "ООО БМФ1",
+      "query": "Дизайнер",
+      "reason": "not_target_title"
+    },
+    "132757952": {
+      "ts": 1779215487,
+      "name": "Графический дизайнер",
+      "employer": "ООО АЙРО",
+      "query": "Дизайнер",
+      "reason": "skipped_other"
+    },
+    "133268430": {
+      "ts": 1779215487,
+      "name": "Дизайнер в онлайн школу",
+      "employer": "ООО Берг ГРУПП",
+      "query": "Дизайнер",
+      "reason": "not_target_title"
+    },
+    "133268240": {
+      "ts": 1779215487,
+      "name": "Разработчик настольных игр / Продукт-менеджер (Game Designer / Product Manager)",
+      "employer": "ИП Машагин Павел Олегович",
+      "query": "Дизайнер",
+      "reason": "not_target_title"
+    },
+    "133266850": {
+      "ts": 1779215487,
+      "name": "Дизайнер карточек для маркетплейсов (Wildberries / Ozon)",
+      "employer": "ИП Табаков Илья Александрович",
+      "query": "Дизайнер",
+      "reason": "not_target_title"
+    },
+    "133266819": {
+      "ts": 1779215487,
+      "name": "Дизайнер интерьеров - 3D визуализатор",
+      "employer": "ПРО Дизайн",
+      "query": "Дизайнер",
+      "reason": "not_target_title"
+    },
+    "133263327": {
+      "ts": 1779215649,
+      "name": "Стажер SMM WHITE LINENS × STAGE Interior Design",
+      "employer": "ИП Дехтяренко Ольга Леонидовна",
+      "query": "Дизайнер",
+      "reason": "not_target_title"
+    },
+    "132369946": {
+      "ts": 1779215649,
+      "name": "Промышленный дизайнер",
+      "employer": "ООО Премиум Кеа Груп",
+      "query": "Дизайнер",
+      "reason": "not_target_title"
+    },
+    "133236762": {
+      "ts": 1779215649,
+      "name": "Дизайнер коммерческих интерьеров",
+      "employer": "ООО Балкон",
+      "query": "Дизайнер",
+      "reason": "not_target_title"
+    },
+    "133235886": {
+      "ts": 1779215649,
+      "name": "UX/UI-дизайнер",
+      "employer": "IT Solutions Management International Pte. Ltd.",
+      "query": "Дизайнер",
+      "reason": "not_target_title"
+    },
+    "133233807": {
+      "ts": 1779215661,
+      "name": "Графический дизайнер (beauty, маркетплейсы)",
+      "employer": "SHE SEE",
+      "query": "Дизайнер",
+      "reason": "match_vacancy:зарплата ниже ожиданий"
+    },
+    "133017220": {
+      "ts": 1779215661,
+      "name": "Конверсионный дизайнер / Архитектор посадочных страниц (Tilda/GetCourse)",
+      "employer": "Академия осознанного мышления",
+      "query": "Дизайнер",
+      "reason": "not_target_title"
+    },
+    "133224096": {
+      "ts": 1779215661,
+      "name": "Product Designer",
+      "employer": "ООО Табор",
+      "query": "Дизайнер",
+      "reason": "not_target_title"
+    },
+    "133222636": {
+      "ts": 1779215661,
+      "name": "Roblox Builder / Левел-дизайнер (Roblox Studio)",
+      "employer": "Полиховский Александр Павлович",
+      "query": "Дизайнер",
+      "reason": "not_target_title"
+    },
+    "133014842": {
+      "ts": 1779215661,
+      "name": "Системный гейм-дизайнер (Steam)",
+      "employer": "KPIBOX",
+      "query": "Дизайнер",
+      "reason": "not_target_title"
+    },
+    "133013806": {
+      "ts": 1779215661,
+      "name": "Motion Designer Mobile app",
+      "employer": "Admire",
+      "query": "Дизайнер",
+      "reason": "not_target_title"
+    },
+    "133221142": {
+      "ts": 1779215661,
+      "name": "Дизайнер карточек для маркетплейсов (товары для творчества)",
+      "employer": "Mavi (ИП Амирханов Рустам Абдуллаевич)",
+      "query": "Дизайнер",
+      "reason": "not_target_title"
+    },
+    "133220808": {
+      "ts": 1779215661,
+      "name": "Дизайнер",
+      "employer": "Мрия, Маркетинг",
+      "query": "Дизайнер",
+      "reason": "not_target_title"
+    },
+    "132857049": {
+      "ts": 1779215661,
+      "name": "Дизайнер в ветеринарную лабораторию",
+      "employer": "ВетДиагностик",
+      "query": "Дизайнер",
+      "reason": "not_target_title"
+    },
+    "133220439": {
+      "ts": 1779215661,
+      "name": "Дизайнер мебели в шоурум-салон (кухни и корпусная)",
+      "employer": "ИП Сорокин Антон Геннадьевич",
+      "query": "Дизайнер",
+      "reason": "not_target_title"
+    },
+    "132550210": {
+      "ts": 1779215671,
+      "name": "Графический дизайнер",
+      "employer": "ИП Мягков Павел Александрович",
+      "query": "Дизайнер",
+      "reason": "match_vacancy:зарплата ниже ожиданий"
+    },
+    "133149655": {
+      "ts": 1779215671,
+      "name": "Дизайнер по подготовке макетов для печати ковровых покрытий",
+      "employer": "AkTs",
+      "query": "Дизайнер",
+      "reason": "not_target_title"
+    },
+    "132348552": {
+      "ts": 1779215671,
+      "name": "Web-дизайнер (UX/UI)",
+      "employer": "AG GROUP LLC",
+      "query": "Дизайнер",
+      "reason": "not_target_title"
+    },
+    "131820019": {
+      "ts": 1779215691,
+      "name": "UX/UI-дизайнер",
+      "employer": "Яндекс Крауд: Контент",
+      "query": "Дизайнер",
+      "reason": "not_target_title"
+    },
+    "131820018": {
+      "ts": 1779215691,
+      "name": "UX/UI-дизайнер",
+      "employer": "Яндекс Крауд: Контент",
+      "query": "Дизайнер",
+      "reason": "not_target_title"
+    },
+    "133132500": {
+      "ts": 1779215769,
+      "name": "Intern Economy Game Designer",
+      "employer": "ООО Эксбо Север",
+      "query": "Дизайнер",
+      "reason": "not_target_title"
+    },
+    "132348927": {
+      "ts": 1779215769,
+      "name": "Коммуникационный дизайнер",
+      "employer": "Иви",
+      "query": "Дизайнер",
+      "reason": "not_target_title"
+    },
+    "132989915": {
+      "ts": 1779215769,
+      "name": "AI креатор/Нейрофотограф/Нейрохудожник/AI-иллюстратор/AI-дизайнер",
+      "employer": "LD LATTE",
+      "query": "Дизайнер",
+      "reason": "not_target_title"
+    },
+    "132329977": {
+      "ts": 1779215769,
+      "name": "Designer (Motion / Creative Designer)",
+      "employer": "ООО Кубикор",
+      "query": "Дизайнер",
+      "reason": "not_target_title"
+    },
+    "133196858": {
+      "ts": 1779215769,
+      "name": "Дизайнер интерфейсов (моб и веб)",
+      "employer": "ООО Автоспот",
+      "query": "Дизайнер",
+      "reason": "not_target_title"
+    },
+    "133193152": {
+      "ts": 1779215952,
+      "name": "Менеджер по работе с маркетплейсами WILDBERRIES (бренд YOS DESIGN)",
+      "employer": "rodinka.recruitment (ИП Звездин Егор Романович)",
+      "query": "Дизайнер",
+      "reason": "not_target_title"
+    },
+    "132464572": {
+      "ts": 1779215952,
+      "name": "Дизайнер интерьеров",
+      "employer": "LiDesign",
+      "query": "Дизайнер",
+      "reason": "not_target_title"
+    },
+    "133190682": {
+      "ts": 1779215972,
+      "name": "Дизайнер маркетплейсов/бренд менеджер",
+      "employer": "ИП Журова Яна Сергеевна",
+      "query": "Дизайнер",
+      "reason": "not_target_title"
+    },
+    "132980218": {
+      "ts": 1779215972,
+      "name": "Дизайнер статической графики",
+      "employer": "ООО Диджитал Лайн",
+      "query": "Дизайнер",
+      "reason": "not_target_title"
+    },
+    "133185256": {
+      "ts": 1779215972,
+      "name": "Motion Designer",
+      "employer": "Karuna",
+      "query": "Дизайнер",
+      "reason": "not_target_title"
+    },
+    "131792121": {
+      "ts": 1779215992,
+      "name": "Руководитель отдела дизайна (товары для дома)",
+      "employer": "KuchenLand",
+      "query": "Дизайнер",
+      "reason": "not_target_title"
+    },
+    "133076540": {
+      "ts": 1779215992,
+      "name": "Motion designer 2D / Моушен дизайнер 2D (Igaming)",
+      "employer": "RM",
+      "query": "Дизайнер",
+      "reason": "not_target_title"
+    },
+    "132649643": {
+      "ts": 1779216005,
+      "name": "Графический дизайнер",
+      "employer": "ООО Тенет",
+      "query": "Дизайнер",
+      "reason": "match_vacancy:зарплата ниже ожиданий"
+    },
+    "133106506": {
+      "ts": 1779216005,
+      "name": "Дизайнер карточек на маркетплейсах",
+      "employer": "ООО Гельтек-Медика",
+      "query": "Дизайнер",
+      "reason": "not_target_title"
+    },
+    "133127077": {
+      "ts": 1779216005,
+      "name": "Моушен-дизайнер / Motion designer / AI-аниматор (мультфильмы для детей)",
+      "employer": "ООО Атлас Дети",
+      "query": "Дизайнер",
+      "reason": "not_target_title"
+    },
+    "133126448": {
+      "ts": 1779216025,
+      "name": "Контент-дизайнер для соцсетей (карточки, сторис, карусели)",
+      "employer": "Lemon Media",
+      "query": "Дизайнер",
+      "reason": "not_target_title"
+    },
+    "133125502": {
+      "ts": 1779216034,
+      "name": "Графический дизайнер/ Косметика",
+      "employer": "ООО ГЛОБАЛ ТРЕЙД СОЛЮШНС",
+      "query": "Дизайнер",
+      "reason": "match_vacancy:зарплата ниже ожиданий"
+    },
+    "133124386": {
+      "ts": 1779216034,
+      "name": "Дизайнер интерьеров - хоумстейджер",
+      "employer": "ИП Абзалилова Екатерина Владимировна",
+      "query": "Дизайнер",
+      "reason": "not_target_title"
+    },
+    "131820035": {
+      "ts": 1779216034,
+      "name": "UX/UI-дизайнер",
+      "employer": "Яндекс Крауд: Контент",
+      "query": "Дизайнер",
+      "reason": "not_target_title"
+    },
+    "131820036": {
+      "ts": 1779216034,
+      "name": "UX/UI-дизайнер",
+      "employer": "Яндекс Крауд: Контент",
+      "query": "Дизайнер",
+      "reason": "not_target_title"
+    },
+    "131820037": {
+      "ts": 1779216034,
+      "name": "UX/UI-дизайнер",
+      "employer": "Яндекс Крауд: Контент",
+      "query": "Дизайнер",
+      "reason": "not_target_title"
+    },
+    "132205836": {
+      "ts": 1779216034,
+      "name": "UX/UI-дизайнер",
+      "employer": "Яндекс Крауд: Контент",
+      "query": "Дизайнер",
+      "reason": "not_target_title"
+    },
+    "131820038": {
+      "ts": 1779216034,
+      "name": "UX/UI-дизайнер",
+      "employer": "Яндекс Крауд: Контент",
+      "query": "Дизайнер",
+      "reason": "not_target_title"
+    },
+    "132205834": {
+      "ts": 1779216034,
+      "name": "UX/UI-дизайнер",
+      "employer": "Яндекс Крауд: Контент",
+      "query": "Дизайнер",
+      "reason": "not_target_title"
+    },
+    "132205835": {
+      "ts": 1779216034,
+      "name": "UX/UI-дизайнер",
+      "employer": "Яндекс Крауд: Контент",
+      "query": "Дизайнер",
+      "reason": "not_target_title"
+    },
+    "132205832": {
+      "ts": 1779216034,
+      "name": "UX/UI-дизайнер",
+      "employer": "Яндекс Крауд: Контент",
+      "query": "Дизайнер",
+      "reason": "not_target_title"
+    },
+    "131820034": {
+      "ts": 1779216034,
+      "name": "UX/UI-дизайнер",
+      "employer": "Яндекс Крауд: Контент",
+      "query": "Дизайнер",
+      "reason": "not_target_title"
+    },
+    "132205833": {
+      "ts": 1779216034,
+      "name": "UX/UI-дизайнер",
+      "employer": "Яндекс Крауд: Контент",
+      "query": "Дизайнер",
+      "reason": "not_target_title"
+    },
+    "132205831": {
+      "ts": 1779216034,
+      "name": "UX/UI-дизайнер",
+      "employer": "Яндекс Крауд: Контент",
+      "query": "Дизайнер",
+      "reason": "not_target_title"
+    },
+    "133121905": {
+      "ts": 1779216034,
+      "name": "Дизайнер-видеограф (маркетплейсы)",
+      "employer": "AMZ Supply",
+      "query": "Дизайнер",
+      "reason": "not_target_title"
+    },
+    "132184123": {
+      "ts": 1779216034,
+      "name": "Специалист по работе с дизайнерами и архитекторами",
+      "employer": "ИП Ряховская Инна Валерьевна",
+      "query": "Дизайнер",
+      "reason": "not_target_title"
+    },
+    "132658546": {
+      "ts": 1779216034,
+      "name": "UX/UI-дизайнер",
+      "employer": "Яндекс Крауд: Контент",
+      "query": "Дизайнер",
+      "reason": "not_target_title"
+    },
+    "132658545": {
+      "ts": 1779216034,
+      "name": "UX/UI-дизайнер",
+      "employer": "Яндекс Крауд: Контент",
+      "query": "Дизайнер",
+      "reason": "not_target_title"
+    },
+    "133061773": {
+      "ts": 1779216034,
+      "name": "AI Motion Designer",
+      "employer": "ООО Appbooster",
+      "query": "Дизайнер",
+      "reason": "not_target_title"
+    },
+    "133057354": {
+      "ts": 1779216150,
+      "name": "Графический дизайнер в Adobe Illustrator",
+      "employer": "Студия адресных табличек BF SIBERIA",
+      "query": "Дизайнер",
+      "reason": "match_vacancy:зарплата ниже ожиданий"
+    },
+    "133057341": {
+      "ts": 1779216150,
+      "name": "Дизайнер интерьеров",
+      "employer": "21KG",
+      "query": "Дизайнер",
+      "reason": "not_target_title"
+    },
+    "133056828": {
+      "ts": 1779216161,
+      "name": "Графический дизайнер",
+      "employer": "ИП Давтян Геворг Аветикович",
+      "query": "Дизайнер",
+      "reason": "match_vacancy:зарплата ниже ожиданий"
+    },
+    "133054771": {
+      "ts": 1779216273,
+      "name": "Графический дизайнер «Сияй, дорогая»",
+      "employer": "Сияй, дорогая",
+      "query": "Дизайнер",
+      "reason": "match_vacancy:зарплата ниже ожиданий"
+    },
+    "133054477": {
+      "ts": 1779216273,
+      "name": "Ведущий дизайнер-продуктолог (интерьеры МОП, Застройщик)",
+      "employer": "ООО Талан",
+      "query": "Дизайнер",
+      "reason": "not_target_title"
+    },
+    "133048894": {
+      "ts": 1779216435,
+      "name": "Продуктовый дизайнер",
+      "employer": "Рунити",
+      "query": "Дизайнер",
+      "reason": "not_target_title"
+    },
+    "133042247": {
+      "ts": 1779216435,
+      "name": "Продуктовый дизайнер",
+      "employer": "ООО 24 ТТЛ",
+      "query": "Дизайнер",
+      "reason": "not_target_title"
+    },
+    "133042222": {
+      "ts": 1779216458,
+      "name": "Графический дизайнер",
+      "employer": "SOFORIA",
+      "query": "Дизайнер",
+      "reason": "match_vacancy:зарплата ниже ожиданий"
+    },
+    "133040103": {
+      "ts": 1779216458,
+      "name": "Дизайнер интерьеров",
+      "employer": "KM design (Маголина Карина Игоревна)",
+      "query": "Дизайнер",
+      "reason": "not_target_title"
+    },
+    "133038215": {
+      "ts": 1779216458,
+      "name": "Дизайнер интерьеров",
+      "employer": "ИП Чура Василий Николаевич",
+      "query": "Дизайнер",
+      "reason": "not_target_title"
+    },
+    "133037727": {
+      "ts": 1779216458,
+      "name": "UX/UI-дизайнер (GameDev)",
+      "employer": "ИП Удовика Сергей Сергеевич",
+      "query": "Дизайнер",
+      "reason": "not_target_title"
+    },
+    "133036320": {
+      "ts": 1779216468,
+      "name": "Графический дизайнер (Ai-контент)",
+      "employer": "Ню Луиза Олеговна",
+      "query": "Дизайнер",
+      "reason": "match_vacancy:зарплата ниже ожиданий"
+    },
+    "133035782": {
+      "ts": 1779216468,
+      "name": "Ландшафтный архитектор / ландшафтный дизайнер",
+      "employer": "ООО Рельеф",
+      "query": "Дизайнер",
+      "reason": "not_target_title"
+    },
+    "132911061": {
+      "ts": 1779216488,
+      "name": "Дизайнер презентаций",
+      "employer": "\"МТС\", Управление продуктами",
+      "query": "Дизайнер",
+      "reason": "not_target_title"
+    },
+    "132911062": {
+      "ts": 1779216488,
+      "name": "Дизайнер презентаций",
+      "employer": "\"МТС\", Управление продуктами",
+      "query": "Дизайнер",
+      "reason": "not_target_title"
+    },
+    "132911063": {
+      "ts": 1779216488,
+      "name": "Дизайнер презентаций",
+      "employer": "\"МТС\", Управление продуктами",
+      "query": "Дизайнер",
+      "reason": "not_target_title"
+    },
+    "132905376": {
+      "ts": 1779216488,
+      "name": "Дизайнер",
+      "employer": "ООО Бочкаревский пивоваренный завод",
+      "query": "Дизайнер",
+      "reason": "not_target_title"
+    },
+    "132904217": {
+      "ts": 1779216488,
+      "name": "Дизайнер",
+      "employer": "ООО Вайт Групп",
+      "query": "Дизайнер",
+      "reason": "not_target_title"
+    },
+    "132892595": {
+      "ts": 1779216499,
+      "name": "Графический дизайнер",
+      "employer": "ИП Белоусова Елена Ильинична",
+      "query": "Дизайнер",
+      "reason": "match_vacancy:зарплата ниже ожиданий"
+    },
+    "131137940": {
+      "ts": 1779216499,
+      "name": "Дизайнер интерьера (Краснодар, Сочи)",
+      "employer": "ООО Бюро",
+      "query": "Дизайнер",
+      "reason": "not_target_title"
+    },
+    "132892113": {
+      "ts": 1779216511,
+      "name": "Графический дизайнер на маркетплейсы",
+      "employer": "ЛЕГОС",
+      "query": "Дизайнер",
+      "reason": "нет нужного стека"
+    },
+    "132767491": {
+      "ts": 1779216511,
+      "name": "Middle Project Manager / Миддл Проектный Менеджер / Account Manager (Дизайн / Design)",
+      "employer": "ИП Ракитина Софья Дмитриевна",
+      "query": "Дизайнер",
+      "reason": "not_target_title"
+    },
+    "132887111": {
+      "ts": 1779216511,
+      "name": "Дизайнер инфографики для маркетплейсов",
+      "employer": "ИП Бобылев Иван Дмитриевич",
+      "query": "Дизайнер",
+      "reason": "not_target_title"
+    },
+    "132874039": {
+      "ts": 1779216511,
+      "name": "Технический дизайнер",
+      "employer": "BROKS branding agency",
+      "query": "Дизайнер",
+      "reason": "not_target_title"
+    },
+    "132862706": {
+      "ts": 1779216511,
+      "name": "Дизайнер в рекламное агентство",
+      "employer": "ООО Энергопромстрой",
+      "query": "Дизайнер",
+      "reason": "not_target_title"
+    },
+    "133263198": {
+      "ts": 1779216896,
+      "name": "Дизайнер / Нейрокреатор",
+      "employer": "KOOh (ООО ЕКОМ КОМПАНИ)",
+      "query": "Дизайнер",
+      "reason": "not_target_title"
+    },
+    "133262682": {
+      "ts": 1779216896,
+      "name": "Младший дизайнер для бренда MOREMIO (e-commerce, маркетплейсы)",
+      "employer": "ИП Юшина Екатерина Андреевна",
+      "query": "Дизайнер",
+      "reason": "not_target_title"
+    },
+    "133218263": {
+      "ts": 1779216907,
+      "name": "Графический дизайнер",
+      "employer": "ИП Коваленко Александра Олеговна",
+      "query": "Дизайнер",
+      "reason": "match_vacancy:зарплата ниже ожиданий"
+    },
+    "133010113": {
+      "ts": 1779216918,
+      "name": "Графический дизайнер",
+      "employer": "Тюбетей",
+      "query": "Дизайнер",
+      "reason": "match_vacancy:зарплата ниже ожиданий"
+    },
+    "132347346": {
+      "ts": 1779216918,
+      "name": "Менеджер по работе с дизайнерами В2В (Фермер)",
+      "employer": "MGS Interior (ИП Демченко Илона Робертовна)",
+      "query": "Дизайнер",
+      "reason": "not_target_title"
+    },
+    "133267738": {
+      "ts": 1779216918,
+      "name": "Руководитель отдела дизайна / Арт-директор",
+      "employer": "Life Practic",
+      "query": "UI/UX дизайнер",
+      "reason": "not_target_title"
+    },
+    "131820033": {
+      "ts": 1779216918,
+      "name": "UX/UI-дизайнер",
+      "employer": "Яндекс Крауд: Контент",
+      "query": "UI/UX дизайнер",
+      "reason": "not_target_title"
+    },
+    "131820032": {
+      "ts": 1779216918,
+      "name": "UX/UI-дизайнер",
+      "employer": "Яндекс Крауд: Контент",
+      "query": "UI/UX дизайнер",
+      "reason": "not_target_title"
+    },
+    "131820031": {
+      "ts": 1779216918,
+      "name": "UX/UI-дизайнер",
+      "employer": "Яндекс Крауд: Контент",
+      "query": "UI/UX дизайнер",
+      "reason": "not_target_title"
+    },
+    "131820030": {
+      "ts": 1779216918,
+      "name": "UX/UI-дизайнер",
+      "employer": "Яндекс Крауд: Контент",
+      "query": "UI/UX дизайнер",
+      "reason": "not_target_title"
+    },
+    "131820029": {
+      "ts": 1779216918,
+      "name": "UX/UI-дизайнер",
+      "employer": "Яндекс Крауд: Контент",
+      "query": "UI/UX дизайнер",
+      "reason": "not_target_title"
+    },
+    "131820028": {
+      "ts": 1779216918,
+      "name": "UX/UI-дизайнер",
+      "employer": "Яндекс Крауд: Контент",
+      "query": "UI/UX дизайнер",
+      "reason": "not_target_title"
+    },
+    "131820027": {
+      "ts": 1779216918,
+      "name": "UX/UI-дизайнер",
+      "employer": "Яндекс Крауд: Контент",
+      "query": "UI/UX дизайнер",
+      "reason": "not_target_title"
+    },
+    "133251904": {
+      "ts": 1779216918,
+      "name": "UX/UI-дизайнер",
+      "employer": "ИП Хаминский Антон Яковлевич",
+      "query": "UI/UX дизайнер",
+      "reason": "not_target_title"
+    },
+    "133234296": {
+      "ts": 1779217044,
+      "name": "Ведущий тестировщик (QA) в студию веб-разработки",
+      "employer": "ИП Бордаковский Антон Робертович",
+      "query": "UI/UX дизайнер",
+      "reason": "not_target_title"
+    },
+    "132286534": {
+      "ts": 1779217044,
+      "name": "Менеджер по продажам IT-услуг (заказная разработка)",
+      "employer": "ООО Открытые решения",
+      "query": "UI/UX дизайнер",
+      "reason": "not_target_title"
+    },
+    "132658544": {
+      "ts": 1779217044,
+      "name": "UX/UI-дизайнер",
+      "employer": "Яндекс Крауд: Контент",
+      "query": "UI/UX дизайнер",
+      "reason": "not_target_title"
+    },
+    "132658543": {
+      "ts": 1779217044,
+      "name": "UX/UI-дизайнер",
+      "employer": "Яндекс Крауд: Контент",
+      "query": "UI/UX дизайнер",
+      "reason": "not_target_title"
+    },
+    "132658542": {
+      "ts": 1779217044,
+      "name": "UX/UI-дизайнер",
+      "employer": "Яндекс Крауд: Контент",
+      "query": "UI/UX дизайнер",
+      "reason": "not_target_title"
+    },
+    "132658541": {
+      "ts": 1779217044,
+      "name": "UX/UI-дизайнер",
+      "employer": "Яндекс Крауд: Контент",
+      "query": "UI/UX дизайнер",
+      "reason": "not_target_title"
+    },
+    "132658540": {
+      "ts": 1779217044,
+      "name": "UX/UI-дизайнер",
+      "employer": "Яндекс Крауд: Контент",
+      "query": "UI/UX дизайнер",
+      "reason": "not_target_title"
+    },
+    "132658539": {
+      "ts": 1779217044,
+      "name": "UX/UI-дизайнер",
+      "employer": "Яндекс Крауд: Контент",
+      "query": "UI/UX дизайнер",
+      "reason": "not_target_title"
+    },
+    "132651749": {
+      "ts": 1779217064,
+      "name": "Unity Developer (Middle/Senior) — VR-обучение",
+      "employer": "SkillCampVR",
+      "query": "UI/UX дизайнер",
+      "reason": "not_target_title"
+    },
+    "132644045": {
+      "ts": 1779217064,
+      "name": "Дизайнер-редактор web-страниц и лендингов",
+      "employer": "ВанГог",
+      "query": "UI/UX дизайнер",
+      "reason": "not_target_title"
+    },
+    "132633221": {
+      "ts": 1779217064,
+      "name": "Дизайнер корпоративный (графический / веб)",
+      "employer": "Автомакон",
+      "query": "UI/UX дизайнер",
+      "reason": "not_target_title"
+    },
+    "132628737": {
+      "ts": 1779217064,
+      "name": "UX/UI-дизайнер",
+      "employer": "Севстар",
+      "query": "UI/UX дизайнер",
+      "reason": "not_target_title"
+    },
+    "132598590": {
+      "ts": 1779217064,
+      "name": "Middle Game Designer/Гейм-дизайнер",
+      "employer": "ROCKSTONE",
+      "query": "UI/UX дизайнер",
+      "reason": "not_target_title"
+    },
+    "132497560": {
+      "ts": 1779217170,
+      "name": "Веб-дизайнер",
+      "employer": "ООО Вита-Про",
+      "query": "UI/UX дизайнер",
+      "reason": "match_vacancy:зарплата ниже ожиданий"
+    },
+    "132447861": {
+      "ts": 1779217316,
+      "name": "Младший продуктовый дизайнер",
+      "employer": "Ozon fresh",
+      "query": "UI/UX дизайнер",
+      "reason": "not_target_title"
+    },
+    "132441079": {
+      "ts": 1779217493,
+      "name": "Веб-дизайнер",
+      "employer": "ИП Соснина Елена Юрьевна",
+      "query": "UI/UX дизайнер",
+      "reason": "match_vacancy:зарплата ниже ожиданий"
+    },
+    "132437735": {
+      "ts": 1779217493,
+      "name": "Дизайнер 2D/3D",
+      "employer": "JenLi Mobile Marketing Agency",
+      "query": "UI/UX дизайнер",
+      "reason": "not_target_title"
+    },
+    "132401839": {
+      "ts": 1779217636,
+      "name": "Дизайнер интерфейсов",
+      "employer": "F6",
+      "query": "UI/UX дизайнер",
+      "reason": "not_target_title"
+    },
+    "132393825": {
+      "ts": 1779217636,
+      "name": "AI-Native Frontend Developer | Vibe-Coding специалист",
+      "employer": "ИП Волкова Татьяна Михайловна",
+      "query": "UI/UX дизайнер",
+      "reason": "not_target_title"
+    },
+    "132348276": {
+      "ts": 1779217877,
+      "name": "Junior System Analyst",
+      "employer": "Codemate Team (ИП Дегтярев Михаил Алексеевич)",
+      "query": "UI/UX дизайнер",
+      "reason": "not_target_title"
+    },
+    "132635716": {
+      "ts": 1779218065,
+      "name": "Middle QA Engineer",
+      "employer": "ООО Си энд Ю Ко",
+      "query": "Веб-дизайнер",
+      "reason": "not_target_title"
+    },
+    "131672107": {
+      "ts": 1779218065,
+      "name": "Team Lead Mediabuyer FB (iGaming)",
+      "employer": "Leads",
+      "query": "Веб-дизайнер",
+      "reason": "not_target_title"
+    },
+    "133158706": {
+      "ts": 1779218065,
+      "name": "Специалист по Яндекс Директ / Директолог",
+      "employer": "Феррум Студио",
+      "query": "Веб-дизайнер",
+      "reason": "not_target_title"
+    },
+    "132732500": {
+      "ts": 1779218065,
+      "name": "IT Product Manager",
+      "employer": "Команда Леонида Тальписа",
+      "query": "Веб-дизайнер",
+      "reason": "not_target_title"
+    },
+    "131605486": {
+      "ts": 1779218065,
+      "name": "Backend‑разработчик (Nest.js)",
+      "employer": "Purrweb",
+      "query": "Веб-дизайнер",
+      "reason": "not_target_title"
+    },
+    "133149812": {
+      "ts": 1779218065,
+      "name": "Специалист по контекстной рекламе / интернет-маркетолог",
+      "employer": "BondSoft",
+      "query": "Веб-дизайнер",
+      "reason": "not_target_title"
+    },
+    "132833390": {
+      "ts": 1779218065,
+      "name": "Руководитель отдела продаж WB",
+      "employer": "Веб-интегратор СПИЧКА",
+      "query": "Веб-дизайнер",
+      "reason": "not_target_title"
+    },
+    "133185463": {
+      "ts": 1779218065,
+      "name": "Frontend-разработчик",
+      "employer": "Мосгосэкспертиза",
+      "query": "Веб-дизайнер",
+      "reason": "not_target_title"
+    },
+    "133180468": {
+      "ts": 1779218065,
+      "name": "Дизайн-лид в диджитал-продакшн",
+      "employer": "JetStyle",
+      "query": "Веб-дизайнер",
+      "reason": "not_target_title"
+    },
+    "132634953": {
+      "ts": 1779218065,
+      "name": "SEO-специалист / Оптимизатор",
+      "employer": "ООО TRINET",
+      "query": "Веб-дизайнер",
+      "reason": "not_target_title"
+    },
+    "132630595": {
+      "ts": 1779218065,
+      "name": "Дизайнер в онлайн - школу (мягкая ниша)",
+      "employer": "Школа Рейки Animaway",
+      "query": "Веб-дизайнер",
+      "reason": "not_target_title"
+    },
+    "133096217": {
+      "ts": 1779218066,
+      "name": "Дизайнер на маркетплейсы",
+      "employer": "ООО СТРАНА ИНСТРУМЕНТОВ",
+      "query": "Веб-дизайнер",
+      "reason": "not_target_title"
+    },
+    "132793642": {
+      "ts": 1779218066,
+      "name": "Дизайнер/Графический дизайнер",
+      "employer": "ООО АЮНА",
+      "query": "Веб-дизайнер",
+      "reason": "query_mismatch"
+    },
+    "132920242": {
+      "ts": 1779218066,
+      "name": "Дизайнер / Графический дизайнер (баннеры, презентации, веб-дизайн)",
+      "employer": "LifeStyleGroup",
+      "query": "Веб-дизайнер",
+      "reason": "query_mismatch"
+    },
+    "132910023": {
+      "ts": 1779218066,
+      "name": "Разработчик сайтов / Web-дизайнер на Tilda, WordPress, Битрикс",
+      "employer": "e-MARKET TECH",
+      "query": "Веб-дизайнер",
+      "reason": "not_target_title"
+    },
+    "133158354": {
+      "ts": 1779218066,
+      "name": "Пишущий редактор, копирайтер в веб-студию (IT)",
+      "employer": "NEXMAN",
+      "query": "Веб-дизайнер",
+      "reason": "not_target_title"
+    },
+    "133137209": {
+      "ts": 1779218066,
+      "name": "Веб-разработчик сайта на конструкторе Flexbe",
+      "employer": "ООО Кристалл",
+      "query": "Веб-дизайнер",
+      "reason": "not_target_title"
+    },
+    "133133854": {
+      "ts": 1779218066,
+      "name": "Traffic Manager / Media Buyer",
+      "employer": "Syndicate Group",
+      "query": "Веб-дизайнер",
+      "reason": "not_target_title"
+    },
+    "133124279": {
+      "ts": 1779218066,
+      "name": "Media Buyer / Трафик-менеджер Google Ads (Demand Gen, YouTube)",
+      "employer": "SEQUOIA PROJECTS LTD",
+      "query": "Веб-дизайнер",
+      "reason": "not_target_title"
+    },
+    "133002926": {
+      "ts": 1779218086,
+      "name": "Проджект менеджер (IT проекты)",
+      "employer": "Группа КБ-12",
+      "query": "Веб-дизайнер",
+      "reason": "not_target_title"
+    },
+    "132991318": {
+      "ts": 1779218086,
+      "name": "UX-исследователь",
+      "employer": "ООО  «Передовые Платежные Решения»",
+      "query": "Веб-дизайнер",
+      "reason": "not_target_title"
+    },
+    "130474577": {
+      "ts": 1779218086,
+      "name": "Media Buyer / Traffic Manager / UA manager",
+      "employer": "Syndicate Group",
+      "query": "Веб-дизайнер",
+      "reason": "not_target_title"
+    },
+    "132985825": {
+      "ts": 1779218086,
+      "name": "Старший проектный менеджер",
+      "employer": "ИП Ларина Юлия Маратовна",
+      "query": "Веб-дизайнер",
+      "reason": "not_target_title"
+    },
+    "132963310": {
+      "ts": 1779218086,
+      "name": "Графический дизайнер",
+      "employer": "Resto Communication",
+      "query": "Веб-дизайнер",
+      "reason": "query_mismatch"
+    },
+    "132934437": {
+      "ts": 1779218086,
+      "name": "Маркетолог (B2B, промышленное оборудование)",
+      "employer": "Евразия Групп",
+      "query": "Веб-дизайнер",
+      "reason": "not_target_title"
+    },
+    "132934406": {
+      "ts": 1779218086,
+      "name": "Интернет-маркетолог",
+      "employer": "GTS",
+      "query": "Веб-дизайнер",
+      "reason": "not_target_title"
+    },
+    "132131021": {
+      "ts": 1779218086,
+      "name": "Веб-программист 1С-Битрикс",
+      "employer": "ООО Студия Арт Нэт",
+      "query": "Веб-дизайнер",
+      "reason": "not_target_title"
+    },
+    "132926124": {
+      "ts": 1779218086,
+      "name": "Разработчик Битрикс24",
+      "employer": "ООО Пять углов",
+      "query": "Веб-дизайнер",
+      "reason": "not_target_title"
+    },
+    "132921555": {
+      "ts": 1779218086,
+      "name": "Дизайнер на Tilda",
+      "employer": "Адикт",
+      "query": "Веб-дизайнер",
+      "reason": "not_target_title"
+    },
+    "132871747": {
+      "ts": 1779218086,
+      "name": "Интернет-маркетолог (Кунашир Резорт и СПА)",
+      "employer": "ИП Орлянская Лариса Витальевна",
+      "query": "Веб-дизайнер",
+      "reason": "not_target_title"
+    },
+    "132871748": {
+      "ts": 1779218086,
+      "name": "Интернет-маркетолог (Кунашир Резорт и СПА)",
+      "employer": "ИП Орлянская Лариса Витальевна",
+      "query": "Веб-дизайнер",
+      "reason": "not_target_title"
+    },
+    "132871750": {
+      "ts": 1779218086,
+      "name": "Интернет-маркетолог (Кунашир Резорт и СПА)",
+      "employer": "ИП Орлянская Лариса Витальевна",
+      "query": "Веб-дизайнер",
+      "reason": "not_target_title"
+    },
+    "132871751": {
+      "ts": 1779218086,
+      "name": "Интернет-маркетолог (Кунашир Резорт и СПА)",
+      "employer": "ИП Орлянская Лариса Витальевна",
+      "query": "Веб-дизайнер",
+      "reason": "not_target_title"
+    },
+    "132871752": {
+      "ts": 1779218086,
+      "name": "Интернет-маркетолог (Кунашир Резорт и СПА)",
+      "employer": "ИП Орлянская Лариса Витальевна",
+      "query": "Веб-дизайнер",
+      "reason": "not_target_title"
+    },
+    "132871753": {
+      "ts": 1779218086,
+      "name": "Интернет-маркетолог (Кунашир Резорт и СПА)",
+      "employer": "ИП Орлянская Лариса Витальевна",
+      "query": "Веб-дизайнер",
+      "reason": "not_target_title"
+    },
+    "132871754": {
+      "ts": 1779218086,
+      "name": "Интернет-маркетолог (Кунашир Резорт и СПА)",
+      "employer": "ИП Орлянская Лариса Витальевна",
+      "query": "Веб-дизайнер",
+      "reason": "not_target_title"
+    },
+    "132871755": {
+      "ts": 1779218086,
+      "name": "Интернет-маркетолог (Кунашир Резорт и СПА)",
+      "employer": "ИП Орлянская Лариса Витальевна",
+      "query": "Веб-дизайнер",
+      "reason": "not_target_title"
+    },
+    "132541202": {
+      "ts": 1779218161,
+      "name": "Digital-дизайнер",
+      "employer": "ХОЧУСТУЛ",
+      "query": "Веб-дизайнер",
+      "reason": "not_target_title"
+    },
+    "131649715": {
+      "ts": 1779218161,
+      "name": "Маркетолог",
+      "employer": "ООО Carrot quest",
+      "query": "Веб-дизайнер",
+      "reason": "not_target_title"
+    },
+    "132527974": {
+      "ts": 1779218161,
+      "name": "Middle React Native разработчик",
+      "employer": "ООО Пойзон Дроп",
+      "query": "Веб-дизайнер",
+      "reason": "not_target_title"
+    },
+    "132527295": {
+      "ts": 1779218161,
+      "name": "SEO-специалист (медицинская тематика)",
+      "employer": "Психиатрическая клиника Василия Шурова",
+      "query": "Веб-дизайнер",
+      "reason": "not_target_title"
+    },
+    "132521639": {
+      "ts": 1779218161,
+      "name": "Маркетолог (аренда автомобилей)",
+      "employer": "ООО Рент-А-Трак",
+      "query": "Веб-дизайнер",
+      "reason": "not_target_title"
+    },
+    "132516945": {
+      "ts": 1779218161,
+      "name": "Маркетолог",
+      "employer": "Факт",
+      "query": "Веб-дизайнер",
+      "reason": "not_target_title"
+    },
+    "132516808": {
+      "ts": 1779218161,
+      "name": "Маркетолог (аренда автомобилей)",
+      "employer": "ООО Рент-А-Трак",
+      "query": "Веб-дизайнер",
+      "reason": "not_target_title"
+    },
+    "132516807": {
+      "ts": 1779218161,
+      "name": "Маркетолог (аренда автомобилей)",
+      "employer": "ООО Рент-А-Трак",
+      "query": "Веб-дизайнер",
+      "reason": "not_target_title"
+    },
+    "132516132": {
+      "ts": 1779218161,
+      "name": "SEO-специалист",
+      "employer": "Веб-Центр",
+      "query": "Веб-дизайнер",
+      "reason": "not_target_title"
+    },
+    "132485722": {
+      "ts": 1779218161,
+      "name": "Дизайнер (zero-блоков на Tilda и полиграфических макетов)",
+      "employer": "RISOMA",
+      "query": "Веб-дизайнер",
+      "reason": "not_target_title"
+    },
+    "131603739": {
+      "ts": 1779218161,
+      "name": "Бизнес-аналитик",
+      "employer": "ООО Ростелеком Информационные Технологии",
+      "query": "Веб-дизайнер",
+      "reason": "not_target_title"
+    },
+    "132458227": {
+      "ts": 1779218161,
+      "name": "Аккаунт-менеджер IT (Account manager)/Менеджер IT проектов",
+      "employer": "Компания Эхо",
+      "query": "Веб-дизайнер",
+      "reason": "not_target_title"
+    },
+    "132446461": {
+      "ts": 1779218161,
+      "name": "Маркетолог (проектная деятельность)",
+      "employer": "ООО Академия Развития и Управления Персоналом",
+      "query": "Веб-дизайнер",
+      "reason": "not_target_title"
+    },
+    "132422260": {
+      "ts": 1779218161,
+      "name": "Менеджер по привлечению оптовых покупателей",
+      "employer": "ООО Юльвик",
+      "query": "Веб-дизайнер",
+      "reason": "not_target_title"
+    },
+    "132170279": {
+      "ts": 1779218161,
+      "name": "Инженер по поддержке и развитию веб-ресурсов",
+      "employer": "ПЕНОПЛЭКС",
+      "query": "Веб-дизайнер",
+      "reason": "not_target_title"
+    },
+    "133273579": {
+      "ts": 1779218161,
+      "name": "Менеджер по рекламе/рекламным конструкциям/POS-материалам",
+      "employer": "ИП Музалевская Анна Владимировна",
+      "query": "Графический дизайнер",
+      "reason": "not_target_title"
+    },
+    "133273478": {
+      "ts": 1779218161,
+      "name": "3D Character Artist / Unreal Engine 5",
+      "employer": "Антипова Анастасия Андреевна",
+      "query": "Графический дизайнер",
+      "reason": "not_target_title"
+    },
+    "132348254": {
+      "ts": 1779218161,
+      "name": "Продюсер (разработка и производство мягких игрушек)",
+      "employer": "ООО НОВЫЕ МЕДИА",
+      "query": "Графический дизайнер",
+      "reason": "not_target_title"
+    },
+    "133260803": {
+      "ts": 1779218161,
+      "name": "AI-дизайнер / Креативный дизайнер (Video & Photo AI)",
+      "employer": "ИП Гаязов Аслан Алаевич",
+      "query": "Графический дизайнер",
+      "reason": "not_target_title"
+    },
+    "132482464": {
+      "ts": 1779218161,
+      "name": "Дизайнер упаковки и инструкций",
+      "employer": "ООО ЗИТРЕК РУС",
+      "query": "Графический дизайнер",
+      "reason": "not_target_title"
+    },
+    "132673733": {
+      "ts": 1779218161,
+      "name": "Дизайнер YouTube каналов",
+      "employer": "Агентство YouTube маркетинга Борисов Султанов",
+      "query": "Графический дизайнер",
+      "reason": "not_target_title"
+    },
+    "133210379": {
+      "ts": 1779218181,
+      "name": "Художник-иллюстратор",
+      "employer": "ООО Архитектор",
+      "query": "Графический дизайнер",
+      "reason": "not_target_title"
+    },
+    "132479847": {
+      "ts": 1779218220,
+      "name": "Ведущий графический дизайнер / Бренд-дизайнер",
+      "employer": "ООО Рестовэй Групп Пулково",
+      "query": "Графический дизайнер",
+      "reason": "match_vacancy:зарплата ниже ожиданий"
+    },
+    "133209895": {
+      "ts": 1779218220,
+      "name": "Дизайнер карточек маркетплейса",
+      "employer": "FreiAVIVER",
+      "query": "Графический дизайнер",
+      "reason": "not_target_title"
+    },
+    "133209449": {
+      "ts": 1779218220,
+      "name": "Designer/Дизайнер (BTL,Event)",
+      "employer": "Юнион-Медиа-Сервис, РА",
+      "query": "Графический дизайнер",
+      "reason": "not_target_title"
+    },
+    "132998615": {
+      "ts": 1779218220,
+      "name": "Старший менеджер маркетплейса OZON бренда VOIS",
+      "employer": "VOIS (ООО Рокет Лаунч)",
+      "query": "Графический дизайнер",
+      "reason": "not_target_title"
+    },
+    "132666191": {
+      "ts": 1779218220,
+      "name": "Graphic designer",
+      "employer": "ООО Вигбо",
+      "query": "Графический дизайнер",
+      "reason": "not_target_title"
+    },
+    "132841649": {
+      "ts": 1779218459,
+      "name": "Руководитель отдела дизайна/Арт директор",
+      "employer": "ООО БИГ",
+      "query": "Графический дизайнер",
+      "reason": "not_target_title"
+    },
+    "132532297": {
+      "ts": 1779218459,
+      "name": "Менеджер маркетплейса OZON (МБТ/электроника) / Ассистент селлера",
+      "employer": "ИП Карякин Павел Алексеевич",
+      "query": "Графический дизайнер",
+      "reason": "not_target_title"
+    },
+    "132663181": {
+      "ts": 1779218459,
+      "name": "AI-дизайнер",
+      "employer": "ООО Вебтехнологии",
+      "query": "Графический дизайнер",
+      "reason": "not_target_title"
+    },
+    "133201511": {
+      "ts": 1779218459,
+      "name": "Разработчик коллекций спортивной одежды",
+      "employer": "София Анисимова",
+      "query": "Графический дизайнер",
+      "reason": "not_target_title"
+    },
+    "133201460": {
+      "ts": 1779218459,
+      "name": "Контент-менеджер на маркетплейсах",
+      "employer": "Natura Siberica",
+      "query": "Графический дизайнер",
+      "reason": "not_target_title"
+    },
+    "132662195": {
+      "ts": 1779218459,
+      "name": "Старший менеджер маркетплейса Яндекс Маркет бренда VOIS",
+      "employer": "VOIS (ООО Рокет Лаунч)",
+      "query": "Графический дизайнер",
+      "reason": "not_target_title"
+    },
+    "133083923": {
+      "ts": 1779218459,
+      "name": "AI Creator Дизайнер (генерация фото в нейросетях для маркетплейсов)",
+      "employer": "ООО Ройал Текс",
+      "query": "Графический дизайнер",
+      "reason": "not_target_title"
+    },
+    "132781696": {
+      "ts": 1779218459,
+      "name": "Дизайнер инфографики",
+      "employer": "Decu.ru",
+      "query": "Графический дизайнер",
+      "reason": "not_target_title"
+    },
+    "133082568": {
+      "ts": 1779218459,
+      "name": "Старший менеджер маркетплейса OZON бренда VOIS",
+      "employer": "VOIS (ООО Рокет Лаунч)",
+      "query": "Графический дизайнер",
+      "reason": "not_target_title"
+    },
+    "132281991": {
+      "ts": 1779218459,
+      "name": "Дизайнер (маркетплейсы)",
+      "employer": "SONOX",
+      "query": "Графический дизайнер",
+      "reason": "not_target_title"
+    },
+    "132778245": {
+      "ts": 1779218459,
+      "name": "Младший нарративный гейм-дизайнер",
+      "employer": "ООО Эксбо Север",
+      "query": "Графический дизайнер",
+      "reason": "not_target_title"
+    },
+    "132127349": {
+      "ts": 1779218459,
+      "name": "Менеджер-маркетолог по работе с маркетплейсом (Ozon / Wb)",
+      "employer": "ООО ЗИТРЕК РУС",
+      "query": "Графический дизайнер",
+      "reason": "not_target_title"
+    },
+    "133066132": {
+      "ts": 1779218583,
+      "name": "Графический дизайнер/Иллюстратор",
+      "employer": "Alexander Tischler",
+      "query": "Графический дизайнер",
+      "reason": "skipped_other"
     }
   }
 }

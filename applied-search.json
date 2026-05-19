@@ -1834,5 +1834,257 @@
     "employer": "ООО Рмт Комьюнити",
     "status": "applied",
     "url": "https://hh.ru/vacancy/133214468"
+  },
+  "133270836": {
+    "ts": 1779215359,
+    "name": "Графический дизайнер",
+    "employer": "Post Scriptum - студия рекламного дизайна",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/133270836"
+  },
+  "https://hh.ru/vacancy/133270836": {
+    "ts": 1779215359,
+    "name": "Графический дизайнер",
+    "employer": "Post Scriptum - студия рекламного дизайна",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/133270836"
+  },
+  "132757952": {
+    "ts": 1779215487,
+    "name": "Графический дизайнер",
+    "employer": "ООО АЙРО",
+    "status": "skipped_other",
+    "url": "https://hh.ru/vacancy/132757952"
+  },
+  "https://hh.ru/vacancy/132757952": {
+    "ts": 1779215487,
+    "name": "Графический дизайнер",
+    "employer": "ООО АЙРО",
+    "status": "skipped_other",
+    "url": "https://hh.ru/vacancy/132757952"
+  },
+  "133266544": {
+    "ts": 1779215649,
+    "name": "Графический дизайнер, г. Тольятти",
+    "employer": "ООО Автостандарт",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/133266544"
+  },
+  "https://hh.ru/vacancy/133266544": {
+    "ts": 1779215649,
+    "name": "Графический дизайнер, г. Тольятти",
+    "employer": "ООО Автостандарт",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/133266544"
+  },
+  "131815982": {
+    "ts": 1779215769,
+    "name": "Веб-дизайнер",
+    "employer": "ООО Эксбо Север",
+    "status": "exception",
+    "url": "https://hh.ru/vacancy/131815982"
+  },
+  "https://hh.ru/vacancy/131815982": {
+    "ts": 1779215769,
+    "name": "Веб-дизайнер",
+    "employer": "ООО Эксбо Север",
+    "status": "exception",
+    "url": "https://hh.ru/vacancy/131815982"
+  },
+  "133196217": {
+    "ts": 1779215952,
+    "name": "Графический дизайнер",
+    "employer": "ИП Белоусов Александр Викторович",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/133196217"
+  },
+  "https://hh.ru/vacancy/133196217": {
+    "ts": 1779215952,
+    "name": "Графический дизайнер",
+    "employer": "ИП Белоусов Александр Викторович",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/133196217"
+  },
+  "132486618": {
+    "ts": 1779216130,
+    "name": "Графический дизайнер",
+    "employer": "Devim",
+    "status": "exception",
+    "url": "https://hh.ru/vacancy/132486618"
+  },
+  "https://hh.ru/vacancy/132486618": {
+    "ts": 1779216130,
+    "name": "Графический дизайнер",
+    "employer": "Devim",
+    "status": "exception",
+    "url": "https://hh.ru/vacancy/132486618"
+  },
+  "133055156": {
+    "ts": 1779216254,
+    "name": "Веб-дизайнер",
+    "employer": "Гекса",
+    "status": "exception",
+    "url": "https://hh.ru/vacancy/133055156"
+  },
+  "https://hh.ru/vacancy/133055156": {
+    "ts": 1779216254,
+    "name": "Веб-дизайнер",
+    "employer": "Гекса",
+    "status": "exception",
+    "url": "https://hh.ru/vacancy/133055156"
+  },
+  "133053927": {
+    "ts": 1779216415,
+    "name": "Графический дизайнер",
+    "employer": "Гекса",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/133053927"
+  },
+  "https://hh.ru/vacancy/133053927": {
+    "ts": 1779216415,
+    "name": "Графический дизайнер",
+    "employer": "Гекса",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/133053927"
+  },
+  "133237136": {
+    "ts": 1779217044,
+    "name": "Проектировщик пользовательских интерфейсов (UI/UX)",
+    "employer": "Тензор",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/133237136"
+  },
+  "https://hh.ru/vacancy/133237136": {
+    "ts": 1779217044,
+    "name": "Проектировщик пользовательских интерфейсов (UI/UX)",
+    "employer": "Тензор",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/133237136"
+  },
+  "132556514": {
+    "ts": 1779217153,
+    "name": "Веб-дизайнер",
+    "employer": "Monitask (Аскаров Руслан Олегович)",
+    "status": "exception",
+    "url": "https://hh.ru/vacancy/132556514"
+  },
+  "https://hh.ru/vacancy/132556514": {
+    "ts": 1779217153,
+    "name": "Веб-дизайнер",
+    "employer": "Monitask (Аскаров Руслан Олегович)",
+    "status": "exception",
+    "url": "https://hh.ru/vacancy/132556514"
+  },
+  "132450415": {
+    "ts": 1779217316,
+    "name": "Веб-дизайнер UI/UX Web Designer (Product / AI)",
+    "employer": "Убей скуку (ИП Мамонько Алексей Александрович)",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132450415"
+  },
+  "https://hh.ru/vacancy/132450415": {
+    "ts": 1779217316,
+    "name": "Веб-дизайнер UI/UX Web Designer (Product / AI)",
+    "employer": "Убей скуку (ИП Мамонько Алексей Александрович)",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132450415"
+  },
+  "132441933": {
+    "ts": 1779217479,
+    "name": "Веб-дизайнер",
+    "employer": "User Tech",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132441933"
+  },
+  "https://hh.ru/vacancy/132441933": {
+    "ts": 1779217479,
+    "name": "Веб-дизайнер",
+    "employer": "User Tech",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132441933"
+  },
+  "132425436": {
+    "ts": 1779217636,
+    "name": "Графический дизайнер",
+    "employer": "ООО ТРИНИТИ",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132425436"
+  },
+  "https://hh.ru/vacancy/132425436": {
+    "ts": 1779217636,
+    "name": "Графический дизайнер",
+    "employer": "ООО ТРИНИТИ",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132425436"
+  },
+  "132390996": {
+    "ts": 1779217857,
+    "name": "UI/UX Designer",
+    "employer": "ИП Козырев Артем Сергеевич",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132390996"
+  },
+  "https://hh.ru/vacancy/132390996": {
+    "ts": 1779217857,
+    "name": "UI/UX Designer",
+    "employer": "ИП Козырев Артем Сергеевич",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132390996"
+  },
+  "132339019": {
+    "ts": 1779218065,
+    "name": "Middle Графический дизайнер",
+    "employer": "DigiKey Limited",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132339019"
+  },
+  "https://hh.ru/vacancy/132339019": {
+    "ts": 1779218065,
+    "name": "Middle Графический дизайнер",
+    "employer": "DigiKey Limited",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/132339019"
+  },
+  "132858004": {
+    "ts": 1779218161,
+    "name": "Веб-дизайнер / Специалист по созданию сайтов на Tilda и Webflow",
+    "employer": "ООО Платформа",
+    "status": "exception",
+    "url": "https://hh.ru/vacancy/132858004"
+  },
+  "https://hh.ru/vacancy/132858004": {
+    "ts": 1779218161,
+    "name": "Веб-дизайнер / Специалист по созданию сайтов на Tilda и Webflow",
+    "employer": "ООО Платформа",
+    "status": "exception",
+    "url": "https://hh.ru/vacancy/132858004"
+  },
+  "133138770": {
+    "ts": 1779218459,
+    "name": "Графический дизайнер/Дизайнер на Маркетплейсах/Контент Дизайнер/AI-Дизайнер",
+    "employer": "Beoma",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/133138770"
+  },
+  "https://hh.ru/vacancy/133138770": {
+    "ts": 1779218459,
+    "name": "Графический дизайнер/Дизайнер на Маркетплейсах/Контент Дизайнер/AI-Дизайнер",
+    "employer": "Beoma",
+    "status": "applied",
+    "url": "https://hh.ru/vacancy/133138770"
+  },
+  "133066132": {
+    "ts": 1779218583,
+    "name": "Графический дизайнер/Иллюстратор",
+    "employer": "Alexander Tischler",
+    "status": "skipped_other",
+    "url": "https://hh.ru/vacancy/133066132"
+  },
+  "https://hh.ru/vacancy/133066132": {
+    "ts": 1779218583,
+    "name": "Графический дизайнер/Иллюстратор",
+    "employer": "Alexander Tischler",
+    "status": "skipped_other",
+    "url": "https://hh.ru/vacancy/133066132"
   }
 }

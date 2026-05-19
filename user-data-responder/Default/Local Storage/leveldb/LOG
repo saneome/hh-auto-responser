@@ -1,25 +1,3 @@
-2026/05/19-13:38:08.449 4910c Reusing MANIFEST /home/xaneodev/hh-auto-response/user-data-responder/Default/Local Storage/leveldb/MANIFEST-000001
-2026/05/19-13:38:08.461 4910c Recovering log #900
-2026/05/19-13:38:08.461 4910c Level-0 table #903: started
-2026/05/19-13:38:08.464 4910c Level-0 table #903: 10532 bytes OK
-2026/05/19-13:38:08.465 4910c Recovering log #902
-2026/05/19-13:38:08.465 4910c Reusing old log /home/xaneodev/hh-auto-response/user-data-responder/Default/Local Storage/leveldb/000902.log 
-2026/05/19-13:38:08.476 4910c Delete type=0 #900
-2026/05/19-13:38:45.122 4910c Level-0 table #905: started
-2026/05/19-13:38:45.131 4910c Level-0 table #905: 12349 bytes OK
-2026/05/19-13:38:45.138 4910c Delete type=0 #902
-2026/05/19-13:39:05.312 4910e Level-0 table #907: started
-2026/05/19-13:39:05.319 4910e Level-0 table #907: 9394 bytes OK
-2026/05/19-13:39:05.323 4910e Delete type=0 #904
-2026/05/19-13:39:05.326 4910e Compacting 4@0 + 1@1 files
-2026/05/19-13:39:05.339 4910e Generated table #908@0: 97 keys, 1026140 bytes
-2026/05/19-13:39:05.339 4910e Compacted 4@0 + 1@1 files => 1026140 bytes
-2026/05/19-13:39:05.344 4910e compacted to: files[ 0 1 0 0 0 0 0 ]
-2026/05/19-13:39:05.346 4910e Delete type=2 #903
-2026/05/19-13:39:05.346 4910e Delete type=2 #899
-2026/05/19-13:39:05.347 4910e Delete type=2 #905
-2026/05/19-13:39:05.347 4910e Delete type=2 #907
-2026/05/19-13:39:05.347 4910e Delete type=2 #901
-2026/05/19-13:39:08.481 4910c Level-0 table #910: started
-2026/05/19-13:39:08.486 4910c Level-0 table #910: 7711 bytes OK
-2026/05/19-13:39:08.492 4910c Delete type=0 #906
+2026/05/19-22:22:04.896 1e7c Reusing MANIFEST C:\Users\Lenovo\Desktop\hh-auto-responser\user-data-responder\Default\Local Storage\leveldb/MANIFEST-000001
+2026/05/19-22:22:04.908 1e7c Recovering log #19
+2026/05/19-22:22:04.912 1e7c Reusing old log C:\Users\Lenovo\Desktop\hh-auto-responser\user-data-responder\Default\Local Storage\leveldb/000019.log 

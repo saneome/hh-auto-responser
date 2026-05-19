@@ -1,25 +1,15 @@
-2026/05/19-13:30:54.060 48be6 Reusing MANIFEST /home/xaneodev/hh-auto-response/user-data-responder/Default/Local Storage/leveldb/MANIFEST-000001
-2026/05/19-13:30:54.069 48be6 Recovering log #891
-2026/05/19-13:30:54.069 48be6 Level-0 table #894: started
-2026/05/19-13:30:54.072 48be6 Level-0 table #894: 10944 bytes OK
-2026/05/19-13:30:54.072 48be6 Recovering log #893
-2026/05/19-13:30:54.073 48be6 Reusing old log /home/xaneodev/hh-auto-response/user-data-responder/Default/Local Storage/leveldb/000893.log 
-2026/05/19-13:30:54.077 48be6 Delete type=0 #891
-2026/05/19-13:31:05.917 48be9 Level-0 table #896: started
-2026/05/19-13:31:05.923 48be9 Level-0 table #896: 11351 bytes OK
-2026/05/19-13:31:05.928 48be9 Delete type=0 #893
-2026/05/19-13:31:52.369 48be6 Level-0 table #898: started
-2026/05/19-13:31:52.373 48be6 Level-0 table #898: 12332 bytes OK
-2026/05/19-13:31:52.380 48be6 Delete type=0 #895
-2026/05/19-13:31:52.380 48be6 Compacting 4@0 + 1@1 files
-2026/05/19-13:31:52.388 48be6 Generated table #899@0: 96 keys, 1024641 bytes
-2026/05/19-13:31:52.389 48be6 Compacted 4@0 + 1@1 files => 1024641 bytes
-2026/05/19-13:31:52.391 48be6 compacted to: files[ 0 1 0 0 0 0 0 ]
-2026/05/19-13:31:52.392 48be6 Delete type=2 #892
-2026/05/19-13:31:52.392 48be6 Delete type=2 #890
-2026/05/19-13:31:52.392 48be6 Delete type=2 #894
-2026/05/19-13:31:52.392 48be6 Delete type=2 #898
-2026/05/19-13:31:52.392 48be6 Delete type=2 #896
-2026/05/19-13:32:56.432 48be9 Level-0 table #901: started
-2026/05/19-13:32:56.437 48be9 Level-0 table #901: 10832 bytes OK
-2026/05/19-13:32:56.441 48be9 Delete type=0 #897
+2026/05/19-22:13:07.848 49a8 Reusing MANIFEST C:\Users\Lenovo\Desktop\hh-auto-responser\user-data-responder\Default\Local Storage\leveldb/MANIFEST-000001
+2026/05/19-22:13:07.860 49a8 Recovering log #17
+2026/05/19-22:13:07.864 49a8 Reusing old log C:\Users\Lenovo\Desktop\hh-auto-responser\user-data-responder\Default\Local Storage\leveldb/000017.log 
+2026/05/19-22:14:36.109 3318 Level-0 table #20: started
+2026/05/19-22:14:36.152 3318 Level-0 table #20: 19153 bytes OK
+2026/05/19-22:14:36.162 3318 Delete type=0 #17
+2026/05/19-22:14:36.163 3318 Compacting 4@0 + 1@1 files
+2026/05/19-22:14:36.182 3318 Generated table #21@0: 114 keys, 379497 bytes
+2026/05/19-22:14:36.182 3318 Compacted 4@0 + 1@1 files => 379497 bytes
+2026/05/19-22:14:36.184 3318 compacted to: files[ 0 1 1 0 0 0 0 ]
+2026/05/19-22:14:36.186 3318 Delete type=2 #8
+2026/05/19-22:14:36.186 3318 Delete type=2 #11
+2026/05/19-22:14:36.186 3318 Delete type=2 #13
+2026/05/19-22:14:36.186 3318 Delete type=2 #16
+2026/05/19-22:14:36.186 3318 Delete type=2 #20

@@ -1,7 +1,11 @@
 @echo off
 setlocal EnableDelayedExpansion
 
+if "%~1"==":search_loop" goto :search_loop
+
 cd /d "%~dp0"
+
+set PYTHON=%~dp0.venv\Scripts\python.exe
 
 if not exist logs mkdir logs
 
@@ -17,18 +21,19 @@ if exist user-data-responder\SingletonSocket del /f user-data-responder\Singleto
 echo Lock-файлы очищены.
 
 :: Responder Agent (background)
-start "responder" /B cmd /c "python main.py --check-negotiations --auto-reply --user-data-dir user-data-responder --loop -v >> logs\responder.log 2>&1"
+start "responder" /B cmd /c "%PYTHON% main.py --check-negotiations --auto-reply --user-data-dir user-data-responder --loop -v >> logs\responder.log 2>&1"
 echo Responder agent started.
 
 :: Search Agent (background loop)
-start "search" /B cmd /c :search_loop
+start "search" /B "%~f0" :search_loop
 
 goto :wait
 
 :search_loop
 :loop_search
 cd /d "%~dp0"
-python main.py --user-data-dir user-data-search --applied-log applied-search.json --no-post-search-responder -v >> logs\search.log 2>&1
+set PYTHON=%~dp0.venv\Scripts\python.exe
+"%PYTHON%" main.py --user-data-dir user-data-search --applied-log applied-search.json --no-post-search-responder -v >> logs\search.log 2>&1
 echo [%date% %time%] Search batch finished, sleeping 3600s >> logs\search.log
 timeout /t 3600 /nobreak >nul
 goto :loop_search
