@@ -113,7 +113,7 @@ def main() -> int:
             else (cfg.get("responder") or {}).get("check_interval_seconds", 300)
         )
         first = True
-        report_time_str = (cfg.get("telegram") or {}).get("daily_report_time", "09:00")
+        report_time_str = (cfg.get("notifications") or {}).get("daily_report_time", "09:00")
         try:
             report_h, report_m = map(int, report_time_str.split(":"))
         except Exception:
@@ -136,9 +136,10 @@ def main() -> int:
                     logging.info("Отправляю ежедневный отчёт...")
                     if notifier:
                         try:
-                            notifier.daily_report("")
+                            stats = daily_report(applied_log_path).summary()
+                            notifier.daily_report(stats)
                         except Exception:
-                            pass
+                            logging.exception("Ошибка отправки ежедневного отчёта")
                     _last_report_date = now.date()
 
             # Пересоздаём браузер каждый цикл — Chrome не выдерживает idle

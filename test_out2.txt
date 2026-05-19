@@ -1,0 +1,11 @@
+--- Report text ---
+Откликов: 0
+Ответов: 15
+Тестовые задания: 1
+Собеседования: 1
+Отказов: 3
+Без ответа: 0
+
+По компаниям:
+  ?: responses=15, test_tasks=1, interviews=1, rejections=3
+--- Sending to Telegram... ---

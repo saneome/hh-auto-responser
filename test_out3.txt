@@ -1,0 +1,13 @@
+--- Report text ---
+Откликов: 0
+Ответов: 15
+Тестовые задания: 1
+Собеседования: 1
+Отказов: 3
+Без ответа: 0
+
+По компаниям:
+  ?: responses=15, test_tasks=1, interviews=1, rejections=3
+--- Sending to Telegram... ---
+Telegram response: 200 {"ok":true,"result":{"message_id":27,"from":{"id":8812495531,"is_bot":true,"first_name":"HH-AUTO","username":"palcianimeli_bot"},"chat":{"id":-5197956283,"title":"test","type":"group","all_members_are
+Done.

@@ -40,8 +40,9 @@ class DailyStats:
 
 
 def _is_today(ts: int) -> bool:
-    now = int(time.time())
-    return now - ts < DAY
+    from datetime import datetime, timezone
+    dt = datetime.fromtimestamp(ts, tz=timezone.utc).date()
+    return dt == datetime.now(tz=timezone.utc).date()
 
 
 def _load_json(path: str | Path) -> dict[str, Any]:
@@ -92,7 +93,7 @@ def daily_report(applied_path: str | Path = "applied.json",
             stats.rejections += 1
             stats.by_employer[emp]["rejections"] += 1
 
-    stats.no_answer = stats.applied - stats.responses
+    stats.no_answer = max(0, stats.applied - stats.responses)
     return stats
 
 

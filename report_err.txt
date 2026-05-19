@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\Desktop\hh-auto-responser\main.py", line 11, in <module>
+    from hh_auto.app_config import load_config, make_browser_config
+  File "C:\Users\Lenovo\Desktop\hh-auto-responser\hh_auto\app_config.py", line 6, in <module>
+    import yaml
+ModuleNotFoundError: No module named 'yaml'
