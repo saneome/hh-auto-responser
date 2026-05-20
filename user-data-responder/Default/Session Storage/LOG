@@ -1,3 +1,6 @@
-2026/05/19-22:22:05.194 1e7c Reusing MANIFEST C:\Users\Lenovo\Desktop\hh-auto-responser\user-data-responder\Default\Session Storage/MANIFEST-000001
-2026/05/19-22:22:05.210 1e7c Recovering log #3
-2026/05/19-22:22:05.225 1e7c Reusing old log C:\Users\Lenovo\Desktop\hh-auto-responser\user-data-responder\Default\Session Storage/000003.log 
+2026/05/20-20:44:51.448 261c Reusing MANIFEST C:\Users\Lenovo\Desktop\hh-auto-responser\user-data-responder\Default\Session Storage/MANIFEST-000001
+2026/05/20-20:44:51.473 261c Recovering log #7
+2026/05/20-20:44:51.481 261c Reusing old log C:\Users\Lenovo\Desktop\hh-auto-responser\user-data-responder\Default\Session Storage/000007.log 
+2026/05/20-20:47:58.050 350c Level-0 table #11: started
+2026/05/20-20:47:58.060 350c Level-0 table #11: 13621 bytes OK
+2026/05/20-20:47:58.067 350c Delete type=0 #7

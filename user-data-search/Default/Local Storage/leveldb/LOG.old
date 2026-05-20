@@ -1,30 +1,42 @@
-2026/05/19-21:22:15.155 2abc Reusing MANIFEST C:\Users\Lenovo\Desktop\hh-auto-responser\user-data-search\Default\Local Storage\leveldb/MANIFEST-000001
-2026/05/19-21:22:15.163 2abc Recovering log #4
-2026/05/19-21:22:15.165 2abc Reusing old log C:\Users\Lenovo\Desktop\hh-auto-responser\user-data-search\Default\Local Storage\leveldb/000004.log 
-2026/05/19-21:23:19.911 4a34 Level-0 table #8: started
-2026/05/19-21:23:19.918 4a34 Level-0 table #8: 16459 bytes OK
-2026/05/19-21:23:19.921 4a34 Delete type=0 #4
-2026/05/19-21:27:19.909 4a34 Level-0 table #10: started
-2026/05/19-21:27:19.916 4a34 Level-0 table #10: 16719 bytes OK
-2026/05/19-21:27:19.919 4a34 Delete type=0 #7
-2026/05/19-21:32:19.904 4a34 Level-0 table #12: started
-2026/05/19-21:32:19.911 4a34 Level-0 table #12: 13773 bytes OK
-2026/05/19-21:32:19.915 4a34 Delete type=0 #9
-2026/05/19-21:38:19.908 2abc Level-0 table #14: started
-2026/05/19-21:38:19.913 2abc Level-0 table #14: 13258 bytes OK
-2026/05/19-21:38:19.916 2abc Delete type=0 #11
-2026/05/19-21:43:16.279 4a34 Level-0 table #16: started
-2026/05/19-21:43:16.284 4a34 Level-0 table #16: 12161 bytes OK
-2026/05/19-21:43:16.287 4a34 Delete type=0 #13
-2026/05/19-21:43:16.288 4a34 Compacting 4@0 + 1@1 files
-2026/05/19-21:43:16.293 4a34 Generated table #17@0: 219 keys, 8208 bytes
-2026/05/19-21:43:16.293 4a34 Compacted 4@0 + 1@1 files => 8208 bytes
-2026/05/19-21:43:16.295 4a34 compacted to: files[ 0 1 1 0 0 0 0 ]
-2026/05/19-21:43:16.296 4a34 Delete type=2 #8
-2026/05/19-21:43:16.296 4a34 Delete type=2 #10
-2026/05/19-21:43:16.296 4a34 Delete type=2 #12
-2026/05/19-21:43:16.296 4a34 Delete type=2 #14
-2026/05/19-21:43:16.296 4a34 Delete type=2 #16
-2026/05/19-21:48:16.274 4a34 Level-0 table #19: started
-2026/05/19-21:48:16.279 4a34 Level-0 table #19: 13472 bytes OK
-2026/05/19-21:48:16.281 4a34 Delete type=0 #15
+2026/05/20-13:07:38.266 21a0 Reusing MANIFEST C:\Users\Lenovo\Desktop\hh-auto-responser\user-data-search\Default\Local Storage\leveldb/MANIFEST-000001
+2026/05/20-13:07:38.274 21a0 Recovering log #126
+2026/05/20-13:07:38.278 21a0 Reusing old log C:\Users\Lenovo\Desktop\hh-auto-responser\user-data-search\Default\Local Storage\leveldb/000126.log 
+2026/05/20-13:07:52.503 3834 Level-0 table #130: started
+2026/05/20-13:07:52.519 3834 Level-0 table #130: 14063 bytes OK
+2026/05/20-13:07:52.522 3834 Delete type=0 #126
+2026/05/20-13:08:38.288 3834 Level-0 table #132: started
+2026/05/20-13:08:38.296 3834 Level-0 table #132: 10374 bytes OK
+2026/05/20-13:08:38.299 3834 Delete type=0 #129
+2026/05/20-13:08:38.300 3834 Compacting 4@0 + 1@1 files
+2026/05/20-13:08:38.312 3834 Generated table #133@0: 1064 keys, 31530 bytes
+2026/05/20-13:08:38.312 3834 Compacted 4@0 + 1@1 files => 31530 bytes
+2026/05/20-13:08:38.314 3834 compacted to: files[ 0 1 1 0 0 0 0 ]
+2026/05/20-13:08:38.315 3834 Delete type=2 #123
+2026/05/20-13:08:38.315 3834 Delete type=2 #125
+2026/05/20-13:08:38.315 3834 Delete type=2 #127
+2026/05/20-13:08:38.315 3834 Delete type=2 #130
+2026/05/20-13:08:38.315 3834 Delete type=2 #132
+2026/05/20-13:09:39.851 3834 Level-0 table #135: started
+2026/05/20-13:09:39.865 3834 Level-0 table #135: 13507 bytes OK
+2026/05/20-13:09:39.868 3834 Delete type=0 #131
+2026/05/20-13:10:39.844 3834 Level-0 table #137: started
+2026/05/20-13:10:39.858 3834 Level-0 table #137: 13452 bytes OK
+2026/05/20-13:10:39.862 3834 Delete type=0 #134
+2026/05/20-13:11:39.852 3834 Level-0 table #139: started
+2026/05/20-13:11:39.863 3834 Level-0 table #139: 14211 bytes OK
+2026/05/20-13:11:39.866 3834 Delete type=0 #136
+2026/05/20-13:11:46.093 3834 Level-0 table #141: started
+2026/05/20-13:11:46.102 3834 Level-0 table #141: 10653 bytes OK
+2026/05/20-13:11:46.106 3834 Delete type=0 #138
+2026/05/20-13:11:46.107 3834 Compacting 4@0 + 1@1 files
+2026/05/20-13:11:46.118 3834 Generated table #142@0: 1118 keys, 35604 bytes
+2026/05/20-13:11:46.118 3834 Compacted 4@0 + 1@1 files => 35604 bytes
+2026/05/20-13:11:46.119 3834 compacted to: files[ 0 1 1 0 0 0 0 ]
+2026/05/20-13:11:46.121 3834 Delete type=2 #133
+2026/05/20-13:11:46.121 3834 Delete type=2 #135
+2026/05/20-13:11:46.121 3834 Delete type=2 #137
+2026/05/20-13:11:46.121 3834 Delete type=2 #139
+2026/05/20-13:11:46.121 3834 Delete type=2 #141
+2026/05/20-13:12:46.098 3834 Level-0 table #144: started
+2026/05/20-13:12:46.108 3834 Level-0 table #144: 14727 bytes OK
+2026/05/20-13:12:46.111 3834 Delete type=0 #140

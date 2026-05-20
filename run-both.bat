@@ -33,7 +33,7 @@ goto :wait
 :loop_search
 cd /d "%~dp0"
 set PYTHON=%~dp0.venv\Scripts\python.exe
-"%PYTHON%" main.py --user-data-dir user-data-search --applied-log applied-search.json --no-post-search-responder -v >> logs\search.log 2>&1
+"%PYTHON%" main.py --user-data-dir user-data-search --no-post-search-responder -v >> logs\search.log 2>&1
 echo [%date% %time%] Search batch finished, sleeping 3600s >> logs\search.log
 timeout /t 3600 /nobreak >nul
 goto :loop_search

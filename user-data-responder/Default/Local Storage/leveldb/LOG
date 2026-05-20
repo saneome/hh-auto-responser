@@ -1,3 +1,42 @@
-2026/05/19-22:22:04.896 1e7c Reusing MANIFEST C:\Users\Lenovo\Desktop\hh-auto-responser\user-data-responder\Default\Local Storage\leveldb/MANIFEST-000001
-2026/05/19-22:22:04.908 1e7c Recovering log #19
-2026/05/19-22:22:04.912 1e7c Reusing old log C:\Users\Lenovo\Desktop\hh-auto-responser\user-data-responder\Default\Local Storage\leveldb/000019.log 
+2026/05/20-20:44:51.439 350c Reusing MANIFEST C:\Users\Lenovo\Desktop\hh-auto-responser\user-data-responder\Default\Local Storage\leveldb/MANIFEST-000001
+2026/05/20-20:44:51.476 350c Recovering log #152
+2026/05/20-20:44:51.485 350c Reusing old log C:\Users\Lenovo\Desktop\hh-auto-responser\user-data-responder\Default\Local Storage\leveldb/000152.log 
+2026/05/20-20:45:21.534 261c Level-0 table #155: started
+2026/05/20-20:45:21.540 261c Level-0 table #155: 14518 bytes OK
+2026/05/20-20:45:21.542 261c Delete type=0 #152
+2026/05/20-20:45:51.521 261c Level-0 table #157: started
+2026/05/20-20:45:51.533 261c Level-0 table #157: 16070 bytes OK
+2026/05/20-20:45:51.537 261c Delete type=0 #154
+2026/05/20-20:45:51.538 261c Compacting 4@0 + 1@1 files
+2026/05/20-20:45:51.559 261c Generated table #158@0: 294 keys, 388325 bytes
+2026/05/20-20:45:51.559 261c Compacted 4@0 + 1@1 files => 388325 bytes
+2026/05/20-20:45:51.561 261c compacted to: files[ 0 1 1 0 0 0 0 ]
+2026/05/20-20:45:51.562 261c Delete type=2 #147
+2026/05/20-20:45:51.563 261c Delete type=2 #149
+2026/05/20-20:45:51.563 261c Delete type=2 #151
+2026/05/20-20:45:51.563 261c Delete type=2 #155
+2026/05/20-20:45:51.563 261c Delete type=2 #157
+2026/05/20-20:46:52.424 261c Level-0 table #160: started
+2026/05/20-20:46:52.434 261c Level-0 table #160: 14073 bytes OK
+2026/05/20-20:46:52.437 261c Delete type=0 #156
+2026/05/20-20:47:52.428 261c Level-0 table #162: started
+2026/05/20-20:47:52.442 261c Level-0 table #162: 15935 bytes OK
+2026/05/20-20:47:52.445 261c Delete type=0 #159
+2026/05/20-20:48:30.657 261c Level-0 table #164: started
+2026/05/20-20:48:30.665 261c Level-0 table #164: 8465 bytes OK
+2026/05/20-20:48:30.668 261c Delete type=0 #161
+2026/05/20-20:49:28.062 261c Level-0 table #166: started
+2026/05/20-20:49:28.073 261c Level-0 table #166: 16176 bytes OK
+2026/05/20-20:49:28.076 261c Delete type=0 #163
+2026/05/20-20:49:28.077 261c Compacting 4@0 + 1@1 files
+2026/05/20-20:49:28.101 261c Generated table #167@0: 300 keys, 388497 bytes
+2026/05/20-20:49:28.101 261c Compacted 4@0 + 1@1 files => 388497 bytes
+2026/05/20-20:49:28.102 261c compacted to: files[ 0 1 1 0 0 0 0 ]
+2026/05/20-20:49:28.104 261c Delete type=2 #158
+2026/05/20-20:49:28.104 261c Delete type=2 #160
+2026/05/20-20:49:28.104 261c Delete type=2 #162
+2026/05/20-20:49:28.104 261c Delete type=2 #164
+2026/05/20-20:49:28.104 261c Delete type=2 #166
+2026/05/20-20:49:58.062 261c Level-0 table #169: started
+2026/05/20-20:49:58.075 261c Level-0 table #169: 16127 bytes OK
+2026/05/20-20:49:58.079 261c Delete type=0 #165

@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import argparse
 import datetime
+import json
 import logging
 import sys
 import time
@@ -17,6 +18,21 @@ from hh_auto.reports import daily_report, print_report
 from hh_auto.responder import run_chat_manager, run_responder
 from hh_auto.runner import make_runner_config, run
 from hh_auto.storage import AppliedLog
+
+
+def _load_negotiations(path: str = "negotiations.json") -> dict:
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except Exception:
+        return {}
+
+
+def _last_employer_message(thread: dict) -> str:
+    for m in reversed(thread.get("messages", [])):
+        if m.get("sender") == "employer":
+            return m.get("text", "")
+    return ""
 
 
 def main() -> int:
@@ -143,6 +159,7 @@ def main() -> int:
                     _last_report_date = now.date()
 
             # Пересоздаём браузер каждый цикл — Chrome не выдерживает idle
+            old_threads = _load_negotiations()
             try:
                 with open_browser(bcfg) as ctx:
                     logging.info("Проверяю переписку с работодателями...")
@@ -158,10 +175,19 @@ def main() -> int:
                                                  dry_run=args.dry_run, auto_reply=False,
                                                  login_timeout=login_timeout)
                         logging.info("chat_manager завершён: %d задач", len(tasks))
+                    new_threads = _load_negotiations()
                     if notifier:
-                        for t in tasks:
-                            if t.test_task:
-                                notifier.test_task(t.employer, t.vacancy, t.last_message[:500])
+                        for vid, th in new_threads.items():
+                            status = th.get("status", "")
+                            old_status = old_threads.get(vid, {}).get("status", "")
+                            if status in ("test_task", "interview") and old_status != status:
+                                employer = th.get("employer", "?")
+                                vacancy = th.get("vacancy", "?")
+                                last_msg = _last_employer_message(th)
+                                if status == "test_task":
+                                    notifier.test_task(employer, vacancy, last_msg[:500])
+                                elif status == "interview":
+                                    notifier.interview_invite(employer, vacancy, last_msg[:500])
             except BrowserClosedError:
                 logging.warning("Браузер закрыт (возможно, Chrome упал). Пересоздам на следующей итерации.")
             except Exception:
@@ -183,16 +209,26 @@ def main() -> int:
         from hh_auto.profile import CandidateProfile
         profile = CandidateProfile.from_config(cfg)
         try:
+            old_threads = _load_negotiations()
             with open_browser(bcfg) as ctx:
                 tasks = run_chat_manager(ctx, profile, bcfg,
                                          dry_run=args.dry_run, auto_reply=True,
                                          login_timeout=login_timeout)
+                new_threads = _load_negotiations()
                 if tasks:
                     logging.info("Ответили на %d сообщений", len([t for t in tasks if t.sent]))
-                    if notifier:
-                        for t in tasks:
-                            if t.test_task:
-                                notifier.test_task(t.employer, t.vacancy, t.last_message[:500])
+                if notifier:
+                    for vid, th in new_threads.items():
+                        status = th.get("status", "")
+                        old_status = old_threads.get(vid, {}).get("status", "")
+                        if status in ("test_task", "interview") and old_status != status:
+                            employer = th.get("employer", "?")
+                            vacancy = th.get("vacancy", "?")
+                            last_msg = _last_employer_message(th)
+                            if status == "test_task":
+                                notifier.test_task(employer, vacancy, last_msg[:500])
+                            elif status == "interview":
+                                notifier.interview_invite(employer, vacancy, last_msg[:500])
         except BrowserClosedError:
             logging.warning("Браузер закрыт при post-search responder. Пропускаю.")
         except Exception as exc:

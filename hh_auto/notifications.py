@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import logging
+import re
 import urllib.error
 import urllib.request
 from dataclasses import dataclass
@@ -12,6 +13,13 @@ import json
 log = logging.getLogger("hh_auto.notifications")
 
 TELEGRAM_API = "https://api.telegram.org"
+
+
+def _clean_text(text: str) -> str:
+    """Collapse excessive blank lines and strip outer whitespace."""
+    text = (text or "").strip()
+    # Replace 3+ consecutive newlines with exactly 2 (keep paragraph breaks)
+    return re.sub(r"\n{3,}", "\n\n", text)
 
 
 @dataclass(frozen=True)
@@ -39,8 +47,13 @@ class TelegramNotifier:
 
     def _build_opener(self) -> urllib.request.OpenerDirector:
         """Build urllib opener with proxy support."""
+        import ssl
+        ctx = ssl.create_default_context()
+        ctx.check_hostname = False
+        ctx.verify_mode = ssl.CERT_NONE
+        ssl_handler = urllib.request.HTTPSHandler(context=ctx)
         if not self.cfg.proxy:
-            return urllib.request.build_opener()
+            return urllib.request.build_opener(ssl_handler)
         proxy = self.cfg.proxy
         if proxy.startswith("socks5://") or proxy.startswith("socks5h://"):
             # SOCKS5 via PySocks
@@ -57,22 +70,17 @@ class TelegramNotifier:
                 )
                 socket.socket = socks.socksocket  # type: ignore[misc]
                 log.info("SOCKS5 proxy configured for Telegram: %s", parsed.hostname)
-                return urllib.request.build_opener()
+                return urllib.request.build_opener(ssl_handler)
             except ImportError:
                 log.error("PySocks not installed but SOCKS5 proxy configured. Install: pip install pysocks")
                 raise
         # HTTP/HTTPS proxy
-        handlers = [urllib.request.ProxyHandler({"https": proxy, "http": proxy})]
-        if proxy.startswith("http://"):
-            # Disable SSL verification for HTTP proxy (optional, depends on environment)
-            import ssl
-            ctx = ssl.create_default_context()
-            ctx.check_hostname = False
-            ctx.verify_mode = ssl.CERT_NONE
-            handlers.append(urllib.request.HTTPSHandler(context=ctx))
-        opener = urllib.request.build_opener(*handlers)
+        handlers = [
+            ssl_handler,
+            urllib.request.ProxyHandler({"https": proxy, "http": proxy}),
+        ]
         log.info("HTTP proxy configured for Telegram")
-        return opener
+        return urllib.request.build_opener(*handlers)
 
     def _url(self, method: str) -> str:
         return f"{TELEGRAM_API}/bot{self.cfg.token}/{method}"
@@ -100,7 +108,7 @@ class TelegramNotifier:
             log.warning("Telegram request failed: %s", exc)
             return None
 
-    def send(self, text: str, *, parse_mode: str = "Markdown") -> dict[str, Any] | None:
+    def send(self, text: str, *, parse_mode: str | None = None) -> dict[str, Any] | None:
         if len(text) > 4096:
             chunks = []
             while text:
@@ -109,25 +117,30 @@ class TelegramNotifier:
                 chunks.append(chunk)
             results = []
             for chunk in chunks:
-                r = self._post("sendMessage", {
+                payload: dict[str, Any] = {
                     "chat_id": self.cfg.chat_id,
                     "text": chunk,
-                    "parse_mode": parse_mode,
                     "disable_web_page_preview": True,
-                })
+                }
+                if parse_mode:
+                    payload["parse_mode"] = parse_mode
+                r = self._post("sendMessage", payload)
                 results.append(r)
             return results[-1] if results else None
 
-        return self._post("sendMessage", {
+        payload = {
             "chat_id": self.cfg.chat_id,
             "text": text,
-            "parse_mode": parse_mode,
             "disable_web_page_preview": True,
-        })
+        }
+        if parse_mode:
+            payload["parse_mode"] = parse_mode
+        return self._post("sendMessage", payload)
 
     # ── helpers ──────────────────────────────────────────────────
 
     def new_response(self, employer: str, vacancy: str, snippet: str) -> None:
+        snippet = _clean_text(snippet)
         self.send(
             f"📬 *Новый отклик*\n"
             f"*{employer}*\n"
@@ -136,6 +149,7 @@ class TelegramNotifier:
         )
 
     def test_task(self, employer: str, vacancy: str, details: str = "") -> None:
+        details = _clean_text(details)
         self.send(
             f"📝 *Тестовое задание*\n"
             f"*{employer}*\n"
@@ -144,6 +158,7 @@ class TelegramNotifier:
         )
 
     def interview_invite(self, employer: str, vacancy: str, details: str = "") -> None:
+        details = _clean_text(details)
         self.send(
             f"🗓 *Приглашение на собеседование*\n"
             f"*{employer}*\n"
@@ -152,6 +167,7 @@ class TelegramNotifier:
         )
 
     def daily_report(self, text: str) -> None:
+        text = _clean_text(text)
         self.send(f"📊 *Ежедневный отчёт*\n\n{text}")
 
 

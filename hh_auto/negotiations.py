@@ -155,7 +155,7 @@ def list_threads(page: Page, timeout_ms: int = 30_000) -> list[Thread]:
 
             # Employer name
             employer = ""
-            for emp_sel in ("[data-qa='negotiations-item-employer']", ".bloko-text_strong", "h3", "span"):
+            for emp_sel in (".title-text--QG3lsfSrjUsWGi2m", "[data-qa='negotiations-item-employer']", ".bloko-text_strong", "h3", "span"):
                 try:
                     emp_el = item.locator(emp_sel).first
                     if emp_el.is_visible():
@@ -253,6 +253,26 @@ def open_thread(page: Page, thread: Thread, timeout_ms: int = 30_000) -> Thread:
             thread.messages = messages
             return thread
 
+        # Try to update employer name from chat header inside the iframe
+        for emp_sel in (
+            "[class*='chat-header'] [class*='title']",
+            "[class*='chat-header'] h1",
+            "[class*='chat-header'] h2",
+            "[data-qa*='employer']",
+            "[data-qa*='company']",
+            "[class*='employer-name']",
+            "[class*='title-text']",
+        ):
+            try:
+                emp_el = chat_frame.locator(emp_sel).first
+                if emp_el.count() > 0:
+                    text = _norm(emp_el.text_content())
+                    if text and text != "?":
+                        thread.employer = text
+                        break
+            except PWError:
+                continue
+
         # Find messages inside the iframe — filter out containers like messages-- / chat-messages--
         raw_els = chat_frame.locator("[class*=message]").all()
         log.debug("Found %d raw message-like elements in chat iframe for %s", len(raw_els), thread.vacancy_id)
@@ -292,12 +312,12 @@ def open_thread(page: Page, thread: Thread, timeout_ms: int = 30_000) -> Thread:
     # Re-detect status from full conversation text
     full_text = "\n".join(m.text for m in messages).lower()
     status = thread.status
-    if "тестовое" in full_text or "задание" in full_text:
+    if "отказ" in full_text or "не подходит" in full_text:
+        status = "rejected"
+    elif "тестовое" in full_text or "задание" in full_text:
         status = "test_task"
     elif "собеседован" in full_text or "интервью" in full_text:
         status = "interview"
-    elif "отказ" in full_text or "не подходит" in full_text:
-        status = "rejected"
     elif not unanswered:
         status = "answered"
     else:
